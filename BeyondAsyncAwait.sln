@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{2DC63681-DD0A-4DC8-9831-FF59C09992D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Parallel Loop Pitfall NotCore", "04 03 Parallel Loop Pitfall NotCore\04 Parallel Loop Pitfall NotCore.csproj", "{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Loop Patterns", "05 Loop Patterns\05 Loop Patterns.csproj", "{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Readable Async Exception", "06 Readable Async Exception\06 Readable Async Exception.csproj", "{9CA101FA-E97D-4A44-9126-00F3A1856B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Readable Async Exception NotCore", "07 Readable Async Exception NotCore\07 Readable Async Exception NotCore.csproj", "{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA101FA-E97D-4A44-9126-00F3A1856B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA101FA-E97D-4A44-9126-00F3A1856B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA101FA-E97D-4A44-9126-00F3A1856B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA101FA-E97D-4A44-9126-00F3A1856B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
