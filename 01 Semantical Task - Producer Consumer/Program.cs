@@ -47,8 +47,7 @@ namespace Bnaya.Samples
 
         private static async Task<string> FirstStageAsync(string input)
         {
-            string data = $@"{input} -> 
-    Processed by first stage";
+            string data = $"{input} -> first stage";
 
             var message = Completeble.Create(data);
             _q1.Enqueue(message); // enqueue and complete
@@ -63,8 +62,7 @@ namespace Bnaya.Samples
             Completeble<string> message;
             while (_q1.TryDequeue(out message))
             {
-                string data = $@"{message.Value} -> 
-        tProcessed by second stage";
+                string data = $"{message.Value} -> second stage";
 
                 var nextMessage = message.ProceedWith(data);
                 _q2.Add(nextMessage); // enqueue and complete
@@ -83,8 +81,7 @@ namespace Bnaya.Samples
             {
                 await Task.Delay(2000);
 
-                string data = $@"{message.Value} -> 
-            Processed by third stage";
+                string data = $"{message.Value} -> third stage";
 
                 var nextMessage = message.ProceedWith(data);
                 _actionBlock.Post(nextMessage); // enqueue and complete
@@ -96,8 +93,7 @@ namespace Bnaya.Samples
         {
             await Task.Delay(1000);
 
-            string next = $@"{message.Value} -> 
-                Processed by last stage";
+            string next = $"{message.Value} -> last stage";
 
             var nextMessage = message.ProceedWith(next);
             if (!nextMessage.TryComplete())

@@ -37,6 +37,7 @@ namespace Bnaya.Samples
                 "at System.Threading.Tasks.Task.Execute()",
                 "at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()",
                 "at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()",
+                "at System.Runtime.CompilerServices.TaskAwaiter",
             };
 
         #endregion // Constants
@@ -50,7 +51,7 @@ namespace Bnaya.Samples
         /// <param name="stackTracer">The stack tracer.</param>
         /// <returns></returns>
         public static string Format(
-                this Exception exception)
+                this Exception exception, bool includeRawInfo = true)
         {
             if (exception == null)
                 return string.Empty;
@@ -81,8 +82,11 @@ namespace Bnaya.Samples
                     builder.Append(keep[i]);
                 }
 
-                builder.AppendLine("\r\n======================= Raw info ===========================");
-                builder.AppendLine(exception.ToString());
+                if (includeRawInfo)
+                {
+                    builder.AppendLine("\r\n======================= Raw info ===========================");
+                    builder.AppendLine(exception.ToString());
+                }
                 return builder.ToString();
             }
             catch
