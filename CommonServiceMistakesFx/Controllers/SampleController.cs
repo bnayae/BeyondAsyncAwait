@@ -14,7 +14,11 @@ namespace CommonServiceMistakesFx.Controllers
     [RoutePrefix("api/sample")]
     public class SampleController : ApiController
     {
-        private const int DELAY = 2000;
+        private static int DELAY = 2000;
+        private static int DELAY_RANGE = 5;
+        private ThreadLocal<Random> _rnd = new ThreadLocal<Random>(() => new Random(Guid.NewGuid().GetHashCode()));
+
+        private TimeSpan Delay => TimeSpan.FromMilliseconds(DELAY + _rnd.Value.Next(0, DELAY_RANGE));
 
         // GET api/sample/sync/{i}
         [Route("sync/{i}")]
@@ -22,7 +26,7 @@ namespace CommonServiceMistakesFx.Controllers
         public string GetSync(int i)
         {
             Debug.Write(".");
-            Thread.Sleep(DELAY); // represent IO call
+            Thread.Sleep(Delay); // represent IO call
             return $"#{i:00}";
         }
 
@@ -32,7 +36,7 @@ namespace CommonServiceMistakesFx.Controllers
         public async Task<string> GetStupid(int i)
         {   // yes, this one is stupid (but sometimes stupid code can be spot at production ;-) 
             Debug.Write(".");
-            Thread.Sleep(DELAY); // represent IO call
+            Thread.Sleep(Delay); // represent IO call
             return $"#{i:00}";
         }
 
@@ -44,7 +48,7 @@ namespace CommonServiceMistakesFx.Controllers
             Debug.Write(".");
             return Task.Run(() =>
             {
-                Thread.Sleep(DELAY); // represent IO call
+                Thread.Sleep(Delay); // represent IO call
                 return $"#{i:00}";
             });
         }
@@ -57,7 +61,7 @@ namespace CommonServiceMistakesFx.Controllers
             Debug.Write(".");
             return Task.Run(async () =>
             {
-                await Task.Delay(DELAY); // represent IO call
+                await Task.Delay(Delay); // represent IO call
                 return $"#{i:00}";
             });
         }
@@ -68,7 +72,7 @@ namespace CommonServiceMistakesFx.Controllers
         public async Task<string> GetRight(int i)
         {
             Debug.Write(".");
-            await Task.Delay(DELAY); // represent IO call
+            await Task.Delay(Delay); // represent IO call
             return $"#{i:00}";
         }
     }

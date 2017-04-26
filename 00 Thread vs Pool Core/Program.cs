@@ -12,6 +12,7 @@ namespace Bnaya.Samples
     {
         private readonly static IBenchmark _banchmark = new BenchmarkCompute();
         //private readonly static IBenchmark _banchmark = new BenchmarkIO(); // pool starvation
+        //private readonly static IBenchmark _banchmark = new BenchmarkAwaitIO(); // pool starvation
 
         static void Main(string[] args)
         {

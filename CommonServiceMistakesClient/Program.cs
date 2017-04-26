@@ -9,14 +9,14 @@ namespace CommonServiceMistakesClient
     class Program
     {
         private const int MAX = 50;
-        private const int PORT = 56368; // Core
-        //private const int PORT = 50257; // FX
+        //private const int PORT = 56368; // Core
+        private const int PORT = 50257; // FX
         private static readonly (string Title, string Url)[] END_POINTS =
         {
             ("Right", $"http://localhost:{PORT}/api/sample/right/"),
             ("Needless", $"http://localhost:{PORT}/api/sample/needless/"),
             ("Stupid", $"http://localhost:{PORT}/api/sample/stupid/"),
-            ("Silly", $"http://localhost:{PORT}/api/sample/silly/"),
+            ("Silly", $"http://localhost:{PORT}/api/sample/silly/ "),
             ("Sync", $"http://localhost:{PORT}/api/sample/sync/"),
         };
 
@@ -25,15 +25,17 @@ namespace CommonServiceMistakesClient
             Console.WriteLine("Warm-up");
 
             Warmup();
-
-            foreach (var endPoint in END_POINTS)
+            for (int i = 0; i < 10; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"==================  Start {endPoint.Title} ==================");
-                Console.ResetColor();
+                foreach (var endPoint in END_POINTS)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"==================  Start {endPoint.Title} ==================");
+                    Console.ResetColor();
 
-                Task test = CallAsync(endPoint.Url, MAX);
-                test.Wait();
+                    Task test = CallAsync(endPoint.Url, MAX);
+                    test.Wait();
+                }
             }
 
             Console.ReadKey();
@@ -49,11 +51,14 @@ namespace CommonServiceMistakesClient
                             select InvokeAsync(http, url);
                 string[] responses = await Task.WhenAll(tasks);
                 sw.Stop();
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine($"\r\n===================== {sw.Elapsed.TotalSeconds:N3} seconds ============================");
-                Console.ResetColor();
-                Array.Sort(responses);
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine($"\r\n\r\nDURATION: {sw.Elapsed.TotalSeconds:N3} seconds");
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Green;
+                //Array.Sort(responses);
                 Console.WriteLine(string.Join(", ", responses));
+                Console.ResetColor();
+                Console.WriteLine("\r\n");
             }
 
         }
@@ -62,7 +67,8 @@ namespace CommonServiceMistakesClient
         {
             Console.Write("-");
             string response = await http.GetStringAsync(url);
-            Console.Write("|");
+            //Console.Write("|");
+            Console.Write($"{response},");
             return response;
         }
 

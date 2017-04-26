@@ -130,6 +130,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\00 Thread vs Pool Core\BenchmarkAwaitIO.cs">
+      <Link>BenchmarkAwaitIO.cs</Link>
+    </Compile>
     <Compile Include="..\00 Thread vs Pool Core\BenchmarkCompute.cs">
       <Link>BenchmarkCompute.cs</Link>
     </Compile>
