@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{2DC63681-DD0A-4DC8-9831-FF59C09992D7}"
 EndProject
@@ -18,6 +18,29 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Readable Async Exception NotCore", "07 Readable Async Exception NotCore\07 Readable Async Exception NotCore.csproj", "{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08 Semantical Task - With Exceptions", "08 Semantical Task - With Exceptions\08 Semantical Task - With Exceptions.csproj", "{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5DFC83C2-EE4E-418B-AF32-D7E3DB0DE2A8}"
+	ProjectSection(SolutionItems) = preProject
+		Links.txt = Links.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 Abortable Cancellation", "09 Abortable Cancellation\10 Abortable Cancellation.csproj", "{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 Lazy Cancellation", "10 Lazy Cancellation\11 Lazy Cancellation.csproj", "{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 Void Async", "09 Void Async\09 Void Async.csproj", "{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12 Cancellation and Exception", "12 Cancellation and Exception\12 Cancellation and Exception.csproj", "{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 Common Service Mistakes", "CommonServiceMistakes\13 Common Service Mistakes.csproj", "{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 Common Service Mistakes Client", "CommonServiceMistakesClient\13 Common Service Mistakes Client.csproj", "{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonServiceMistakesFx", "CommonServiceMistakesFx\CommonServiceMistakesFx.csproj", "{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 Thread vs Pool Core", "00 Thread vs Pool Core\00 Thread vs Pool Core.csproj", "{D05AA901-2D78-40BE-A29B-B166043D2A58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 Thread vs Pool Fx", "00 Thread vs Pool Fx\00 Thread vs Pool Fx.csproj", "{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +80,42 @@ Global
 		{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D05AA901-2D78-40BE-A29B-B166043D2A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05AA901-2D78-40BE-A29B-B166043D2A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05AA901-2D78-40BE-A29B-B166043D2A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05AA901-2D78-40BE-A29B-B166043D2A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
