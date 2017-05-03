@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Diagnostics;
 
+// ISSUE: https://github.com/aspnet/Hosting/issues/1058
+
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 namespace CommonServiceMistakes.Controllers
 {

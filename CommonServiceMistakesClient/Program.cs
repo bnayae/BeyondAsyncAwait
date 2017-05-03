@@ -9,8 +9,10 @@ namespace CommonServiceMistakesClient
     class Program
     {
         private const int MAX = 50;
-        //private const int PORT = 56368; // Core
-        private const int PORT = 50257; // FX
+        private const int PORT = 56368; // Core IIS Express
+        //private const int PORT = 56369; // Core Exe
+        //private const int PORT = 32769; // Core Docker
+        //private const int PORT = 50257; // FX
         private static readonly (string Title, string Url)[] END_POINTS =
         {
             ("Right", $"http://localhost:{PORT}/api/sample/right/"),
@@ -35,6 +37,8 @@ namespace CommonServiceMistakesClient
 
                     Task test = CallAsync(endPoint.Url, MAX);
                     test.Wait();
+                    Console.WriteLine("Press any key for the next test...");
+                    Console.ReadKey(true);
                 }
             }
 
@@ -44,7 +48,7 @@ namespace CommonServiceMistakesClient
         private static async Task CallAsync(string root, int times)
         {
             var sw = Stopwatch.StartNew();
-            using (var http = new HttpClient())
+            using (var http = new HttpClient(new HttpClientHandler() { MaxConnectionsPerServer = 100 }))
             {
                 var tasks = from i in Enumerable.Range(0, times)
                             let url = $"{root}{i}"
@@ -65,10 +69,13 @@ namespace CommonServiceMistakesClient
 
         private static async Task<string> InvokeAsync(HttpClient http, string url)
         {
+            var latency = Stopwatch.StartNew();
             Console.Write("-");
             string response = await http.GetStringAsync(url);
+            latency.Stop();
+            Console.Write($"{latency.Elapsed.TotalSeconds:0.0}, ");
             //Console.Write("|");
-            Console.Write($"{response},");
+            //Console.Write($"{response},");
             return response;
         }
 
