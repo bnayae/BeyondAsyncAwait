@@ -1,0 +1,9 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\bin\Debug\netcoreapp1.1\Loop Patterns.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\bin\Debug\netcoreapp1.1\Loop Patterns.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\bin\Debug\netcoreapp1.1\Loop Patterns.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\bin\Debug\netcoreapp1.1\Loop Patterns.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\bin\Debug\netcoreapp1.1\Loop Patterns.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\obj\Debug\netcoreapp1.1\05 Loop Patterns.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\obj\Debug\netcoreapp1.1\Loop Patterns.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\obj\Debug\netcoreapp1.1\Loop Patterns.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\05 Loop Patterns\obj\Debug\netcoreapp1.1\05 Loop Patterns.csprojResolveAssemblyReference.cache

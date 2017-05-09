@@ -1,0 +1,9 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\bin\Release\netcoreapp1.1\Semantical Task - Producer Consumer.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\bin\Release\netcoreapp1.1\Semantical Task - Producer Consumer.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\bin\Release\netcoreapp1.1\Semantical Task - Producer Consumer.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\bin\Release\netcoreapp1.1\Semantical Task - Producer Consumer.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\bin\Release\netcoreapp1.1\Semantical Task - Producer Consumer.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\obj\Release\netcoreapp1.1\01 Semantical Task - Producer Consumer.csprojResolveAssemblyReference.cache
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\obj\Release\netcoreapp1.1\01 Semantical Task - Producer Consumer.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\obj\Release\netcoreapp1.1\Semantical Task - Producer Consumer.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\01 Semantical Task - Producer Consumer\obj\Release\netcoreapp1.1\Semantical Task - Producer Consumer.pdb

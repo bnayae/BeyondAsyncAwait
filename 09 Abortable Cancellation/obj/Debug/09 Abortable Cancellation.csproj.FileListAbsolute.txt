@@ -1,0 +1,6 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\bin\Debug\AbortableCancellation.exe.config
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\bin\Debug\AbortableCancellation.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\bin\Debug\AbortableCancellation.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\obj\Debug\09 Abortable Cancellation.csprojResolveAssemblyReference.cache
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\obj\Debug\AbortableCancellation.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\09 Abortable Cancellation\obj\Debug\AbortableCancellation.pdb

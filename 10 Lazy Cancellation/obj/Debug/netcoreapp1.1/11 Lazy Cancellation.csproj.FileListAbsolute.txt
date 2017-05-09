@@ -1,0 +1,8 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\bin\Debug\netcoreapp1.1\LazyCancellation.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\bin\Debug\netcoreapp1.1\LazyCancellation.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\bin\Debug\netcoreapp1.1\LazyCancellation.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\bin\Debug\netcoreapp1.1\LazyCancellation.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\bin\Debug\netcoreapp1.1\LazyCancellation.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\obj\Debug\netcoreapp1.1\11 Lazy Cancellation.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\obj\Debug\netcoreapp1.1\LazyCancellation.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\10 Lazy Cancellation\obj\Debug\netcoreapp1.1\LazyCancellation.pdb

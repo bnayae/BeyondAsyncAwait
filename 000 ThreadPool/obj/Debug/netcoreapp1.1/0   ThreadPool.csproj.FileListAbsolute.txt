@@ -1,0 +1,9 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\bin\Debug\netcoreapp1.1\ThreadPool.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\bin\Debug\netcoreapp1.1\ThreadPool.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\bin\Debug\netcoreapp1.1\ThreadPool.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\bin\Debug\netcoreapp1.1\ThreadPool.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\bin\Debug\netcoreapp1.1\ThreadPool.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\obj\Debug\netcoreapp1.1\0   ThreadPool.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\obj\Debug\netcoreapp1.1\ThreadPool.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\obj\Debug\netcoreapp1.1\ThreadPool.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\000 ThreadPool\obj\Debug\netcoreapp1.1\0   ThreadPool.csprojResolveAssemblyReference.cache

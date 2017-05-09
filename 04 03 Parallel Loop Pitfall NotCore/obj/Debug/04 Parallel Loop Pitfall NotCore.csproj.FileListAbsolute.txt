@@ -1,0 +1,6 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Debug\Parallel Loop Pitfall NotCore.exe.config
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Debug\Parallel Loop Pitfall NotCore.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Debug\Parallel Loop Pitfall NotCore.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Debug\Parallel Loop Pitfall NotCore.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Debug\Parallel Loop Pitfall NotCore.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Debug\04 Parallel Loop Pitfall NotCore.csprojResolveAssemblyReference.cache

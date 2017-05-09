@@ -1,0 +1,8 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\bin\Release\netcoreapp1.1\CancellationAndException.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\bin\Release\netcoreapp1.1\CancellationAndException.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\bin\Release\netcoreapp1.1\CancellationAndException.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\bin\Release\netcoreapp1.1\CancellationAndException.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\bin\Release\netcoreapp1.1\CancellationAndException.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\obj\Release\netcoreapp1.1\12 Cancellation and Exception.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\obj\Release\netcoreapp1.1\CancellationAndException.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\12 Cancellation and Exception\obj\Release\netcoreapp1.1\CancellationAndException.pdb

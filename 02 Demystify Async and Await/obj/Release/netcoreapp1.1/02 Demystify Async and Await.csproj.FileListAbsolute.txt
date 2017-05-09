@@ -1,0 +1,8 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\bin\Release\netcoreapp1.1\Demystify Async and Await.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\bin\Release\netcoreapp1.1\Demystify Async and Await.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\bin\Release\netcoreapp1.1\Demystify Async and Await.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\bin\Release\netcoreapp1.1\Demystify Async and Await.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\bin\Release\netcoreapp1.1\Demystify Async and Await.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\obj\Release\netcoreapp1.1\02 Demystify Async and Await.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\obj\Release\netcoreapp1.1\Demystify Async and Await.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\02 Demystify Async and Await\obj\Release\netcoreapp1.1\Demystify Async and Await.pdb

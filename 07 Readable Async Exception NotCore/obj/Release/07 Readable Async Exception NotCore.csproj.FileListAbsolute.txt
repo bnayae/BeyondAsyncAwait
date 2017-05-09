@@ -1,0 +1,7 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\bin\Release\Readable Async Exception NotCore.exe.config
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\bin\Release\Readable Async Exception NotCore.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\bin\Release\Readable Async Exception NotCore.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\bin\Release\AsyncFriendlyStackTrace.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\obj\Release\07 Readable Async Exception NotCore.csprojResolveAssemblyReference.cache
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\obj\Release\Readable Async Exception NotCore.exe
+C:\TFS\GIT\Async\BeyondAsyncAwait\07 Readable Async Exception NotCore\obj\Release\Readable Async Exception NotCore.pdb

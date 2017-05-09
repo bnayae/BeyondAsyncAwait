@@ -1,0 +1,9 @@
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\obj\Debug\netcoreapp1.1\03 Parallel Loop Pitfall.AssemblyInfo.cs
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\bin\Debug\netcoreapp1.1\ParallelLoopPitfall.deps.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\bin\Debug\netcoreapp1.1\ParallelLoopPitfall.runtimeconfig.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\bin\Debug\netcoreapp1.1\ParallelLoopPitfall.runtimeconfig.dev.json
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\bin\Debug\netcoreapp1.1\ParallelLoopPitfall.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\bin\Debug\netcoreapp1.1\ParallelLoopPitfall.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\obj\Debug\netcoreapp1.1\ParallelLoopPitfall.dll
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\obj\Debug\netcoreapp1.1\ParallelLoopPitfall.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\03 Parallel Loop Pitfall\obj\Debug\netcoreapp1.1\03 Parallel Loop Pitfall.csprojResolveAssemblyReference.cache
