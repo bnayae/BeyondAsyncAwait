@@ -71,8 +71,10 @@ namespace CommonServiceMistakes.Controllers
         [HttpGet]
         public async Task<string> GetRight(int i)
         {
-            Debug.Write(".");
+            var sw = Stopwatch.StartNew();
             await Task.Delay(Delay);//.ConfigureAwait(false); // represent IO call
+            Debug.Write($"## Duration = {sw.ElapsedMilliseconds}");
+
             return $"#{i:00}";
         }
     }

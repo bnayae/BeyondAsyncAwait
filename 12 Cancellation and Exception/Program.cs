@@ -33,10 +33,7 @@ namespace Bnaya.Samples
 
         }
 
-        private static void RiskyCancellation(CancellationTokenSource cts)
-        {
-            cts.Cancel();
-        }
+        private static void RiskyCancellation(CancellationTokenSource cts) => cts.Cancel();
 
         private static void SaferCancellation(CancellationTokenSource cts)
         {

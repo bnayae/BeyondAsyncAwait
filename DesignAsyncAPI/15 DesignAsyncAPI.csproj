@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <AssemblyName>DesignAsyncAPI</AssemblyName>
+    <RootNamespace>Bnaya.Samples</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Content.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

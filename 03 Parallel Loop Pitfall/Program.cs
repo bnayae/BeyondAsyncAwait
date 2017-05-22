@@ -17,6 +17,7 @@ namespace Bnaya.Samples
         {
             Console.WriteLine("Press any key to start");
             var data = GetBlockingData();
+            //var data = GetComputeData();
             Parallel.ForEach(data, item => Console.Write($"{item}, "));
         }
 

@@ -39,6 +39,19 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
+        #region SeqAsync
+
+        static async Task SeqAsync(int i)
+        {
+            _context.Add($"Start {i}");
+            await Task.Delay(100);
+            await _SeqAsync(i);
+            _context.Add($"End {i}");
+            Console.WriteLine(_context.GetContext(i));
+        }
+
+        #endregion // SeqAsync
+
         #region ForkJoinAsync
 
 
@@ -80,19 +93,6 @@ namespace Bnaya.Samples
         }
 
         #endregion // _ForkB_Async
-
-        #region SeqAsync
-
-        static async Task SeqAsync(int i)
-        {
-            _context.Add($"Start {i}");
-            await Task.Delay(100);
-            await _SeqAsync(i);
-            _context.Add($"End {i}");
-            Console.WriteLine(_context.GetContext(i));
-        }
-
-        #endregion // SeqAsync
 
         #region _SeqAsync
 

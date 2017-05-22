@@ -28,7 +28,12 @@ namespace CommonServiceMistakes
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            //services.AddCors();
+            services.AddCors();
+            //services.AddCors(setup => setup.AddPolicy("CorsPolicy",
+            //                            builder => builder.AllowAnyOrigin()
+            //                            .AllowAnyMethod()
+            //                            .AllowAnyHeader()
+            //                            .AllowCredentials()));
             services.AddMvc();
         }
 

@@ -6,4 +6,3 @@ C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Debug\netcorea
 C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Debug\netcoreapp1.1\ReadableAsyncException.pdb
 C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Debug\netcoreapp1.1\ReadableAsyncException.dll
 C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Debug\netcoreapp1.1\ReadableAsyncException.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Debug\netcoreapp1.1\06 Readable Async Exception.csprojResolveAssemblyReference.cache

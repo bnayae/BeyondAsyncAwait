@@ -17,7 +17,7 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
-
+           
             #region Warm-up
 
             Thread t = new Thread(() => { });

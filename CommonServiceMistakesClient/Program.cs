@@ -16,6 +16,8 @@ namespace CommonServiceMistakesClient
             ("Core on exe", "localhost:56369"),
             ("Core on Docker", "localhost:32769"),
             ("Fx on IIS Express", "localhost:50257"),
+            ("Fx Deadlock on IIS Express", "http://localhost:50257/api/Pitfall/deadlock"),
+            ("Fx Deadlock Getaway on IIS Express", "http://localhost:50257/api/Pitfall/deadlock-getaway"),
         };
 
         private static readonly (string Title, string Url)[] END_POINTS =
@@ -31,8 +33,27 @@ namespace CommonServiceMistakesClient
 
         static void Main(string[] args)
         {
-            ServerSelectionAndWarmup();
+            int selection = ServerSelectionAndWarmup();
 
+            switch (selection)
+            {
+                case 4:
+                case 5:
+                    var info = SERVERS[selection];
+                    Task _ = DeadlockAsync(info);
+                    break;
+                default:
+                    PoolBehavior();
+                    break;
+            }
+
+            Console.ReadKey();
+        }
+
+        #region PoolBehavior
+
+        private static void PoolBehavior()
+        {
             for (int i = 0; i < 10; i++)
             {
                 foreach (var endPointTemplate in END_POINTS)
@@ -48,11 +69,44 @@ namespace CommonServiceMistakesClient
                     Console.ReadKey(true);
                 }
             }
-
-            Console.ReadKey();
         }
 
-        private static void ServerSelectionAndWarmup()
+
+        #endregion // PoolBehavior
+
+        #region DeadlockAsync
+
+        private static async Task DeadlockAsync((string Title, string Url) info)
+        {
+            Console.WriteLine(info.Title);
+            try
+            {
+                using (var http = new HttpClient() { Timeout = TimeSpan.FromSeconds(15) })
+                {
+                    Console.WriteLine("Calling ....");
+                    string result = await http.GetStringAsync(info.Url);
+                    Console.WriteLine(result);
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("Timeout");
+                Console.ResetColor();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine(ex);
+                Console.ResetColor();
+            }
+        }
+
+        #endregion // DeadlockAsync
+
+        #region ServerSelectionAndWarmup
+
+        private static int ServerSelectionAndWarmup()
         {
             Console.WriteLine("Select Server");
             for (int i = 0; i < SERVERS.Length; i++)
@@ -64,18 +118,25 @@ namespace CommonServiceMistakesClient
             int selection = int.Parse(c.ToString());
             _server = SERVERS[selection].Server;
 
+            if (selection >= 4)
+                return selection;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Targeting: {SERVERS[selection].Title}");
             Console.ResetColor();
 
             Console.WriteLine("Warm-up");
-            Warmup();
+            Wormup();
 
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Targeting: {SERVERS[selection].Title}");
             Console.ResetColor();
+            return selection;
         }
+
+        #endregion // ServerSelectionAndWarmup
+
+        #region CallAsync
 
         private static async Task CallAsync(string root, int times)
         {
@@ -99,6 +160,10 @@ namespace CommonServiceMistakesClient
 
         }
 
+        #endregion // CallAsync
+
+        #region InvokeAsync
+
         private static async Task<string> InvokeAsync(HttpClient http, string url)
         {
             var latency = Stopwatch.StartNew();
@@ -111,7 +176,11 @@ namespace CommonServiceMistakesClient
             return response;
         }
 
-        private static void Warmup()
+        #endregion // InvokeAsync
+
+        #region Worm-up
+
+        private static void Wormup()
         {
             while (true)
             {
@@ -130,5 +199,7 @@ namespace CommonServiceMistakesClient
             }
             Console.Clear();
         }
+
+        #endregion // Worm-up
     }
 }
