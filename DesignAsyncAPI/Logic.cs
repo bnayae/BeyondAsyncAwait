@@ -9,7 +9,8 @@ namespace Bnaya.Samples
     {
         #region OldFashion
 
-        public void OldFashion(Func<string> strategy, string title)
+        public void OldFashion(
+            Func<string> strategy, string title)
         {
             Console.WriteLine(title);
             byte[] buffer = Encoding.UTF8.GetBytes("API Design");
@@ -21,7 +22,8 @@ namespace Bnaya.Samples
 
         #region TapFashion
 
-        public async Task TapFashion(Func<Task<string>> strategy, string title)
+        public async Task TapFashion(
+            Func<Task<string>> strategy, string title)
         {
             Console.WriteLine(title);
             byte[] buffer = Encoding.UTF8.GetBytes("API Design");
@@ -33,7 +35,8 @@ namespace Bnaya.Samples
 
         #region VTapFashion
 
-        public async ValueTask<object> VTapFashion(Func<ValueTask<string>> strategy, string title)
+        public async ValueTask<object> VTapFashion(
+            Func<ValueTask<string>> strategy, string title)
         {
             Console.WriteLine(title);
             byte[] buffer = Encoding.UTF8.GetBytes("API Design");
@@ -46,7 +49,8 @@ namespace Bnaya.Samples
 
         #region LTapFashion
 
-        public async LightTask<object> LTapFashion(Func<LightTask<string>> strategy, string title)
+        public async LightTask<object> LTapFashion(
+            Func<LightTask<string>> strategy, string title)
         {
             Console.WriteLine(title);
             byte[] buffer = Encoding.UTF8.GetBytes("API Design");

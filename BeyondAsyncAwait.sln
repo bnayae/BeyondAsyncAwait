@@ -68,6 +68,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Service"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Client", "AsyncRelayMediator.Client\AsyncRelayMediator.Client.csproj", "{883DC055-A83C-4DA5-AFD7-D7910C3BF255}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.1 AwaitFileSystemWatcher", "..\AwaitFileSystemWatcher\15.1 AwaitFileSystemWatcher.csproj", "{1B65E627-2CEA-45F0-90B7-FC175ED5C2D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.1 ConfigureAwaitAndSchedulers", "ConfigureAwaitAndSchedulers\13.1 ConfigureAwaitAndSchedulers.csproj", "{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.5 Run vs Start New", "Run vs Start New\05.5 Run vs Start New.csproj", "{36E85A00-EBD8-4964-9E57-EEE30D731068}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -184,6 +190,18 @@ Global
 		{883DC055-A83C-4DA5-AFD7-D7910C3BF255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{883DC055-A83C-4DA5-AFD7-D7910C3BF255}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{883DC055-A83C-4DA5-AFD7-D7910C3BF255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B65E627-2CEA-45F0-90B7-FC175ED5C2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B65E627-2CEA-45F0-90B7-FC175ED5C2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B65E627-2CEA-45F0-90B7-FC175ED5C2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B65E627-2CEA-45F0-90B7-FC175ED5C2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E85A00-EBD8-4964-9E57-EEE30D731068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E85A00-EBD8-4964-9E57-EEE30D731068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E85A00-EBD8-4964-9E57-EEE30D731068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E85A00-EBD8-4964-9E57-EEE30D731068}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

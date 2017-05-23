@@ -20,11 +20,17 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
+        #region BadIdeaAsync
+
         private static async void BadIdeaAsync()
         {
             await Task.Delay(10);
             throw new NotSupportedException("Should it crash the application?");
         }
+
+        #endregion // BadIdeaAsync
+
+        #region GoodIdeaAsync
 
         private static async Task GoodIdeaAsync()
         {
@@ -32,7 +38,11 @@ namespace Bnaya.Samples
             throw new NotSupportedException("Should it crash the application?");
         }
 
-        // like command in WPF or event handling in general
+        #endregion // GoodIdeaAsync
+
+        #region WhenYouMustAsync
+
+        // like event handling in general
         private static void WhenYouMustAsync()
         {
             // wrap it
@@ -43,5 +53,7 @@ namespace Bnaya.Samples
             }
             Task _ = LocalAsync();
         }
+
+        #endregion // WhenYouMustAsync
     }
 }

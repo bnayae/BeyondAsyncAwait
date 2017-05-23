@@ -12,20 +12,38 @@ namespace Bnaya.Samples
             //CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(1.5));
             CancellationTokenSource cts = new CancellationTokenSource();
 
-            Task _ = ExecAsync(cts.Token);
+            Task _ = ListenToCancellationAsync(cts.Token);
 
             Thread.Sleep(1000);
             Console.WriteLine("Canceling");
 
-            RiskyCancellation(cts);
-            //SaferCancellation(cts);
+            #region Risky Cancellation
+
+            cts.Cancel();
+
+            #endregion // Risky Cancellation
+
+            #region Safer Cancellation
+
+            try
+            {
+                cts.Cancel();
+            }
+            catch (Exception)
+            {
+                // TODO: Log
+            }
+
+            #endregion // Safer Cancellation
 
             Console.WriteLine("Done");
 
             Console.ReadKey();
         }
 
-        private static async Task ExecAsync(CancellationToken token)
+        #region ListenToCancellationAsync
+
+        private static async Task ListenToCancellationAsync(CancellationToken token)
         {
             await Task.Delay(100);
             // you better check each and every registration
@@ -33,18 +51,6 @@ namespace Bnaya.Samples
 
         }
 
-        private static void RiskyCancellation(CancellationTokenSource cts) => cts.Cancel();
-
-        private static void SaferCancellation(CancellationTokenSource cts)
-        {
-            try
-            {
-                cts.Cancel();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Format(false));
-            }
-        }
-    }
+        #endregion // ListenToCancellationAsync        
+  }
 }

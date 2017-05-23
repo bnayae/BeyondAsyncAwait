@@ -109,7 +109,11 @@ namespace Bnaya.Samples
 
         private static async Task NonSequentialWithTdfAsync(int n)
         {
-            var abSequential = new ActionBlock<int>(SingleStepAsync, new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = n });
+            var abSequential = new ActionBlock<int>(SingleStepAsync, 
+                new ExecutionDataflowBlockOptions
+                        {
+                            MaxDegreeOfParallelism = n
+                        });
             for (int i = 0; i < 10; i++)
             {
                 abSequential.Post(i);

@@ -89,9 +89,13 @@ namespace Bnaya.Samples
         {
             var logic = new Logic();
 
-            await logic.VTapFashion(() => new ValueTask<string>(GetContent()), "Sync -> Wrap");
-            await logic.VTapFashion(() => GetContent().ToValueTask(), "TAP -> Wrap(sync)");
-            await logic.VTapFashion(async () => await GetContentAsync(), "TAP -> async");
+            string syncContent = GetContent();
+            await logic.VTapFashion(() => new ValueTask<string>(syncContent), "Sync -> Wrap");
+            await logic.VTapFashion(() => syncContent.ToValueTask(), "TAP -> Wrap(sync)");
+
+            Task<string> asyncContent = GetContentAsync();
+            await logic.VTapFashion(() =>  new ValueTask<string>(asyncContent), "TAP -> async");
+            await logic.VTapFashion(async () => await asyncContent, "TAP -> async");
 
             await logic.VTapFashion(GetValueContentAsync, "VTAP -> async");
         }

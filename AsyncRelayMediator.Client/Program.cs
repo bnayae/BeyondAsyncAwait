@@ -50,7 +50,7 @@ namespace AsyncRelayMediator.Client
             #endregion // User route selection
 
             Task _ = ExecRouteAsync(name, route);
-            Console.ReadKey();
+            Console.ReadLine();
 
         }
 

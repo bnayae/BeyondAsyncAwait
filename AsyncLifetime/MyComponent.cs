@@ -25,6 +25,5 @@ namespace Bnaya.Samples
             await Initilaized;
             return 42 * _config.Factor;
         }
-
     }
 }

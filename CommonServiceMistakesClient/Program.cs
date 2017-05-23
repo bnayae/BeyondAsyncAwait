@@ -8,7 +8,7 @@ namespace CommonServiceMistakesClient
 {
     class Program
     {
-        private const int MAX = 50;
+        private const int MAX = 100;
 
         private static readonly (string Title, string Server)[] SERVERS =
         {
@@ -141,7 +141,7 @@ namespace CommonServiceMistakesClient
         private static async Task CallAsync(string root, int times)
         {
             var sw = Stopwatch.StartNew();
-            using (var http = new HttpClient(new HttpClientHandler() { MaxConnectionsPerServer = 100 }))
+            using (var http = new HttpClient(new HttpClientHandler() { MaxConnectionsPerServer = 1000 }))
             {
                 var tasks = from i in Enumerable.Range(0, times)
                             let url = $"{root}{i}"

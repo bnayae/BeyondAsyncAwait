@@ -10,15 +10,22 @@ namespace Bnaya.Samples
 {
     public class BenchmarkCompute : IBenchmark
     {
+        #region Constants
+
         private const int THREAD_LEVEL = 10000;
         private const int WORK_LEVEL = 10000;
+
+        #endregion // Constants
+
+        #region CountdownEvents
+
         private static readonly CountdownEvent _cdPool = new CountdownEvent(THREAD_LEVEL);
         private static readonly CountdownEvent _cdThread = new CountdownEvent(THREAD_LEVEL);
 
+        #endregion // CountdownEvents
 
-#if Fx
-        [Benchmark]
-#endif
+        #region ExecPool
+
         public void ExecPool()
         {
             _cdPool.Reset();
@@ -33,10 +40,10 @@ namespace Bnaya.Samples
             _cdPool.Wait();
         }
 
+        #endregion // ExecPool
 
-#if Fx
-        [Benchmark]
-#endif
+        #region ExecThread
+
         public void ExecThread()
         {
             _cdThread.Reset();
@@ -54,6 +61,8 @@ namespace Bnaya.Samples
             _cdThread.Wait();
         }
 
+        #endregion // ExecThread
+
         #region UnitOfWork
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
@@ -66,5 +75,4 @@ namespace Bnaya.Samples
 
         #endregion // UnitOfWork   
     }
-
 }

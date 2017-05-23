@@ -16,6 +16,8 @@ namespace Bnaya.Samples
             Parallel.ForEach(data, item => Console.Write($"{item}, "));
         }
 
+        #region GetComputeData
+
         private static IEnumerable<int> GetBlockingData()
         {
             while (true)
@@ -24,6 +26,10 @@ namespace Bnaya.Samples
                 yield return (int)c;
             }
         }
+
+        #endregion // GetComputeData
+
+        #region GetComputeData
 
         [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoOptimization)]
         private static IEnumerable<int> GetComputeData()
@@ -36,5 +42,7 @@ namespace Bnaya.Samples
                 yield return j;
             }
         }
+
+        #endregion // GetComputeData
     }
 }

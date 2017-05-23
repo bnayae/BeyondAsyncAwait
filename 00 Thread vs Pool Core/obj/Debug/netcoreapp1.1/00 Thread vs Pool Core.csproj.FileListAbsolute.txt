@@ -6,3 +6,4 @@ C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Debug\netcoreapp1.1
 C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Debug\netcoreapp1.1\00 Thread vs Pool Core.AssemblyInfo.cs
 C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Debug\netcoreapp1.1\ThreadVsPoolCore.dll
 C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Debug\netcoreapp1.1\ThreadVsPoolCore.pdb
+C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Debug\netcoreapp1.1\00 Thread vs Pool Core.csprojResolveAssemblyReference.cache

@@ -14,16 +14,21 @@ namespace Bnaya.Samples
     {
         private readonly TaskCompletionSource<T> _taskSemantic;
 
+        #region Ctor
+
         public Completeble(T value)
         {
             Value = value;
             _taskSemantic = new TaskCompletionSource<T>();
         }
+
         private Completeble(T value, TaskCompletionSource<T> taskSemantic)
         {
             Value = value;
             _taskSemantic = taskSemantic;
         }
+
+        #endregion // Ctor
 
         public T Value { get; }
 
@@ -31,7 +36,7 @@ namespace Bnaya.Samples
 
         public bool TryComplete() => _taskSemantic.TrySetResult(Value);
 
-        public Completeble<T> ProceedWith(T nextValue) =>
+        public Completeble<T> ProceedWith(T nextValue) => // change the value keep the task semantic ref
                         new Completeble<T>(nextValue, _taskSemantic);
     }
 }

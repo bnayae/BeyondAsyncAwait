@@ -14,6 +14,8 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
+        #region DefaultAsync
+
         private static async Task DefaultAsync()
         {
             try
@@ -25,6 +27,10 @@ namespace Bnaya.Samples
                 Console.WriteLine(ex);
             }
         }
+
+        #endregion // DefaultAsync
+
+        #region FormatAsync
 
         private static async Task FormatAsync()
         {
@@ -38,6 +44,9 @@ namespace Bnaya.Samples
             }
         }
 
+        #endregion // FormatAsync
+
+        #region DefaultMultiAsync
 
         private static async Task DefaultMultiAsync()
         {
@@ -51,6 +60,10 @@ namespace Bnaya.Samples
             }
         }
 
+        #endregion // DefaultMultiAsync
+
+        #region FormatMultiAsync
+
         private static async Task FormatMultiAsync()
         {
             try
@@ -63,12 +76,19 @@ namespace Bnaya.Samples
             }
         }
 
+        #endregion // FormatMultiAsync
+
+        #region StepAAsync
 
         private static async Task StepAAsync()
         {
             await Task.Delay(1);
             await StepBAsync();
         }
+
+        #endregion // StepAAsync
+
+        #region StepBAsync
 
         private static async Task StepBAsync()
         {
@@ -77,11 +97,19 @@ namespace Bnaya.Samples
             await Task.WhenAll(t1, t2).ThrowAll();
         }
 
+        #endregion // StepBAsync
+
+        #region Step1Async
+
         private static async Task Step1Async()
         {
             await Task.Delay(1);
             await Step2Async();
         }
+
+        #endregion // Step1Async
+
+        #region Step2Async
 
         private static async Task Step2Async()
         {
@@ -96,16 +124,26 @@ namespace Bnaya.Samples
             }
         }
 
+        #endregion // Step2Async
+
+        #region Step3Async
+
         private static async Task Step3Async()
         {
             await Task.Delay(1);
             await Step4Async();
         }
 
+        #endregion // Step3Async
+
+        #region Step4Async
+
         private static async Task Step4Async()
         {
             await Task.Delay(1);
             throw new FormatException("Illegal");
         }
-    }
+ 
+        #endregion // Step4Async
+   }
 }

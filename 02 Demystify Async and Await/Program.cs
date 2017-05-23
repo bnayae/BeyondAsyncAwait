@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace Bnaya.Samples
             Task t = CanBeTrickyAsync();
             //Task t = AlsoTrickyAsync();
             //Task t = ExpectedAsync();
+            //Task t = MultiAwaitAsync();
             Info("Main");
             while (!t.IsCompleted)
             {
@@ -22,12 +24,30 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
+        #region CanBeTrickyAsync
+
         private static async Task CanBeTrickyAsync()
         {
             Info("CanBeTrickyAsync Start");
             Thread.Sleep(2000);
             Info("CanBeTrickyAsync End");
         }
+
+        #endregion // CanBeTrickyAsync
+
+        #region CanBeTrickyDemystifyAsync
+
+        private static Task CanBeTrickyDemystifyAsync()
+        {
+            Info("CanBeTrickyAsync Start");
+            Thread.Sleep(2000);
+            Info("CanBeTrickyAsync End");
+            return Task.CompletedTask;
+        }
+
+        #endregion // CanBeTrickyDemystifyAsync
+
+        #region AlsoTrickyAsync
 
         private static async Task AlsoTrickyAsync()
         {
@@ -37,6 +57,10 @@ namespace Bnaya.Samples
             Info("AlsoTrickyAsync End");
         }
 
+        #endregion // AlsoTrickyAsync
+
+        #region ExpectedAsync
+
         private static async Task ExpectedAsync()
         {
             Info("ExpectedAsync Start");
@@ -44,10 +68,32 @@ namespace Bnaya.Samples
             Info("ExpectedAsync End");
         }
 
+        #endregion // ExpectedAsync
+
+        #region MultiAwaitAsync
+
+        private static async Task MultiAwaitAsync()
+        {
+            var sw = Stopwatch.StartNew();
+            Info("ExpectedAsync Start");
+            await Task.Delay(2000);
+            Info("ExpectedAsync Processing");
+            await Task.Delay(2000);
+            Info("ExpectedAsync End");
+            sw.Stop();
+            Console.WriteLine($"Duration = {sw.Elapsed:hh':'mm':'ss'.'fff}");
+        }
+
+        #endregion // MultiAwaitAsync
+
+        #region Info
+
         private static void Info(string title)
         {
             var trd = Thread.CurrentThread;
             Console.WriteLine($"{title} [{trd.ManagedThreadId}]");
         }
+
+        #endregion // Info
     }
 }

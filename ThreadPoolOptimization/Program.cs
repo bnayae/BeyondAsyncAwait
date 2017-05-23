@@ -23,11 +23,35 @@ namespace Bnaya.Samples
     class Program
     {
         // TODO: Change the modes
-        private const Mode MODE = Mode.ThreadPool;
+        private static Mode ExecMode = Mode.ThreadPool;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Start");
+
+
+            #region User choice of Mode
+            Console.WriteLine(@"Select
+    1. Thread Pool
+    2. Task
+    3. Fair Task");
+
+            char c = Console.ReadKey(true).KeyChar;
+
+            switch (c)
+            {
+                case '1':
+                    ExecMode = Mode.ThreadPool;
+                    break;
+                case '2':
+                    ExecMode = Mode.Task;
+                    break;
+                default:
+                    ExecMode = Mode.FairTask;
+                    break;
+            }
+
+            #endregion // User choice of Mode
 
             for (int i = 0; i < 2; i++)
             {
@@ -39,7 +63,7 @@ namespace Bnaya.Samples
             for (int i = 2; i < Environment.ProcessorCount + 2; i++)
             {
                 int id = i;
-                Invoke(() => DoWork("Parent " + i, 1000));
+                Invoke(() => DoWork("Parent " + id, 1000));
             }
 
             Console.ReadKey();
@@ -49,7 +73,7 @@ namespace Bnaya.Samples
 
         private static void Invoke(Action action)
         {
-            switch (MODE)
+            switch (ExecMode)
             {
                 case Mode.ThreadPool:
                     ThreadPool.QueueUserWorkItem(state => action());

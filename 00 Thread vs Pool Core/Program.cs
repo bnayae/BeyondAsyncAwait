@@ -10,14 +10,39 @@ namespace Bnaya.Samples
 {
     class Program
     {
-        private readonly static IBenchmark _banchmark = new BenchmarkCompute();
-        //private readonly static IBenchmark _banchmark = new BenchmarkIO(); // pool starvation
-        //private readonly static IBenchmark _banchmark = new BenchmarkAwaitIO(); // pool starvation
+        private readonly static IBenchmark _banchmarkCompute = new BenchmarkCompute();
+        private readonly static IBenchmark _banchmarkIO = new BenchmarkIO(); // pool starvation
+        private readonly static IBenchmark _banchmarkAwaitIO = new BenchmarkAwaitIO(); // pool starvation
 
         static void Main(string[] args)
         {
             Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
-           
+
+            #region _banchmark = ...
+
+            Console.WriteLine(@"Select
+1. Compute
+2. IO blocking
+3. IO with Await");
+            char c = Console.ReadKey(true).KeyChar;
+            IBenchmark _banchmark;
+            switch (c)
+            {
+                case '1':
+                    _banchmark = _banchmarkCompute;
+                    break;
+                case '2':
+                    _banchmark = _banchmarkIO;
+                    break;
+                case '3':
+                    _banchmark = _banchmarkAwaitIO;
+                    break;
+                default:
+                    throw new NotSupportedException();
+            }
+
+            #endregion // _banchmark = ...
+
             #region Warm-up
 
             Thread t = new Thread(() => { });
@@ -26,13 +51,6 @@ namespace Bnaya.Samples
             Thread.Sleep(200);
 
             #endregion // Warm-up
-
-
-#if Fx
-            //var summary = BenchmarkRunner.Run<BenchmarkCompute>();
-            ////var summary = BenchmarkRunner.Run<BenchmarkIO>();
-            //Console.WriteLine(summary);
-#endif
 
             for (int i = 0; i < 3; i++)
             {

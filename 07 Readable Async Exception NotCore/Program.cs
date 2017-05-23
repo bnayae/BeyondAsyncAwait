@@ -8,9 +8,9 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            Task _ = DefaultAsync();
+            //Task _ = DefaultAsync();
             //Task _ = FormatAsync();
-            //Task _ = FriendlyStackAsync();
+            Task _ = FriendlyStackAsync();
             //Task _ = DefaultMultiAsync();
             //Task _ = FormatMultiAsync();
             //Task _ = FriendlyStackMultiAsync();
