@@ -1,9 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Release\netcoreapp1.1\ReadableAsyncException.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Release\netcoreapp1.1\ReadableAsyncException.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Release\netcoreapp1.1\ReadableAsyncException.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Release\netcoreapp1.1\ReadableAsyncException.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\bin\Release\netcoreapp1.1\ReadableAsyncException.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Release\netcoreapp1.1\06 Readable Async Exception.csprojResolveAssemblyReference.cache
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Release\netcoreapp1.1\06 Readable Async Exception.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Release\netcoreapp1.1\ReadableAsyncException.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\06 Readable Async Exception\obj\Release\netcoreapp1.1\ReadableAsyncException.pdb

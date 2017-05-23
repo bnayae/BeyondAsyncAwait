@@ -1,9 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\bin\Release\netcoreapp1.1\13 Common Service Mistakes Client.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\bin\Release\netcoreapp1.1\13 Common Service Mistakes Client.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\bin\Release\netcoreapp1.1\13 Common Service Mistakes Client.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\bin\Release\netcoreapp1.1\13 Common Service Mistakes Client.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\bin\Release\netcoreapp1.1\13 Common Service Mistakes Client.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\obj\Release\netcoreapp1.1\13 Common Service Mistakes Client.csprojResolveAssemblyReference.cache
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\obj\Release\netcoreapp1.1\13 Common Service Mistakes Client.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\obj\Release\netcoreapp1.1\13 Common Service Mistakes Client.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakesClient\obj\Release\netcoreapp1.1\13 Common Service Mistakes Client.pdb

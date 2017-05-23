@@ -1,8 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Release\netcoreapp1.1\ThreadVsPoolCore.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Release\netcoreapp1.1\ThreadVsPoolCore.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Release\netcoreapp1.1\ThreadVsPoolCore.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Release\netcoreapp1.1\ThreadVsPoolCore.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\bin\Release\netcoreapp1.1\ThreadVsPoolCore.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Release\netcoreapp1.1\00 Thread vs Pool Core.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Release\netcoreapp1.1\ThreadVsPoolCore.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\00 Thread vs Pool Core\obj\Release\netcoreapp1.1\ThreadVsPoolCore.pdb

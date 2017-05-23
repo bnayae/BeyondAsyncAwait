@@ -21,12 +21,7 @@ namespace Bnaya.Samples
         private IImmutableList<string> _context => 
             _contexts.Value ?? ImmutableList<string>.Empty;
 
-        public string GetContext<T>(T title, [CallerMemberName]string source = null)
-        {
-            string items = string.Join("\r\n", _context);
-            return $@"============= {source} {title} ===========
-{items}";
-        }
+        #region Add
 
         public IEnumerable<string> Add<T>(T value, [CallerMemberName]string source =null)
         {
@@ -34,5 +29,20 @@ namespace Bnaya.Samples
             _contexts.Value = current;
             return current;
         }
+
+        #endregion // Add
+
+        #region GetContext
+
+        public string GetContext<T>(
+            T title, 
+            [CallerMemberName]string source = null)
+        {
+            string items = string.Join("\r\n", _context);
+            return $@"============= {source} {title} ===========
+{items}";
+        }
+
+        #endregion // GetContext
     }
 }

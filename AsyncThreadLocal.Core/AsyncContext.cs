@@ -18,15 +18,8 @@ namespace Bnaya.Samples
 
         private AsyncLocal<ConcurrentQueue<string>> _contexts =
             new AsyncLocal<ConcurrentQueue<string>>();
-            
 
-        public string GetContext<T>(T title, [CallerMemberName]string source = null)
-        {
-            var context = _contexts.Value ?? Enumerable.Empty<string>();
-            string items = string.Join("\r\n", context);
-            return $@"============= {source} {title} ===========
-{items}";
-        }
+        #region Add
 
         public IEnumerable<string> Add<T>(T value, [CallerMemberName]string source =null)
         {
@@ -40,5 +33,21 @@ namespace Bnaya.Samples
             context.Enqueue($"{source}: {value}");
             return context;
         }
+
+        #endregion // Add
+
+        #region GetContext
+
+        public string GetContext<T>(
+            T title, 
+            [CallerMemberName]string source = null)
+        {
+            var context = _contexts.Value ?? Enumerable.Empty<string>();
+            string items = string.Join("\r\n", context);
+            return $@"============= {source} {title} ===========
+{items}";
+        }
+
+        #endregion // GetContext
     }
 }

@@ -1,6 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Release\Parallel Loop Pitfall NotCore.exe.config
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Release\Parallel Loop Pitfall NotCore.exe
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\bin\Release\Parallel Loop Pitfall NotCore.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Release\04 Parallel Loop Pitfall NotCore.csprojResolveAssemblyReference.cache
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Release\Parallel Loop Pitfall NotCore.exe
-C:\TFS\GIT\Async\BeyondAsyncAwait\04 03 Parallel Loop Pitfall NotCore\obj\Release\Parallel Loop Pitfall NotCore.pdb

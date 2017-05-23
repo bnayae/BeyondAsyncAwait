@@ -1,8 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\bin\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\bin\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\bin\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\obj\Debug\netcoreapp1.1\08 Semantical Task - With Exceptions.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\bin\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\bin\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\obj\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\08 Semantical Task - With Exceptions\obj\Debug\netcoreapp1.1\SemanticalTaskWithExceptions.pdb

@@ -1,8 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\bin\Release\netcoreapp1.1\VoidAsync.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\bin\Release\netcoreapp1.1\VoidAsync.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\bin\Release\netcoreapp1.1\VoidAsync.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\bin\Release\netcoreapp1.1\VoidAsync.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\bin\Release\netcoreapp1.1\VoidAsync.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\obj\Release\netcoreapp1.1\09 Void Async.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\obj\Release\netcoreapp1.1\VoidAsync.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\09 Void Async\obj\Release\netcoreapp1.1\VoidAsync.pdb

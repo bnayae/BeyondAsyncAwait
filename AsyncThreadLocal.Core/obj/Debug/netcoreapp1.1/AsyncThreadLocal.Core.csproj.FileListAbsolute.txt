@@ -1,9 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\bin\Debug\netcoreapp1.1\AsyncThreadLocal.Core.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\bin\Debug\netcoreapp1.1\AsyncThreadLocal.Core.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\bin\Debug\netcoreapp1.1\AsyncThreadLocal.Core.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\bin\Debug\netcoreapp1.1\AsyncThreadLocal.Core.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\obj\Debug\netcoreapp1.1\AsyncThreadLocal.Core.csprojResolveAssemblyReference.cache
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\obj\Debug\netcoreapp1.1\AsyncThreadLocal.Core.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\bin\Debug\netcoreapp1.1\AsyncThreadLocal.Core.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\obj\Debug\netcoreapp1.1\AsyncThreadLocal.Core.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\AsyncThreadLocal.Core\obj\Debug\netcoreapp1.1\AsyncThreadLocal.Core.pdb

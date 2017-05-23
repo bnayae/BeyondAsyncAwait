@@ -1,9 +1,0 @@
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\obj\Debug\netcoreapp1.1\13 Common Service Mistakes.AssemblyInfo.cs
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\bin\Debug\netcoreapp1.1\CommonServiceMistakes.deps.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\bin\Debug\netcoreapp1.1\CommonServiceMistakes.runtimeconfig.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\bin\Debug\netcoreapp1.1\CommonServiceMistakes.runtimeconfig.dev.json
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\bin\Debug\netcoreapp1.1\CommonServiceMistakes.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\bin\Debug\netcoreapp1.1\CommonServiceMistakes.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\obj\Debug\netcoreapp1.1\CommonServiceMistakes.dll
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\obj\Debug\netcoreapp1.1\CommonServiceMistakes.pdb
-C:\TFS\GIT\Async\BeyondAsyncAwait\CommonServiceMistakes\obj\Debug\netcoreapp1.1\13 Common Service Mistakes.csprojResolveAssemblyReference.cache
