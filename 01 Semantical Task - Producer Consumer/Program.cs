@@ -25,13 +25,14 @@ namespace Bnaya.Samples
             // start the second message processing loop
             _tmr = new Timer(SecondStageAsync, null, TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(5));
             // start the third message processing loop
-            Task _ = FinalStageAsync(); 
+            Task _ = TrdStageAsync(); 
             // define the last message processing handler
             _finalProcesing = new ActionBlock<Completeble<string>>(ProcessFinalStageAsync);
 
             #endregion // Setup Stage Listeners
 
             // start sending messages
+            //Task<string> t = FirstStageAsync("Single Call");
             Task<string[]> t = StartAsync();
 
             // hangout until all messages completes
@@ -40,6 +41,7 @@ namespace Bnaya.Samples
                 Console.Write(".");
                 Thread.Sleep(100);
             }
+            
             Console.WriteLine($"\r\nAll Task completes [{t.Result.Length}] messages");
             _secondQueue.CompleteAdding();
             Console.ReadKey(true);
@@ -47,18 +49,19 @@ namespace Bnaya.Samples
 
         #endregion // Main
 
-        #region StartAsync
+ 
+        #region StartAsync -=> FirstStageAsync
 
         private static Task<string[]> StartAsync()
         {
-            var tasks = from i in Enumerable.Range(1, 3)
+            var tasks = from i in Enumerable.Range(1, 4)
                         select FirstStageAsync($"Message in a bottle {i}");
             return Task.WhenAll(tasks);
         }
 
-        #endregion // StartAsync
+        #endregion // StartAsync -=> FirstStageAsync
 
-        #region FirstStageAsync
+        #region FirstStageAsync > _firstQueue
 
         private static async Task<string> FirstStageAsync(string input)
         {
@@ -72,9 +75,9 @@ namespace Bnaya.Samples
             return result;
         }
 
-        #endregion // FirstStageAsync
+        #endregion // FirstStageAsync > _firstQueue
 
-        #region SecondStageAsync
+        #region _firstQueue > SecondStageAsync > _secondQueue
 
         private static void SecondStageAsync(object state)
         {
@@ -89,11 +92,11 @@ namespace Bnaya.Samples
             }
         }
 
-        #endregion // SecondStageAsync
+        #endregion // _firstQueue > SecondStageAsync > _secondQueue
 
-        #region FinalStageAsync
+        #region _secondQueue > TrdStageAsync > _finalProcesing (queued)
 
-        private static async Task FinalStageAsync()
+        private static async Task TrdStageAsync()
         {
             // make the rest of the code async 
             // otherwise you will have dead lock (GetConsumingEnumerable is 
@@ -112,9 +115,9 @@ namespace Bnaya.Samples
             }
         }
 
-        #endregion // FinalStageAsync
+        #endregion // _secondQueue > TrdStageAsync > _finalProcesing (queued)
 
-        #region ProcessFinalStageAsync
+        #region ProcessFinalStageAsync ~> Task Complete
 
         private static async Task ProcessFinalStageAsync(Completeble<string> message)
         {
@@ -127,6 +130,6 @@ namespace Bnaya.Samples
                 Console.WriteLine("Completion failed (can only complete once)");
         }
 
-        #endregion // ProcessFinalStageAsync
+        #endregion // ProcessFinalStageAsync ~> Task Complete
     }
 }

@@ -22,8 +22,15 @@ namespace Bnaya.Samples
 
         public async Task<int> GetData()
         {
-            await Initilaized;
-            return 42 * _config.Factor;
+            try
+            {
+                await Initilaized;
+                return 42 * _config.Factor;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

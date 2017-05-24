@@ -23,11 +23,12 @@ namespace Bnaya.Samples
         private static async Task ShouldBeSequentialAsync()
         {
             Console.Write("1 ");
+           
             await Task.Factory.StartNew(async () =>
             {
                 await Task.Delay(1000);
                 Console.Write("2 ");
-            });
+            }).Unwrap();
             Console.Write("3 ");
         }
     }

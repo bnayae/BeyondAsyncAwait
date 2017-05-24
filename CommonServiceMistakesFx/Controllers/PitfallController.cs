@@ -19,6 +19,7 @@ namespace CommonServiceMistakesFx.Controllers
         [HttpGet]
         public int GetDeadlockSync()
         {
+            //SynchronizationContext.Current
             Task<int> t = InContextAsync();
             var result = t.Result;
             return result;

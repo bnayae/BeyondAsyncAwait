@@ -94,7 +94,7 @@ namespace Bnaya.Samples
             await logic.VTapFashion(() => syncContent.ToValueTask(), "TAP -> Wrap(sync)");
 
             Task<string> asyncContent = GetContentAsync();
-            await logic.VTapFashion(() =>  new ValueTask<string>(asyncContent), "TAP -> async");
+            await logic.VTapFashion(() => new ValueTask<string>(asyncContent), "TAP -> async");
             await logic.VTapFashion(async () => await asyncContent, "TAP -> async");
 
             await logic.VTapFashion(GetValueContentAsync, "VTAP -> async");

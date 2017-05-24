@@ -10,9 +10,9 @@ namespace Bnaya.Samples
         {
             Console.WriteLine("Avoid async Void!!!");
 
-            BadIdeaAsync();
+            //BadIdeaAsync();
             //Task _ = GoodIdeaAsync();
-            //WhenYouMustAsync();
+            WhenYouMustAsync();
 
             Console.WriteLine("Still working");
             Thread.Sleep(1000);
@@ -46,12 +46,13 @@ namespace Bnaya.Samples
         private static void WhenYouMustAsync()
         {
             // wrap it
+            Task _ = LocalAsync();
+
             async Task LocalAsync() // C# 7 local function
             {
                 await Task.Delay(10);
                 throw new NotSupportedException("Should it crash the application?");
             }
-            Task _ = LocalAsync();
         }
 
         #endregion // WhenYouMustAsync

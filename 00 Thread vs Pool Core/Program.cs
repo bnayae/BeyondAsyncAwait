@@ -18,7 +18,7 @@ namespace Bnaya.Samples
         {
             Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
 
-            #region _banchmark = ...
+            #region _banchmark = switch (Console.ReadKey())
 
             Console.WriteLine(@"Select
 1. Compute
@@ -41,7 +41,7 @@ namespace Bnaya.Samples
                     throw new NotSupportedException();
             }
 
-            #endregion // _banchmark = ...
+            #endregion // _banchmark =  = switch (Console.ReadKey())
 
             #region Warm-up
 

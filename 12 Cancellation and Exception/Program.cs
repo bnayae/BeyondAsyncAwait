@@ -9,7 +9,7 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Console.WriteLine("Start");
-            //CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(1.5));
+            //CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(1));
             CancellationTokenSource cts = new CancellationTokenSource();
 
             Task _ = ListenToCancellationAsync(cts.Token);
@@ -25,14 +25,14 @@ namespace Bnaya.Samples
 
             #region Safer Cancellation
 
-            try
-            {
-                cts.Cancel();
-            }
-            catch (Exception)
-            {
-                // TODO: Log
-            }
+            //try
+            //{
+            //    cts.Cancel();
+            //}
+            //catch (Exception)
+            //{
+            //    // TODO: Log
+            //}
 
             #endregion // Safer Cancellation
 

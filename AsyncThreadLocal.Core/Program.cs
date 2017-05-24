@@ -23,19 +23,20 @@ namespace Bnaya.Samples
     /// </remarks>
     public class Program
     {
-        private static readonly IAsyncContext _context = AsyncImmutableContext.Instance;
-        //private static readonly IAsyncContext _context = AsyncContext.Instance;
+        //private static readonly IAsyncContext _context = AsyncImmutableContext.Instance;
+        private static readonly IAsyncContext _context = AsyncContext.Instance;
 
-        private static Func<int, Task> _executer = SeqAsync;
-        //private static Func<int, Task> _executer = ForkJoinAsync;
+        //private static Func<int, Task> _executer = SeqAsync;
+        private static Func<int, Task> _executer = ForkJoinAsync;
 
         public static void Main()
         {
-            var tasks = from i in Enumerable.Range(0, 3)
-                        select _executer(i);
+            _executer(10);
+            //var tasks = from i in Enumerable.Range(0, 3)
+            //            select _executer(i);
 
-            Task.WaitAll(tasks.ToArray()); // Don't get use to use Wait
-            Console.WriteLine("Done");
+            //Task.WaitAll(tasks.ToArray()); // Don't get use to use Wait
+            //Console.WriteLine("Done");
             Console.ReadKey();
         }
 

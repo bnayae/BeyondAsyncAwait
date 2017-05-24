@@ -13,7 +13,7 @@ namespace Bnaya.Samples
     {
         #region Constants
 
-        private const int THREAD_LEVEL = 200; //50000;
+        private const int THREAD_LEVEL = 10000; //50000;
         private const int WORK_LEVEL = 100; //10000;
 
         #endregion // Constants

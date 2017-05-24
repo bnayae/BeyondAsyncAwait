@@ -20,7 +20,7 @@ namespace Bnaya.Samples
         {
             _fsw = fsw;
             //_fsw.NotifyFilter = NotifyFilters.Attributes | NotifyFilters.DirectoryName | NotifyFilters.FileName | NotifyFilters.LastWrite;
-            _fsw.IncludeSubdirectories = true;
+            //_fsw.IncludeSubdirectories = true;
         }
 
         public bool IsCompleted => !IsNullOrEmpty(_result);

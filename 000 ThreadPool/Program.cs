@@ -13,8 +13,8 @@ namespace _000_ThreadPool
             {
                 ThreadPool.QueueUserWorkItem(state =>
                 {
-                    Console.Write("-");
-                    Thread.Sleep(5000); // thread pool starvetion
+                    Console.Write(">");
+                    Thread.Sleep(7000); // thread pool starvation
                     Console.Write("|");
                     Interlocked.Decrement(ref _count);
                 }, i);
