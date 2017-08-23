@@ -32,8 +32,8 @@ namespace Bnaya.Samples
             #endregion // Setup Stage Listeners
 
             // start sending messages
-            //Task<string> t = FirstStageAsync("Single Call");
-            Task<string[]> t = StartAsync();
+            Task<string> t = FirstStageAsync("Single Call");
+            //Task<string[]> t = StartAsync();
 
             // hangout until all messages completes
             while (!t.IsCompleted)
@@ -42,7 +42,7 @@ namespace Bnaya.Samples
                 Thread.Sleep(100);
             }
             
-            Console.WriteLine($"\r\nAll Task completes [{t.Result.Length}] messages");
+            Console.WriteLine($"\r\nDone");
             _secondQueue.CompleteAdding();
             Console.ReadKey(true);
         }

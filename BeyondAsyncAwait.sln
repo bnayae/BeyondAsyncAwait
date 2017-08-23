@@ -1,23 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{2DC63681-DD0A-4DC8-9831-FF59C09992D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{2DC63681-DD0A-4DC8-9831-FF59C09992D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Parallel Loop Pitfall NotCore", "04 03 Parallel Loop Pitfall NotCore\04 Parallel Loop Pitfall NotCore.csproj", "{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Loop Patterns", "05 Loop Patterns\05 Loop Patterns.csproj", "{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05 Loop Patterns", "05 Loop Patterns\05 Loop Patterns.csproj", "{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Readable Async Exception", "06 Readable Async Exception\06 Readable Async Exception.csproj", "{9CA101FA-E97D-4A44-9126-00F3A1856B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06 Readable Async Exception", "06 Readable Async Exception\06 Readable Async Exception.csproj", "{9CA101FA-E97D-4A44-9126-00F3A1856B54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Readable Async Exception NotCore", "07 Readable Async Exception NotCore\07 Readable Async Exception NotCore.csproj", "{8236A2A1-F398-42D1-BC2F-BD202BD9F4A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08 Semantical Task - With Exceptions", "08 Semantical Task - With Exceptions\08 Semantical Task - With Exceptions.csproj", "{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08 Semantical Task - With Exceptions", "08 Semantical Task - With Exceptions\08 Semantical Task - With Exceptions.csproj", "{4C3110DB-0E34-4975-A2F3-4FE2FB53D6B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5DFC83C2-EE4E-418B-AF32-D7E3DB0DE2A8}"
 	ProjectSection(SolutionItems) = preProject
@@ -26,33 +26,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 Abortable Cancellation", "09 Abortable Cancellation\10 Abortable Cancellation.csproj", "{AFB2AA32-3BD0-4D5B-BA4E-B0DB44E8F046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 Lazy Cancellation", "10 Lazy Cancellation\11 Lazy Cancellation.csproj", "{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11 Lazy Cancellation", "10 Lazy Cancellation\11 Lazy Cancellation.csproj", "{098EFAE2-DCF1-49C8-9FA7-3F8827825BB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09 Void Async", "09 Void Async\09 Void Async.csproj", "{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09 Void Async", "09 Void Async\09 Void Async.csproj", "{37391B52-EED2-4F7D-9C2A-B5666A6ECD9A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12 Cancellation and Exception", "12 Cancellation and Exception\12 Cancellation and Exception.csproj", "{D98345B9-F307-4EA0-AE4B-BF33EFF10D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 Common Service Mistakes", "CommonServiceMistakes\13 Common Service Mistakes.csproj", "{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13 Common Service Mistakes", "CommonServiceMistakes\13 Common Service Mistakes.csproj", "{07150DB2-759C-4C97-BA0D-28DB0B2B70E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 Common Service Mistakes Client", "CommonServiceMistakesClient\13 Common Service Mistakes Client.csproj", "{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13 Common Service Mistakes Client", "CommonServiceMistakesClient\13 Common Service Mistakes Client.csproj", "{C4C86D93-15F4-4F5D-9557-B3F0D3999FD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13 CommonServiceMistakesFx", "CommonServiceMistakesFx\13 CommonServiceMistakesFx.csproj", "{69C080B7-A47B-4E05-8B5D-9C9F3C63B521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 Thread vs Pool Core", "00 Thread vs Pool Core\00 Thread vs Pool Core.csproj", "{D05AA901-2D78-40BE-A29B-B166043D2A58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00 Thread vs Pool Core", "00 Thread vs Pool Core\00 Thread vs Pool Core.csproj", "{D05AA901-2D78-40BE-A29B-B166043D2A58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 Thread vs Pool Fx", "00 Thread vs Pool Fx\00 Thread vs Pool Fx.csproj", "{C95EA8CC-7C7A-45C4-A27C-0D60325595ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0   ThreadPool", "000 ThreadPool\0   ThreadPool.csproj", "{F73CE361-A0C7-4058-8E43-3E0F71C9FB63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0   ThreadPool", "000 ThreadPool\0   ThreadPool.csproj", "{F73CE361-A0C7-4058-8E43-3E0F71C9FB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 AsyncThreadLocal.Core", "AsyncThreadLocal.Core\17 AsyncThreadLocal.Core.csproj", "{A1F1B949-FBDA-4C26-A13E-473889B93294}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17 AsyncThreadLocal.Core", "AsyncThreadLocal.Core\17 AsyncThreadLocal.Core.csproj", "{A1F1B949-FBDA-4C26-A13E-473889B93294}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{221788FB-BD6A-4CE4-9F0E-817172FFD4A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14 OpenFilePitfallFx", "OpenFilePitfallFx\14 OpenFilePitfallFx.csproj", "{7632C2DE-0BAC-4AA0-8A3A-23624427B5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16 AsyncLifetime", "AsyncLifetime\16 AsyncLifetime.csproj", "{CBB03FB5-2A5D-49E4-89C1-0C2B47AC2A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16 AsyncLifetime", "AsyncLifetime\16 AsyncLifetime.csproj", "{CBB03FB5-2A5D-49E4-89C1-0C2B47AC2A82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18 AsyncCriticalSection", "AsyncCriticalSection\18 AsyncCriticalSection.csproj", "{957A0545-4DC8-4906-812B-FA433A68CEB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18 AsyncCriticalSection", "AsyncCriticalSection\18 AsyncCriticalSection.csproj", "{957A0545-4DC8-4906-812B-FA433A68CEB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15 DesignAsyncAPI", "DesignAsyncAPI\15 DesignAsyncAPI.csproj", "{D668A262-AA04-4105-8B96-31DB6F897BB3}"
 EndProject
@@ -66,11 +66,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Service"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Client", "AsyncRelayMediator.Client\AsyncRelayMediator.Client.csproj", "{883DC055-A83C-4DA5-AFD7-D7910C3BF255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.1 ConfigureAwaitAndSchedulers", "ConfigureAwaitAndSchedulers\13.1 ConfigureAwaitAndSchedulers.csproj", "{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.1 ConfigureAwaitAndSchedulers", "ConfigureAwaitAndSchedulers\13.1 ConfigureAwaitAndSchedulers.csproj", "{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.5 Run vs Start New", "Run vs Start New\05.5 Run vs Start New.csproj", "{36E85A00-EBD8-4964-9E57-EEE30D731068}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.5 Run vs Start New", "Run vs Start New\05.5 Run vs Start New.csproj", "{36E85A00-EBD8-4964-9E57-EEE30D731068}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.2 AwaitFileSystemWatcherFx", "AwaitFileSystemWatcherFx\15.2 AwaitFileSystemWatcherFx.csproj", "{4A099FEE-4494-4166-AFB1-A1F76F6171B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.1 Async Download", "..\02.1 Async Download\02.1 Async Download.csproj", "{973801BB-9703-4D30-B097-EE02799B9308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.2 DeadLock Async", "02.2 DeadLock Async\02.2 DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.1 Async Init", "016.1 Async Init\16.1 Async Init.csproj", "{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17 AsyncLocal Simple", "17 AsyncLocal Simple\17 AsyncLocal Simple.csproj", "{451977D5-2D86-412E-88AA-AE3C2EB83369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{D06D9236-B7E8-47E4-812D-3911FA7AE224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -200,6 +210,26 @@ Global
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{451977D5-2D86-412E-88AA-AE3C2EB83369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451977D5-2D86-412E-88AA-AE3C2EB83369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451977D5-2D86-412E-88AA-AE3C2EB83369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451977D5-2D86-412E-88AA-AE3C2EB83369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06D9236-B7E8-47E4-812D-3911FA7AE224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06D9236-B7E8-47E4-812D-3911FA7AE224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06D9236-B7E8-47E4-812D-3911FA7AE224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06D9236-B7E8-47E4-812D-3911FA7AE224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -208,5 +238,8 @@ Global
 		{D7586A15-60BF-4D7B-8E5A-D98C1BBDDC72} = {5E4A0833-14A1-4F5E-8DC6-A48C7CB8FBFE}
 		{CF4A6A1A-708C-4A4A-8B52-7AFBB72DB4FF} = {5E4A0833-14A1-4F5E-8DC6-A48C7CB8FBFE}
 		{883DC055-A83C-4DA5-AFD7-D7910C3BF255} = {5E4A0833-14A1-4F5E-8DC6-A48C7CB8FBFE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}
 	EndGlobalSection
 EndGlobal

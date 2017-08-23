@@ -7,10 +7,10 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            Task _ = DefaultAsync();
+            //Task _ = DefaultAsync();
             //Task _ = FormatAsync();
             //Task _ = DefaultMultiAsync();
-            //Task _ = FormatMultiAsync();
+            Task _ = FormatMultiAsync();
             Console.ReadKey();
         }
 
@@ -78,27 +78,6 @@ namespace Bnaya.Samples
 
         #endregion // FormatMultiAsync
 
-        #region StepAAsync
-
-        private static async Task StepAAsync()
-        {
-            await Task.Delay(1);
-            await StepBAsync();
-        }
-
-        #endregion // StepAAsync
-
-        #region StepBAsync
-
-        private static async Task StepBAsync()
-        {
-            var t1 = Task.Run(() => throw new ArgumentException("Other Error"));
-            var t2 = Step1Async();
-            await Task.WhenAll(t1, t2).ThrowAll();
-        }
-
-        #endregion // StepBAsync
-
         #region Step1Async
 
         private static async Task Step1Async()
@@ -145,5 +124,26 @@ namespace Bnaya.Samples
         }
  
         #endregion // Step4Async
+
+        #region StepAAsync
+
+        private static async Task StepAAsync()
+        {
+            await Task.Delay(1);
+            await StepBAsync();
+        }
+
+        #endregion // StepAAsync
+
+        #region StepBAsync
+
+        private static async Task StepBAsync()
+        {
+            var t1 = Task.Run(() => throw new ArgumentException("Other Error"));
+            var t2 = Step1Async();
+            await Task.WhenAll(t1, t2).ThrowAll();
+        }
+
+        #endregion // StepBAsync
    }
 }

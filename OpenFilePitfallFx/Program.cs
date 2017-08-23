@@ -1,4 +1,4 @@
-﻿//#define OK
+﻿#define OK
 
 using System;
 using System.IO;

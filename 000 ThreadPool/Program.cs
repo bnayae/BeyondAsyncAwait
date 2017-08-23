@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace _000_ThreadPool
@@ -6,6 +7,7 @@ namespace _000_ThreadPool
     class Program
     {
         private static int _count = 25;
+        private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(10);
 
         static void Main(string[] args)
         {
@@ -14,7 +16,8 @@ namespace _000_ThreadPool
                 ThreadPool.QueueUserWorkItem(state =>
                 {
                     Console.Write(">");
-                    Thread.Sleep(7000); // thread pool starvation
+                    //ExecuteIoLike(DURATION);
+                    ExecuteComputeLike(DURATION);
                     Console.Write("|");
                     Interlocked.Decrement(ref _count);
                 }, i);
@@ -25,6 +28,20 @@ namespace _000_ThreadPool
                 Thread.Sleep(100);
             }
             Console.ReadKey();
+        }
+
+        private static void ExecuteIoLike(TimeSpan duration)
+        {
+            Thread.Sleep(duration); // thread pool starvation
+        }
+
+        private static void ExecuteComputeLike(TimeSpan duration)
+        {
+            var sw = Stopwatch.StartNew();
+            while (sw.Elapsed < duration)
+            {
+
+            }
         }
     }
 }

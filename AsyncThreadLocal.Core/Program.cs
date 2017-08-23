@@ -23,11 +23,11 @@ namespace Bnaya.Samples
     /// </remarks>
     public class Program
     {
-        //private static readonly IAsyncContext _context = AsyncImmutableContext.Instance;
-        private static readonly IAsyncContext _context = AsyncContext.Instance;
+        private static readonly IAsyncContext _context = AsyncImmutableContext.Instance;
+        //private static readonly IAsyncContext _context = AsyncContext.Instance;
 
-        //private static Func<int, Task> _executer = SeqAsync;
-        private static Func<int, Task> _executer = ForkJoinAsync;
+        private static Func<int, Task> _executer = SeqAsync;
+        //private static Func<int, Task> _executer = ForkJoinAsync;
 
         public static void Main()
         {

@@ -41,12 +41,12 @@ namespace Bnaya.Samples
         public void OnCompleted(Action continuation)
         {
             _continuation = continuation;
+            _fsw.EnableRaisingEvents = true;
             _fsw.Changed += OnChanged;
             _fsw.Deleted += OnChanged;
             _fsw.Created += OnChanged;
             _fsw.Renamed += OnChanged;
             _fsw.Error += OnError;
-            _fsw.EnableRaisingEvents = true;
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)

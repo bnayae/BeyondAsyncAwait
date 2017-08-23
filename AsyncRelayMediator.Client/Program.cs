@@ -51,7 +51,6 @@ namespace AsyncRelayMediator.Client
 
             Task _ = ExecRouteAsync(name, route);
             Console.ReadLine();
-
         }
 
         private static async Task ExecRouteAsync(
