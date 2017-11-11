@@ -9,37 +9,18 @@ namespace _17_AsyncLocal_Simple
 {
     class Program
     {
-        private static AsyncLocal<string> _contexts = new AsyncLocal<string>();
 
         static void Main(string[] args)
         {
-            Task _ = Exec1Async("A", 10);
-            _ = Exec1Async("B", 20);
+            var service = new AsyncContext();
+            //var service = new LegacyAsyncContext();
+            //var service = new ThreadContext();
+            var items = new[] { "1st", "2dn", "3rd", "4th", "5th", "6th", "7th", "8th", "9th" };
+            for (int i = 1; i <= items.Length; i++)
+            {
+                Task _ = service.Exec1Async(items[i - 1], i);
+            }
             Console.ReadKey();
-        }
-
-        private static async Task Exec1Async(string s, int i)
-        {
-            _contexts.Value = i.ToString();
-            await Task.Delay(10);
-            await Exec2Async(s);
-        }
-        private static async Task Exec2Async(string s)
-        {
-            await Task.Delay(10);
-            await Exec3Async(s);
-            Console.WriteLine($"# {_contexts.Value}");
-        }
-        private static async Task Exec3Async(string s)
-        {
-            _contexts.Value += 1;
-            await Task.Delay(10);
-            await Exec4Async(s);
-        }
-        private static async Task Exec4Async(string s)
-        {
-            await Task.Delay(10);
-            Console.WriteLine($"Context {_contexts.Value} for {s}");
         }
     }
 }
