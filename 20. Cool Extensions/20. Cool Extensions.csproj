@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Bnaya.CSharp.AsyncExtensions</AssemblyName>
+    <RootNamespace>Bnaya.CSharp.AsyncExtensions</RootNamespace>
+    <Version>1.0.1</Version>
+    <Description>Useful extensions contribution by Bnaya Eshet
+Blog: http://blogs.microsoft.co.il/bnaya/</Description>
+    <Copyright>Bnaya Eshet ©</Copyright>
+    <PackageTags>async, Parallel, await, task, timeout, deadlock, cancel, cancellation, bnaya</PackageTags>
+    <PackageReleaseNotes>Namespace changed</PackageReleaseNotes>
+    <PackageProjectUrl>http://blogs.microsoft.co.il/bnaya/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bnayae/BeyondAsyncAwait</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Bnaya.CSharp.AsyncExtensions.1.0.0.nupkg" />
+  </ItemGroup>
+
+</Project>

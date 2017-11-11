@@ -20,8 +20,8 @@ namespace _016._1_Async_Init
 
         private async Task Init(ISetting setting)
         {
-             await OnInitAsync(setting);
-           _config = await setting.GetSetting();
+            _config = await setting.GetSetting();
+            await OnInitAsync(setting);
         }
 
         protected virtual Task OnInitAsync(ISetting setting) => Task.CompletedTask;
