@@ -11,7 +11,7 @@ namespace System.Threading.Tasks
     /// <summary>
     /// Task Extensions
     /// </summary>
-    public static class GeneralExtensions
+    public static class ErrorHandlinglExtensions
     {
         //private static readonly Regex ASYNC_REGEX = new Regex(@"\.(.*)\.<(.*)>d__"); // .{group 0 - any}.<{group 1 = any}>d__
         // "^\s*at = start with 'at ' optional preceding whitespace 
@@ -27,6 +27,7 @@ namespace System.Threading.Tasks
         private static readonly Regex ASYNC_REGEX5 = new Regex(@"^\s*at\s+System\.Threading\.Tasks\.Task.*\.InnerInvoke\(\)"); // at System.Threading.Tasks.Task`1.InnerInvoke()
         private static readonly string[] IGNORE_START_WITH =
             {
+                "at System.Runtime.ExceptionServices.",
                 "at System.Runtime.CompilerServices.TaskAwaiter",
                 "at System.AppDomain.",
                 "at System.Threading.ThreadHelper.ThreadStart_",

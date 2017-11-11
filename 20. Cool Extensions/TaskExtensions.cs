@@ -104,14 +104,28 @@ namespace System.Threading.Tasks
         public static bool CancelSafe(
             this CancellationTokenSource instance)
         {
+            return CancelSafe(instance, out Exception ex);
+        }
+
+        /// <summary>
+        /// Cancels the safe.
+        /// </summary>
+        /// <param name="instance">The instance.</param>
+        /// <param name="exc">The exception (on fault cancellation).</param>
+        /// <returns></returns>
+        public static bool CancelSafe(
+            this CancellationTokenSource instance, out Exception exc)
+        {
+            exc = null;
             try
             {
                 instance.Cancel();
             }
             #region Exception Handling
 
-            catch 
+            catch (Exception ex)
             {
+                exc = ex;
                 return false;
             }
 
