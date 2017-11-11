@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-// IMPORTANT: this file (Program.cs) properties Build Action is set to None
-//            Set it to Compile before trying to build or debug this project
+
 namespace Exercise
 {
     class Program
     {
-        private static BlockingCollection</* encapsulation of future completed task */> _queue =
-            new BlockingCollection</* encapsulation of future completed task */>();
+        // using C# 7 Value Tuple
+        private static BlockingCollection<(string Data, TaskCompletionSource<string> SemanticTask)> _queue =
+            new BlockingCollection<(string, TaskCompletionSource<string>)>();
 
         static void Main(string[] args)
         {
@@ -23,6 +23,7 @@ namespace Exercise
                 {
                     Thread.Sleep(1000); // log running task (not using a thread-pool's thread)
                     // TODO: set the task encapsulation into completion state
+                    item.SemanticTask.TrySetResult($"{item.Data}#");
                 }
             }, TaskCreationOptions.LongRunning);
 
@@ -39,14 +40,20 @@ namespace Exercise
         private static async Task ProcessSequentiallyAsync(string[] items)
         {
             // TODO: call ProcessAsync(...) sequentially for each item (one ofter the completion of the other)
+            foreach (var data in items)
+            {
+                await ProcessAsync(data).ConfigureAwait(false);
+            }
         }
 
         private static async Task ProcessAsync(string data)
         {
             Console.Write(data);
             // enqueue the data (don't forget to encapsulate it with semantic of task)
-
-            // result = await the completion of the data processing
+            var tcs = new TaskCompletionSource<string>();
+            _queue.Add((data, tcs));
+            // await the completion of the data processing
+            var result = await tcs.Task.ConfigureAwait(false);
             Console.Write(result);
         }
     }
