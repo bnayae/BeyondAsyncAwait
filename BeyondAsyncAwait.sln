@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{2DC63681-DD0A-4DC8-9831-FF59C09992D7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Parallel Loop Pitfall NotCore", "04 03 Parallel Loop Pitfall NotCore\04 Parallel Loop Pitfall NotCore.csproj", "{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}"
@@ -72,8 +68,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.5 Run vs Start New", "Ru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.2 AwaitFileSystemWatcherFx", "AwaitFileSystemWatcherFx\15.2 AwaitFileSystemWatcherFx.csproj", "{4A099FEE-4494-4166-AFB1-A1F76F6171B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.1 Async Download", "..\02.1 Async Download\02.1 Async Download.csproj", "{973801BB-9703-4D30-B097-EE02799B9308}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.2 DeadLock Async", "02.2 DeadLock Async\02.2 DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.1 Async Init", "016.1 Async Init\16.1 Async Init.csproj", "{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}"
@@ -86,7 +80,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise - Solution", "Exer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20. Cool Extensions", "20. Cool Extensions\20. Cool Extensions.csproj", "{F0515715-BC7D-4BF0-8305-DBEAAB48531A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20. Useful Extensions Core Client", "..\20. Useful Extensions Core Client\20. Useful Extensions Core Client.csproj", "{7B887CFE-88CD-48E3-A05C-0D614F533AED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.1 Async Download", "02.1 Async Download\02.1 Async Download.csproj", "{973801BB-9703-4D30-B097-EE02799B9308}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20. Useful Extensions Core Client", "20. Useful Extensions Core Client\20. Useful Extensions Core Client.csproj", "{87F32156-5C0C-4205-9E1B-40E1C541FE51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{191168FF-B2B1-44A9-9CDD-C0998F520372}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25 Sequential Or Not", "..\25 Sequential Or Not\25 Sequential Or Not.csproj", "{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,14 +96,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC63681-DD0A-4DC8-9831-FF59C09992D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BBF9113-A3E7-46F4-8FEA-E0A132A0284D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -216,10 +210,6 @@ Global
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A099FEE-4494-4166-AFB1-A1F76F6171B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -244,10 +234,26 @@ Global
 		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B887CFE-88CD-48E3-A05C-0D614F533AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B887CFE-88CD-48E3-A05C-0D614F533AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B887CFE-88CD-48E3-A05C-0D614F533AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B887CFE-88CD-48E3-A05C-0D614F533AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F32156-5C0C-4205-9E1B-40E1C541FE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F32156-5C0C-4205-9E1B-40E1C541FE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F32156-5C0C-4205-9E1B-40E1C541FE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F32156-5C0C-4205-9E1B-40E1C541FE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191168FF-B2B1-44A9-9CDD-C0998F520372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191168FF-B2B1-44A9-9CDD-C0998F520372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191168FF-B2B1-44A9-9CDD-C0998F520372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191168FF-B2B1-44A9-9CDD-C0998F520372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
