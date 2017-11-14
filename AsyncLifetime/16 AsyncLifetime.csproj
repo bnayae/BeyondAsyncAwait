@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>Bnaya.Samples</RootNamespace>
     <ApplicationIcon />
     <OutputTypeEx>library</OutputTypeEx>

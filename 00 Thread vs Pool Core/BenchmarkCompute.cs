@@ -1,7 +1,4 @@
-﻿#if Fx
-using BenchmarkDotNet.Attributes;
-#endif
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
