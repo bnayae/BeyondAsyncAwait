@@ -9,4 +9,8 @@
     <StartupObject />
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.3" />
+  </ItemGroup>
+
 </Project>

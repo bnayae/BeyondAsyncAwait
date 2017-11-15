@@ -88,9 +88,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 Demystify Async and Awai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25 Sequential Or Not", "..\25 Sequential Or Not\25 Sequential Or Not.csproj", "{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0   ThreadPoolFx", "0   ThreadPoolFx\0   ThreadPoolFx.csproj", "{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26 Post vs SendAsync", "..\26 Post vs SendAsync\26 Post vs SendAsync.csproj", "{A1B80CCC-992B-4AAB-8CFB-2E4F2A81B4A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26 Post vs SendAsync", "26 Post vs SendAsync\26 Post vs SendAsync.csproj", "{8414F101-E638-4C68-91C5-BFA08AF81B80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25 Sequential Or Not", "25 Sequential Or Not\25 Sequential Or Not.csproj", "{EAA598B6-2786-4155-B1CE-481C1D0F9213}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -252,14 +254,18 @@ Global
 		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EF3CEF4-4395-460E-AD12-D9F5CEF1AEA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1B80CCC-992B-4AAB-8CFB-2E4F2A81B4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1B80CCC-992B-4AAB-8CFB-2E4F2A81B4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1B80CCC-992B-4AAB-8CFB-2E4F2A81B4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1B80CCC-992B-4AAB-8CFB-2E4F2A81B4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8414F101-E638-4C68-91C5-BFA08AF81B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8414F101-E638-4C68-91C5-BFA08AF81B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8414F101-E638-4C68-91C5-BFA08AF81B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8414F101-E638-4C68-91C5-BFA08AF81B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

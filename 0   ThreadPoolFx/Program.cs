@@ -17,8 +17,8 @@ namespace Bnaya.Samples
                 ThreadPool.QueueUserWorkItem(state =>
                 {
                     Console.Write(">");
-                    ExecuteIoLike(DURATION);
-                    //ExecuteComputeLike(DURATION);
+                    //ExecuteIoLike(DURATION);
+                    ExecuteComputeLike(DURATION);
                     Console.Write("|");
                     Interlocked.Decrement(ref _count);
                 }, i);
@@ -42,6 +42,7 @@ namespace Bnaya.Samples
             var sw = Stopwatch.StartNew();
             while (sw.Elapsed < duration)
             {
+               
             }
         }
     }

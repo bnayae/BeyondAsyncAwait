@@ -12,19 +12,20 @@ namespace Bnaya.Samples
 
         public MyComponent(ISetting setting)
         {
-            Initilaized = InitAsync(setting);
+            Initilaized = InitAsync(setting)
+                                .WithTimeout();
         }
 
         private async Task InitAsync(ISetting setting)
         {
-            _config = await setting.GetAsync();
+            _config = await setting.GetAsync().ConfigureAwait(false);
         }
 
         public async Task<int> GetData()
         {
             try
             {
-                await Initilaized;
+                await Initilaized.ConfigureAwait(false);
                 return 42 * _config.Factor;
             }
             catch (Exception)
