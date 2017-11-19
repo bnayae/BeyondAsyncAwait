@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
@@ -77,8 +77,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{D06D9236-B7E8-47E4-812D-3911FA7AE224}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise - Solution", "Exercise - Solution\Exercise - Solution.csproj", "{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20. Cool Extensions", "20. Cool Extensions\20. Cool Extensions.csproj", "{F0515715-BC7D-4BF0-8305-DBEAAB48531A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.1 Async Download", "02.1 Async Download\02.1 Async Download.csproj", "{973801BB-9703-4D30-B097-EE02799B9308}"
 EndProject
@@ -234,10 +232,6 @@ Global
 		{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0515715-BC7D-4BF0-8305-DBEAAB48531A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{973801BB-9703-4D30-B097-EE02799B9308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973801BB-9703-4D30-B097-EE02799B9308}.Release|Any CPU.ActiveCfg = Release|Any CPU

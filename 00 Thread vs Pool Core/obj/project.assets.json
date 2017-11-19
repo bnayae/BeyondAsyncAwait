@@ -674,7 +674,7 @@
     },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\00 Thread vs Pool Core.csproj",
-      "projectName": "00 Thread vs Pool Core",
+      "projectName": "ThreadVsPoolCore",
       "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\00 Thread vs Pool Core.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\obj\\",
@@ -713,7 +713,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

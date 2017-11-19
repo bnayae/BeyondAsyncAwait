@@ -12,6 +12,42 @@ namespace System.Threading.Tasks
     {
         private static readonly TimeSpan DefaultTimeout = TimeSpan.FromMinutes(15);
 
+        #region Try/LockAsync
+
+        /// <summary>
+        /// Try to acquire async lock,
+        /// when failed the LockScope.Acquired will equals false
+        /// </summary>
+        /// <param name="gate">The gate.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <returns>lock disposal and acquired indication</returns>
+        [DebuggerHidden]
+        [DebuggerNonUserCode]
+        [DebuggerStepThrough]
+        public static Task<LockScope> TryAcquireAsync(this SemaphoreSlim gate, TimeSpan timeout)
+        {
+            var locker = new AsyncLock(gate, timeout);
+            return locker.TryAcquireAsync();
+        }
+
+        /// <summary>
+        /// Try to acquire async lock,
+        /// when failed the LockScope.Acquired will equals false
+        /// </summary>
+        /// <param name="gate">The gate.</param>
+        /// <param name="timeout">The timeout.</param>
+        /// <returns>lock disposal</returns>
+        [DebuggerHidden]
+        [DebuggerNonUserCode]
+        [DebuggerStepThrough]
+        public static Task<IDisposable> AcquireAsync(this SemaphoreSlim gate, TimeSpan timeout)
+        {
+            var locker = new AsyncLock(gate, timeout);
+            return locker.AcquireAsync();
+        }
+
+        #endregion // Try/LockAsync
+
         #region WithTimeout
 
         /// <summary>

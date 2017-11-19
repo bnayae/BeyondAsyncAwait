@@ -8765,7 +8765,7 @@
     },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\13 Common Service Mistakes.csproj",
-      "projectName": "13 Common Service Mistakes",
+      "projectName": "CommonServiceMistakes",
       "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\13 Common Service Mistakes.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\obj\\",
@@ -8812,7 +8812,7 @@
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.Mvc": {

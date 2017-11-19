@@ -27,9 +27,9 @@ namespace _20._Useful_Extensions_Core_Client
             {
                 Task t = Task.Delay(1000);
                 // check for potential deadlock
-                if (await t.IsTimeoutAsync(TimeSpan.FromMilliseconds(100)))
+                if (await t.IsTimeoutAsync(TimeSpan.FromMilliseconds(100)).ConfigureAwait(false))
                     Console.WriteLine("Potential deadlock");
-                await t;
+                await t.ConfigureAwait(false);
                 Console.WriteLine("Eventually it pass");
             }
             catch (TimeoutException)

@@ -674,7 +674,7 @@
     },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\12 Cancellation and Exception.csproj",
-      "projectName": "12 Cancellation and Exception",
+      "projectName": "CancellationAndException",
       "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\12 Cancellation and Exception.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\obj\\",
@@ -713,7 +713,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

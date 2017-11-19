@@ -674,7 +674,7 @@
     },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01 Semantical Task - Producer Consumer.csproj",
-      "projectName": "01 Semantical Task - Producer Consumer",
+      "projectName": "Semantical Task - Producer Consumer",
       "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01 Semantical Task - Producer Consumer.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\obj\\",
@@ -713,7 +713,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

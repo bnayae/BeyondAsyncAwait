@@ -674,7 +674,7 @@
     },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\0   ThreadPool.csproj",
-      "projectName": "0   ThreadPool",
+      "projectName": "ThreadPool",
       "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\0   ThreadPool.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\obj\\",
@@ -713,7 +713,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

@@ -7,31 +7,24 @@ using System.Diagnostics;
 
 namespace Bnaya.Samples
 {
-    public class Foo
+    public class FooBetter
     {
         private readonly static TimeSpan TIMEOUT = TimeSpan.FromMinutes(5);
-        private readonly SemaphoreSlim _gate = new SemaphoreSlim(1);
+        private readonly AsyncLock _gate = new AsyncLock(TimeSpan.FromSeconds(10));
 
         public async Task ExecAsync(int i)
         {
-            if (!await _gate.WaitAsync(TIMEOUT).ConfigureAwait(false))
-                throw new InvalidOperationException  ("Deadlock");
-            try
+            using (await _gate.AcquireAsync().ConfigureAwait(false))
             {
                 Console.Write($"#{i}");
                 await Task.Delay(1500).ConfigureAwait(false);
                 Console.Write($"{i}# ");
             }
-            finally
-            {
-                _gate.Release();
-            }
         }
-
-
+ 
         public async Task TryExecAsync(int i)
         {
-            using (var scope = await _gate.TryAcquireAsync(TimeSpan.FromSeconds(10)).ConfigureAwait(false))
+            using (var scope = await _gate.TryAcquireAsync().ConfigureAwait(false))
             {
                 if (!scope.Acquired)
                     Console.WriteLine("Potential deadlock");
@@ -43,5 +36,6 @@ namespace Bnaya.Samples
                 }
             }
         }
+       
     }
 }
