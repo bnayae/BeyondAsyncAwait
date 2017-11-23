@@ -16,10 +16,10 @@ namespace _02._2_DeadLock_Async
 
         public VM()
         {
-            Task _ = ProcessAsync();
+            Process();
         }
 
-        private async Task ProcessAsync()
+        private void Process()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -35,8 +35,7 @@ namespace _02._2_DeadLock_Async
             using (var http = new HttpClient())
             {
                 //byte[] data = http.GetByteArrayAsync(url).Result; // freeze
-                byte[] data = await http.GetByteArrayAsync(url)
-                                        .ConfigureAwait(false);
+                byte[] data = await http.GetByteArrayAsync(url);
                 return data;
             }
         }

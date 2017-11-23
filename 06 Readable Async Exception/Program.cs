@@ -7,8 +7,9 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            //Task _ = DefaultAsync();
-            //Task _ = FormatAsync();
+            //Task _ = DefaultAsync(10);
+            //Task _ = FormatAsync(10);
+            //Task _ = FormatAsync(10, ErrorFormattingOption.FormatDuplication);
             //Task _ = DefaultMultiAsync();
             Task _ = FormatMultiAsync();
             Console.ReadKey();
@@ -16,11 +17,11 @@ namespace Bnaya.Samples
 
         #region DefaultAsync
 
-        private static async Task DefaultAsync()
+        private static async Task DefaultAsync(int i)
         {
             try
             {
-                await Step1Async();
+                await Step1Async(i);
             }
             catch (Exception ex)
             {
@@ -32,35 +33,19 @@ namespace Bnaya.Samples
 
         #region FormatAsync
 
-        private static async Task FormatAsync()
+        private static async Task FormatAsync(int j, ErrorFormattingOption options = ErrorFormattingOption.Default)
         {
             try
             {
-                await Step1Async();
+                await Step1Async(j);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Format());
+                Console.WriteLine(ex.Format(options));
             }
         }
 
         #endregion // FormatAsync
-
-        #region DefaultMultiAsync
-
-        private static async Task DefaultMultiAsync()
-        {
-            try
-            {
-                await StepAAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-        }
-
-        #endregion // DefaultMultiAsync
 
         #region FormatMultiAsync
 
@@ -68,11 +53,11 @@ namespace Bnaya.Samples
         {
             try
             {
-                await StepAAsync();
+                await StepAAsync(10);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Format());
+                Console.WriteLine(ex.Format(ErrorFormattingOption.FormatDuplication));
             }
         }
 
@@ -80,22 +65,23 @@ namespace Bnaya.Samples
 
         #region Step1Async
 
-        private static async Task Step1Async()
+        private static async Task Step1Async(int i)
         {
             await Task.Delay(1);
-            await Step2Async();
+            var s = new string('*', i % 6);
+            await Step2Async(s);
         }
 
         #endregion // Step1Async
 
         #region Step2Async
 
-        private static async Task Step2Async()
+        private static async Task Step2Async(string s)
         {
             try
             {
                 await Task.Delay(1);
-                await Step3Async();
+                await Step3Async(s);
             }
             catch (Exception ex)
             {
@@ -107,41 +93,41 @@ namespace Bnaya.Samples
 
         #region Step3Async
 
-        private static async Task Step3Async()
+        private static async Task Step3Async(string s1)
         {
             await Task.Delay(1);
-            await Step4Async();
+            await Step4Async(s1);
         }
 
         #endregion // Step3Async
 
         #region Step4Async
 
-        private static async Task Step4Async()
+        private static async Task Step4Async(string s2)
         {
             await Task.Delay(1);
-            throw new FormatException("Illegal");
+            throw new FormatException($"Illegal {s2}");
         }
  
         #endregion // Step4Async
 
         #region StepAAsync
 
-        private static async Task StepAAsync()
+        private static async Task StepAAsync(int j)
         {
             await Task.Delay(1);
-            await StepBAsync();
+            await StepBAsync(DateTime.Now.AddDays(j));
         }
 
         #endregion // StepAAsync
 
         #region StepBAsync
 
-        private static async Task StepBAsync()
+        private static Task StepBAsync(DateTime dt)
         {
             var t1 = Task.Run(() => throw new ArgumentException("Other Error"));
-            var t2 = Step1Async();
-            await Task.WhenAll(t1, t2).ThrowAll();
+            var t2 = Step1Async(dt.Second);
+            return Task.WhenAll(t1, t2).ThrowAll();
         }
 
         #endregion // StepBAsync

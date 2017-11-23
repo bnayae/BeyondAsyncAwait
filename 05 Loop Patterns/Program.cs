@@ -73,7 +73,7 @@ namespace Bnaya.Samples
         {
             for (int i = 0; i < n; i++)
             {
-                await SingleStepAsync(i);
+                await SingleStepAsync(i).ConfigureAwait(false);
             }
         }
 
@@ -81,18 +81,18 @@ namespace Bnaya.Samples
 
         #region NonSequentialAsync
 
-        private static async Task NonSequentialAsync(int n)
+        private static Task NonSequentialAsync(int n)
         {
             var tasks = from i in Enumerable.Range(0, n)
                         select SingleStepAsync(i);
-            await Task.WhenAll(tasks);
+            return Task.WhenAll(tasks);
         }
 
         #endregion // NonSequentialAsync
 
         #region SequentialWithTdfAsync
 
-        private static async Task SequentialWithTdfAsync(int n)
+        private static Task SequentialWithTdfAsync(int n)
         {
             var abSequential = new ActionBlock<int>(SingleStepAsync);
             for (int i = 0; i < 10; i++)
@@ -100,14 +100,14 @@ namespace Bnaya.Samples
                 abSequential.Post(i);
             }
             abSequential.Complete();
-            await abSequential.Completion;
+            return abSequential.Completion;
         }
 
         #endregion // SequentialWithTdfAsync
 
         #region NonSequentialWithTdfAsync
 
-        private static async Task NonSequentialWithTdfAsync(int n)
+        private static Task NonSequentialWithTdfAsync(int n)
         {
             var abSequential = new ActionBlock<int>(SingleStepAsync, 
                 new ExecutionDataflowBlockOptions
@@ -119,7 +119,7 @@ namespace Bnaya.Samples
                 abSequential.Post(i);
             }
             abSequential.Complete();
-            await abSequential.Completion;
+            return abSequential.Completion;
         }
 
         #endregion // NonSequentialWithTdfAsync

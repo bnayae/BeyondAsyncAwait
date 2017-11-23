@@ -60,6 +60,7 @@
     <Compile Include="..\00 Thread vs Pool Core\Program.cs">
       <Link>Program.cs</Link>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ISetting.cs" />
     <Compile Include="LogicBase.cs" />
     <Compile Include="Logic.cs" />
