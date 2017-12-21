@@ -53,7 +53,7 @@ namespace Bnaya.Samples
 
             #endregion // User choice of Mode
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < Environment.ProcessorCount / 2; i++)
             {
                 int id = i;
                 Invoke(() => DoComplexWork(id)); // have child work
@@ -79,7 +79,8 @@ namespace Bnaya.Samples
                     ThreadPool.QueueUserWorkItem(state => action());
                     break;
                 case Mode.Task:
-                    Task.Run(action);
+                    //Task.Run(action);
+                    Task.Factory.StartNew(action);
                     break;
                 case Mode.FairTask:
                     Task.Factory.StartNew(action, TaskCreationOptions.PreferFairness);

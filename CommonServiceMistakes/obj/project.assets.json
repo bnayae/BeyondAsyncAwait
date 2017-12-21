@@ -8802,26 +8802,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.ApplicationInsights.AspNetCore": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.AspNetCore": {
             "target": "Package",
-            "version": "1.1.1"
-          },
-          "Microsoft.Extensions.Logging.Debug": {
-            "target": "Package",
-            "version": "1.1.1"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "[1.1.1, )"
           },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )"
           },
-          "Microsoft.ApplicationInsights.AspNetCore": {
+          "Microsoft.Extensions.Logging.Debug": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[1.1.1, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [

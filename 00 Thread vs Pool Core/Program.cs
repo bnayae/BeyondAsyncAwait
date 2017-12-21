@@ -49,7 +49,7 @@ namespace Bnaya.Samples
 
             #endregion // Warm-up
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Measure(_banchmark.ExecPool, "ExecPool");

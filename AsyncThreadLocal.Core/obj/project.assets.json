@@ -744,12 +744,12 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "System.Collections.Immutable": {
             "target": "Package",
-            "version": "1.4.0"
+            "version": "[1.4.0, )"
           }
         },
         "imports": [

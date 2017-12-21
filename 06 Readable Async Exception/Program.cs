@@ -8,10 +8,10 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             //Task _ = DefaultAsync(10);
-            //Task _ = FormatAsync(10);
+            Task _ = FormatAsync(10);
             //Task _ = FormatAsync(10, ErrorFormattingOption.FormatDuplication);
             //Task _ = DefaultMultiAsync();
-            Task _ = FormatMultiAsync();
+            //Task _ = FormatMultiAsync();
             Console.ReadKey();
         }
 
@@ -37,6 +37,7 @@ namespace Bnaya.Samples
         {
             try
             {
+                await Task.Run(() => throw new ArgumentException("Other Error"));
                 await Step1Async(j);
             }
             catch (Exception ex)

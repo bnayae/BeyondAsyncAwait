@@ -1489,14 +1489,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "System.ValueTuple": {
-            "target": "Package",
-            "version": "4.3.0"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "System.ValueTuple": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
