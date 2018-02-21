@@ -36,6 +36,19 @@ namespace Bnaya.Samples
 
             #endregion // Safer Cancellation
 
+            #region CancelSafe
+
+            //cts.CancelSafe();
+
+            #endregion // CancelSafe
+
+            #region CancelSafe (advance)
+
+            //if (!cts.CancelSafe(out Exception ex))
+            //    Console.WriteLine($"Cancellation throw: {ex.Format()}");
+
+            #endregion // CancelSafe (advance)
+
             Console.WriteLine("Done");
 
             Console.ReadKey();

@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 #endregion // Using
 
 #pragma warning disable CS0162 // Unreachable code detected
+
+// Demo: Local Queue (ThreadPool 4.0)
+
 namespace Bnaya.Samples
 {
     enum Mode
@@ -22,7 +25,6 @@ namespace Bnaya.Samples
 
     class Program
     {
-        // TODO: Change the modes
         private static Mode ExecMode = Mode.ThreadPool;
 
         static void Main(string[] args)

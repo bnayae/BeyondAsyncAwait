@@ -8,7 +8,7 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            Task _ = DefaultAsync();
+            //Task _ = DefaultAsync();
             //Task _ = FormatAsync();
             //Task _ = FriendlyStackAsync();
             //Task _ = DefaultMultiAsync();
@@ -53,11 +53,11 @@ namespace Bnaya.Samples
             }
         }
 
-        private static async Task DefaultMultiAsync()
+        private static async Task DefaultNonSequentialAsync()
         {
             try
             {
-                await StepAAsync();
+                await NonSequentialRootAsync();
             }
             catch (Exception ex)
             {
@@ -65,11 +65,11 @@ namespace Bnaya.Samples
             }
         }
 
-        private static async Task FormatMultiAsync()
+        private static async Task FormatNonSequentialAsync()
         {
             try
             {
-                await StepAAsync();
+                await NonSequentialRootAsync();
             }
             catch (Exception ex)
             {
@@ -81,7 +81,7 @@ namespace Bnaya.Samples
         {
             try
             {
-                await StepAAsync();
+                await NonSequentialRootAsync();
             }
             catch (Exception ex)
             {
@@ -89,13 +89,13 @@ namespace Bnaya.Samples
             }
         }
 
-        private static async Task StepAAsync()
+        private static async Task NonSequentialRootAsync()
         {
             await Task.Delay(1);
-            await StepBAsync();
+            await NonSequentialSplitAsync();
         }
 
-        private static async Task StepBAsync()
+        private static async Task NonSequentialSplitAsync()
         {
             var t1 = Task.Run(() => throw new ArgumentException("Other Error"));
             var t2 = Step1Async();

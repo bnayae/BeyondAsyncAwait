@@ -7,8 +7,8 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            //Task _ = DefaultAsync(10);
-            Task _ = FormatAsync(10);
+            Task _ = DefaultAsync(10);
+            //Task _ = FormatAsync(10);
             //Task _ = FormatAsync(10, ErrorFormattingOption.FormatDuplication);
             //Task _ = DefaultMultiAsync();
             //Task _ = FormatMultiAsync();
@@ -37,7 +37,7 @@ namespace Bnaya.Samples
         {
             try
             {
-                await Task.Run(() => throw new ArgumentException("Other Error"));
+                //await Task.Run(() => throw new ArgumentException("Other Error"));
                 await Step1Async(j);
             }
             catch (Exception ex)
@@ -48,13 +48,13 @@ namespace Bnaya.Samples
 
         #endregion // FormatAsync
 
-        #region FormatMultiAsync
+        #region FormatNonSequentialAsync
 
-        private static async Task FormatMultiAsync()
+        private static async Task FormatNonSequentialAsync()
         {
             try
             {
-                await StepAAsync(10);
+                await NonSequentialRootAsync(10);
             }
             catch (Exception ex)
             {
@@ -62,7 +62,7 @@ namespace Bnaya.Samples
             }
         }
 
-        #endregion // FormatMultiAsync
+        #endregion // FormatNonSequentialAsync
 
         #region Step1Async
 
@@ -109,28 +109,28 @@ namespace Bnaya.Samples
             await Task.Delay(1);
             throw new FormatException($"Illegal {s2}");
         }
- 
+
         #endregion // Step4Async
 
-        #region StepAAsync
+        #region NonSequentialRootAsync
 
-        private static async Task StepAAsync(int j)
+        private static async Task NonSequentialRootAsync(int j)
         {
             await Task.Delay(1);
-            await StepBAsync(DateTime.Now.AddDays(j));
+            await NonSequentialSplitAsync(DateTime.Now.AddDays(j));
         }
 
-        #endregion // StepAAsync
+        #endregion // NonSequentialRootAsync
 
-        #region StepBAsync
+        #region NonSequentialSplitAsync
 
-        private static Task StepBAsync(DateTime dt)
+        private static Task NonSequentialSplitAsync(DateTime dt)
         {
             var t1 = Task.Run(() => throw new ArgumentException("Other Error"));
             var t2 = Step1Async(dt.Second);
             return Task.WhenAll(t1, t2).ThrowAll();
         }
 
-        #endregion // StepBAsync
-   }
+        #endregion // NonSequentialSplitAsync
+    }
 }

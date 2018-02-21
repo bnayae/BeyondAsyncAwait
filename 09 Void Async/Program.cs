@@ -47,14 +47,31 @@ namespace Bnaya.Samples
         {
             // wrap it
             Task _ = LocalAsync();
+        }
 
-            async Task LocalAsync() // C# 7 local function
+        private static async Task LocalAsync() // C# 7 local function
+        {
+            await Task.Delay(10);
+            throw new NotSupportedException("Should it crash the application?");
+        }
+
+        #endregion // WhenYouMustAsync
+
+        #region WhenYouMust7Async
+
+        // like event handling in general
+        private static void WhenYouMust7Async()
+        {
+            // wrap it
+            Task _ = Local7Async();
+
+            async Task Local7Async() // C# 7 local function
             {
                 await Task.Delay(10);
                 throw new NotSupportedException("Should it crash the application?");
             }
         }
 
-        #endregion // WhenYouMustAsync
+        #endregion // WhenYouMust7Async
     }
 }

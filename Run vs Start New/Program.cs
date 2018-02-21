@@ -22,6 +22,7 @@ namespace Bnaya.Samples
 
         #region StartNewAsync
 
+        // what is the return value of this call?
         private static async Task StartNewAsync()
         {
             Console.Write("1 ");
@@ -39,6 +40,7 @@ namespace Bnaya.Samples
 
         #region RunAsync
 
+        // what is the return value of this call?
         private static async Task RunAsync()
         {
             Console.Write("1 ");
@@ -56,6 +58,7 @@ namespace Bnaya.Samples
 
         #region StartNewAsRunAsync
 
+        // what is the return value of this call?
         private static async Task StartNewAsRunAsync()
         {
             Console.Write("1 ");

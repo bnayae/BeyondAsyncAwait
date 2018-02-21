@@ -62,11 +62,11 @@ namespace CommonServiceMistakesClient
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"==================  Start {endPointTemplate.Title} ==================");
                     Console.ResetColor();
+                    Console.WriteLine("Press any key for the next test...");
+                    Console.ReadKey(true);
 
                     Task test = CallAsync(endPoint, MAX);
                     test.Wait();
-                    Console.WriteLine("Press any key for the next test...");
-                    Console.ReadKey(true);
                 }
             }
         }
