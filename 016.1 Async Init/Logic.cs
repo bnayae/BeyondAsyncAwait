@@ -25,7 +25,7 @@ namespace _016._1_Async_Init
 
         public async Task<int> ExecAsync()
         {
-            await Initialize;
+            await Initialize.ConfigureAwait(false);
             Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
             return 1 * _config.Factor;
         }

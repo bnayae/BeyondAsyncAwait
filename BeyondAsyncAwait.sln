@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
@@ -91,6 +91,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26 Post vs SendAsync", "26 Post vs SendAsync\26 Post vs SendAsync.csproj", "{8414F101-E638-4C68-91C5-BFA08AF81B80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25 Sequential Or Not", "25 Sequential Or Not\25 Sequential Or Not.csproj", "{EAA598B6-2786-4155-B1CE-481C1D0F9213}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer - Simple", "01 Semantical Task - Producer Consumer - Simple\01 Semantical Task - Producer Consumer - Simple.csproj", "{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -260,6 +262,10 @@ Global
 		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAA598B6-2786-4155-B1CE-481C1D0F9213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

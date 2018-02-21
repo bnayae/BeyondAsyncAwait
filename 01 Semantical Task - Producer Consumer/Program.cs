@@ -42,7 +42,7 @@ namespace Bnaya.Samples
                 Thread.Sleep(100);
             }
             
-            Console.WriteLine($"\r\nDone");
+            Console.WriteLine($"\r\nDone: {t.Result}");
             _secondQueue.CompleteAdding();
             Console.ReadKey(true);
         }

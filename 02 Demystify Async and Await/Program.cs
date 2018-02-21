@@ -11,9 +11,9 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Info("Main");
-            Task t = CanBeTrickyAsync();
+            //Task t = CanBeTrickyAsync();
             //Task t = AlsoTrickyAsync();
-            //Task t = ExpectedAsync();
+            Task t = ExpectedAsync();
             //Task t = MultiAwaitAsync();
             Info("Main");
             while (!t.IsCompleted)
@@ -33,6 +33,15 @@ namespace Bnaya.Samples
             Thread.Sleep(2000);
             Info("CanBeTrickyAsync End");
         }
+
+
+        //private static Task CanBeTrickyAsync()
+        //{
+        //    Info("CanBeTrickyAsync Start");
+        //    Thread.Sleep(2000);
+        //    Info("CanBeTrickyAsync End");
+        //    return Task.CompletedTask;
+        //}
 
         #endregion // CanBeTrickyAsync
 
