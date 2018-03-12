@@ -12,13 +12,15 @@ namespace Bnaya.Samples
 
         static void Main(string[] args)
         {
+            Console.WriteLine("This sample emphasize the behavior of the thread-pool");
+
             for (int i = 0; i < 25; i++)
             {
                 ThreadPool.QueueUserWorkItem(state =>
                 {
                     Console.Write(">");
-                    //ExecuteIoLike(DURATION);
-                    ExecuteComputeLike(DURATION);
+                    ExecuteIoLike(DURATION);
+                    //ExecuteComputeLike(DURATION);
                     Console.Write("|");
                     Interlocked.Decrement(ref _count);
                 }, i);

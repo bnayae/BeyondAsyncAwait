@@ -11,7 +11,7 @@ namespace _02._1_Async_Download
 {
     class Program
     {
-        private const string URL = "http://lorempixel.com/1200/1200/animals/";
+        private const string URL = "https://source.unsplash.com/random/1200x1200";
 
         static void Main(string[] args)
         {

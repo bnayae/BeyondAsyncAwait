@@ -17,8 +17,7 @@ namespace Bnaya.Samples
 
         #region CountdownEvents
 
-        private static readonly CountdownEvent _cdPool = new CountdownEvent(THREAD_LEVEL);
-        private static readonly CountdownEvent _cdThread = new CountdownEvent(THREAD_LEVEL);
+        private static readonly CountdownEvent _cd = new CountdownEvent(THREAD_LEVEL);
 
         #endregion // CountdownEvents
 
@@ -26,16 +25,16 @@ namespace Bnaya.Samples
 
         public void ExecPool()
         {
-            _cdPool.Reset();
+            _cd.Reset();
             for (int i = 0; i < THREAD_LEVEL; i++)
             {
-                ThreadPool.QueueUserWorkItem(async _ =>
+                ThreadPool.QueueUserWorkItem((WaitCallback)(async _ =>
                         {
                             await UnitOfWork();
-                            _cdPool.Signal();
-                        }, null);
+                            BenchmarkAwaitIO._cd.Signal();
+                        }), null);
             }
-            _cdPool.Wait();
+            _cd.Wait();
         }
 
         #endregion // ExecPool
@@ -44,19 +43,19 @@ namespace Bnaya.Samples
 
         public void ExecThread()
         {
-            _cdThread.Reset();
+            _cd.Reset();
             for (int i = 0; i < THREAD_LEVEL; i++)
             {
                 Thread t = new Thread(async () =>
                     {
                         await UnitOfWork();
-                        _cdThread.Signal();
+                        _cd.Signal();
                     });
                 t.IsBackground = true;
                 t.Name = "T " + i;
                 t.Start();
             }
-            _cdThread.Wait();
+            _cd.Wait();
         }
 
         #endregion // ExecThread

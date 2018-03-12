@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01 Semantical Task - Producer Consumer.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01.1 Semantical Task - Producer Consumer.csproj",
       "projectName": "Semantical Task - Producer Consumer",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01 Semantical Task - Producer Consumer.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\01.1 Semantical Task - Producer Consumer.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\01 Semantical Task - Producer Consumer\\obj\\",
       "projectStyle": "PackageReference",

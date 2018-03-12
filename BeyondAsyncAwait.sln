@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03 Parallel Loop Pitfall", "03 Parallel Loop Pitfall\03 Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
@@ -62,13 +62,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Service"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncRelayMediator.Client", "AsyncRelayMediator.Client\AsyncRelayMediator.Client.csproj", "{883DC055-A83C-4DA5-AFD7-D7910C3BF255}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.1 ConfigureAwaitAndSchedulers", "ConfigureAwaitAndSchedulers\13.1 ConfigureAwaitAndSchedulers.csproj", "{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.6 ConfigureAwaitAndSchedulers", "ConfigureAwaitAndSchedulers\13.6 ConfigureAwaitAndSchedulers.csproj", "{C40FA9B2-23DF-46E9-996E-18FA5B63ECD9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.5 Run vs Start New", "Run vs Start New\05.5 Run vs Start New.csproj", "{36E85A00-EBD8-4964-9E57-EEE30D731068}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.2 AwaitFileSystemWatcherFx", "AwaitFileSystemWatcherFx\15.2 AwaitFileSystemWatcherFx.csproj", "{4A099FEE-4494-4166-AFB1-A1F76F6171B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.2 DeadLock Async", "02.2 DeadLock Async\02.2 DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.2 DeadLock Async", "02.2 DeadLock Async\13.2 DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.1 Async Init", "016.1 Async Init\16.1 Async Init.csproj", "{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}"
 EndProject
@@ -84,7 +84,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20. Useful Extensions Core 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02 Demystify Async and Await", "02 Demystify Async and Await\02 Demystify Async and Await.csproj", "{191168FF-B2B1-44A9-9CDD-C0998F520372}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01 Semantical Task - Producer Consumer.csproj", "{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.1 Semantical Task - Producer Consumer", "01 Semantical Task - Producer Consumer\01.1 Semantical Task - Producer Consumer.csproj", "{1C2CE70B-7CF6-4E0A-AF89-DCD1CF25E0EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0   ThreadPoolFx", "0   ThreadPoolFx\0   ThreadPoolFx.csproj", "{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225}"
 EndProject
@@ -93,6 +93,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25 Sequential Or Not", "25 Sequential Or Not\25 Sequential Or Not.csproj", "{EAA598B6-2786-4155-B1CE-481C1D0F9213}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Semantical Task - Producer Consumer - Simple", "01 Semantical Task - Producer Consumer - Simple\01 Semantical Task - Producer Consumer - Simple.csproj", "{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.3 TaskLikeSample", "..\TaskLikeSample\15.3 TaskLikeSample.csproj", "{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.1 ParallelStack Diagnostic", "ParallelStackSample\07.1 ParallelStack Diagnostic.csproj", "{4F421AD8-F8D5-46B4-894B-473BE8AEE946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -266,6 +270,14 @@ Global
 		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DD375EA-7DEE-423F-B7EF-97F692F22D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F421AD8-F8D5-46B4-894B-473BE8AEE946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F421AD8-F8D5-46B4-894B-473BE8AEE946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F421AD8-F8D5-46B4-894B-473BE8AEE946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F421AD8-F8D5-46B4-894B-473BE8AEE946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

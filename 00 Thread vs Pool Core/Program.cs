@@ -13,14 +13,16 @@ namespace Bnaya.Samples
 
         static void Main(string[] args)
         {
-            Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
+            Console.WriteLine(@"This sample compare 3 different scenarios (Thread vs. Thread-Pool):");
+
+            //Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
 
             #region _banchmark = switch (Console.ReadKey())
 
             Console.WriteLine(@"Select
-1. Compute
-2. IO blocking
-3. IO with Await");
+    1. Compute          (running compute work)
+    2. IO blocking      (running IO like work)
+    3. IO with Await    (running IO like using async await)");
             char c = Console.ReadKey(true).KeyChar;
             IBenchmark _banchmark;
             switch (c)
