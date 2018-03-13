@@ -20,6 +20,7 @@ namespace _17_AsyncLocal_Simple
 
         private async Task Exec2Async(string s)
         {
+            await Task.Delay(100);
             // thread pool
             Console.WriteLine($"Thread local context of {s} = {_contexts.Value}");
         }

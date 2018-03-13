@@ -1,4 +1,4 @@
-﻿namespace _016._1_Async_Init
+﻿namespace Bnaya.Samples
 {
     public class Config
     {

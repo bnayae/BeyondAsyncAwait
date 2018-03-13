@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\03 Parallel Loop Pitfall\\03 Parallel Loop Pitfall.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\03 Parallel Loop Pitfall\\03 ~Parallel Loop Pitfall.csproj",
       "projectName": "ParallelLoopPitfall",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\03 Parallel Loop Pitfall\\03 Parallel Loop Pitfall.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\03 Parallel Loop Pitfall\\03 ~Parallel Loop Pitfall.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\03 Parallel Loop Pitfall\\obj\\",
       "projectStyle": "PackageReference",

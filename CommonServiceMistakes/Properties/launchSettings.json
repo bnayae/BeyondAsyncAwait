@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CommonServiceMistakes": {
+    "Bnaya.Samples": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/sample/sync/0",

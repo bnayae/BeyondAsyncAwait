@@ -693,9 +693,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\12 Cancellation and Exception.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\10.2 Cancellation and Exception.csproj",
       "projectName": "CancellationAndException",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\12 Cancellation and Exception.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\10.2 Cancellation and Exception.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\12 Cancellation and Exception\\obj\\",
       "projectStyle": "PackageReference",

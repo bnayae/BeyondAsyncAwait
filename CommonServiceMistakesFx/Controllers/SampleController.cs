@@ -8,6 +8,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+#pragma warning disable SG0005 // Weak random generator
+#pragma warning disable SG0029 // Potential XSS vulnerability
 
 namespace CommonServiceMistakesFx.Controllers
 {
@@ -19,6 +21,7 @@ namespace CommonServiceMistakesFx.Controllers
         private ThreadLocal<Random> _rnd = new ThreadLocal<Random>(() => new Random(Guid.NewGuid().GetHashCode()));
 
         private TimeSpan Delay => TimeSpan.FromMilliseconds(DELAY + _rnd.Value.Next(0, DELAY_RANGE));
+
 
         // GET api/sample/sync/{i}
         [Route("sync/{i}")]

@@ -10,7 +10,8 @@ using System.Diagnostics;
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 #pragma warning disable SG0029 // Potential XSS vulnerability
-namespace CommonServiceMistakes.Controllers
+#pragma warning disable SG0005 // Weak random generator
+namespace Bnaya.Samples.Controllers
 {
     [Route("api/[controller]")]
     public class SampleController : Controller

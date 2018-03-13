@@ -22,6 +22,7 @@ namespace _17_AsyncLocal_Simple
 
         private async Task Exec2Async(string s)
         {
+            await Task.Delay(100);
             int i = (int)CallContext.LogicalGetData(SLOT);
 
             Console.WriteLine($"Context of {s} = {i}");

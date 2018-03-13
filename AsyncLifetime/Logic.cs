@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public class MyComponent
+    public class Logic
     {
         private Config _config;
         private readonly Task Initilaized;
 
-        public MyComponent(ISetting setting)
+        public Logic(ISetting setting)
         {
             Initilaized = InitAsync(setting)
                                 .WithTimeout();

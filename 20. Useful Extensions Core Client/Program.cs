@@ -2,21 +2,18 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace _20._Useful_Extensions_Core_Client
+namespace Bnaya.Samples
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Task _ = CheckDeadlockAsync();
-            _ = CheckTimeoutAsync();
-            _ = MultiExceptionAsync();
-            _ = ExecAsync();
+            Task a = CheckDeadlockAsync();
+            //Task b = CheckTimeoutAsync();
+            //Task c = MultiExceptionAsync();
+            //Task d = ExecAsync();
 
-            var cts = new CancellationTokenSource();
-            cts.Token.RegisterWeak(() => throw new InvalidCastException("Shit may happen"));
-            if(!cts.CancelSafe())
-                Console.WriteLine("shit does happen");
+            //SafeCancellation();
 
             Console.ReadKey();
         }
@@ -49,6 +46,44 @@ namespace _20._Useful_Extensions_Core_Client
             {
                 Console.WriteLine("Took longer than expected");
             }
+        }
+
+        private static void SafeCancellation()
+        {
+            var cts = new CancellationTokenSource();
+            cts.Token.RegisterWeak(() => throw new InvalidCastException("Shit may happen"));
+
+            #region Risky Cancellation
+
+            cts.Cancel();
+
+            #endregion // Risky Cancellation
+
+            #region Safer Cancellation
+
+            //try
+            //{
+            //    cts.Cancel();
+            //}
+            //catch (Exception)
+            //{
+            //    // TODO: Log
+            //}
+
+            #endregion // Safer Cancellation
+
+            #region CancelSafe
+
+            //cts.CancelSafe();
+
+            #endregion // CancelSafe
+
+            #region CancelSafe (advance)
+
+            //if (!cts.CancelSafe(out Exception ex))
+            //    Console.WriteLine($"Cancellation throw: {ex.Format()}");
+
+            #endregion // CancelSafe (advance)
         }
 
         private static async Task MultiExceptionAsync()

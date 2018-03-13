@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace CommonServiceMistakes
+namespace Bnaya.Samples
 {
     public class Startup
     {
@@ -34,6 +34,13 @@ namespace CommonServiceMistakes
             //                            .AllowAnyMethod()
             //                            .AllowAnyHeader()
             //                            .AllowCredentials()));
+
+            // Dependencies Injection (registration)
+            services.AddSingleton<IDownloader, Downloader>();
+            services.AddSingleton<IDownloaderAsync, DownloaderAsync>();
+            services.AddSingleton<IDownloaderValueAsync, DownloaderValueAsync>();
+
+            services.AddMemoryCache();
             services.AddMvc();
         }
 

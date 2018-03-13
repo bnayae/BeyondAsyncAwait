@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
+#pragma warning disable ParallelChecker // Detection of parallel issues in C#.
 namespace Bnaya.Samples
 {
     class Program
@@ -20,7 +21,7 @@ namespace Bnaya.Samples
                     ExecuteIoLike(DURATION);
                     //ExecuteComputeLike(DURATION);
                     Console.Write("|");
-                    Interlocked.Decrement(ref _count);
+                    var x = Interlocked.Decrement(ref _count);
                 }, i);
             }
             while (_count != 0)

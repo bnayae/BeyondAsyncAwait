@@ -4,7 +4,7 @@
 // Project-level suppressions either have no target or are given 
 // a specific target and scoped to a namespace, type, member, etc.
 
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "member", Target = "~M:_016._1_Async_Init.Program.Main(System.String[])")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1102:Make class static.", Justification = "<Pending>", Scope = "type", Target = "~T:_016._1_Async_Init.Program")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "type", Target = "~T:_016._1_Async_Init.Program")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.Program.Main(System.String[])")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1102:Make class static.", Justification = "<Pending>", Scope = "type", Target = "~T:Bnaya.Samples.Program")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "type", Target = "~T:Bnaya.Samples.Program")]
 
