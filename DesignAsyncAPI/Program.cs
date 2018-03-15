@@ -33,7 +33,7 @@ namespace Bnaya.Samples
                                     4096, FileOptions.Asynchronous))
             using (var reader = new StreamReader(srm))
             {
-                string content = await reader.ReadToEndAsync();
+                string content = await reader.ReadToEndAsync().ConfigureAwait(false);
                 return content;
             }
         }
@@ -50,7 +50,7 @@ namespace Bnaya.Samples
                                     4096, FileOptions.Asynchronous))
             using (var reader = new StreamReader(srm))
             {
-                string content = await reader.ReadToEndAsync();
+                string content = await reader.ReadToEndAsync().ConfigureAwait(false);
                 return content;
             }
         }
@@ -77,8 +77,8 @@ namespace Bnaya.Samples
         {
             var logic = new Logic();
 
-            await logic.TapFashion(() => Task.FromResult(GetContent()), "Sync -> Wrap");
-            await logic.TapFashion(GetContentAsync, "TAP -> async");
+            await logic.TapFashion(() => Task.FromResult(GetContent()), "Sync -> Wrap").ConfigureAwait(false);
+            await logic.TapFashion(GetContentAsync, "TAP -> async").ConfigureAwait(false);
         }
 
         #endregion // ExecAsync
@@ -95,7 +95,7 @@ namespace Bnaya.Samples
 
             Task<string> asyncContent = GetContentAsync();
             await logic.VTapFashion(() => new ValueTask<string>(asyncContent), "TAP -> async");
-            await logic.VTapFashion(async () => await asyncContent, "TAP -> async");
+            await logic.VTapFashion(async () => await asyncContent.ConfigureAwait(false), "TAP -> async");
 
             await logic.VTapFashion(GetValueContentAsync, "VTAP -> async");
         }

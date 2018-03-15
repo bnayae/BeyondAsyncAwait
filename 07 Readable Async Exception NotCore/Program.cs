@@ -1,6 +1,7 @@
 ﻿using AsyncFriendlyStackTrace;
 using System;
 using System.Threading.Tasks;
+#pragma warning disable Await1 // Method is not configured to be awaited
 
 namespace Bnaya.Samples
 {

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static AsyncRelayMediator.Common.Constants;
+#pragma warning disable SG0001 // Potential command injection with Process.Start
 
 namespace AsyncRelayMediator.Service
 {

@@ -22,7 +22,6 @@ namespace CommonServiceMistakesFx.Controllers
 
         private TimeSpan Delay => TimeSpan.FromMilliseconds(DELAY + _rnd.Value.Next(0, DELAY_RANGE));
 
-
         // GET api/sample/sync/{i}
         [Route("sync/{i}")]
         [HttpGet]
@@ -64,7 +63,8 @@ namespace CommonServiceMistakesFx.Controllers
             Debug.Write(".");
             return Task.Run(async () =>
             {
-                await Task.Delay(Delay); // represent IO call
+                // represent IO call
+                await Task.Delay(Delay).ConfigureAwait(false); 
                 return $"#{i:00}";
             });
         }
@@ -75,7 +75,8 @@ namespace CommonServiceMistakesFx.Controllers
         public async Task<string> GetRight(int i)
         {
             Debug.Write(".");
-            await Task.Delay(Delay); // represent IO call
+            // represent IO call
+            await Task.Delay(Delay).ConfigureAwait(false); 
             return $"#{i:00}";
         }
     }

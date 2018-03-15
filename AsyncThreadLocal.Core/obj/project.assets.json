@@ -704,9 +704,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\AsyncThreadLocal.Core\\17 AsyncThreadLocal.Core.csproj",
-      "projectName": "17 AsyncThreadLocal.Core",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\AsyncThreadLocal.Core\\17 AsyncThreadLocal.Core.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\AsyncThreadLocal.Core\\17.1 ~AsyncThreadLocal.Core.csproj",
+      "projectName": "17.1 ~AsyncThreadLocal.Core",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\AsyncThreadLocal.Core\\17.1 ~AsyncThreadLocal.Core.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\AsyncThreadLocal.Core\\obj\\",
       "projectStyle": "PackageReference",

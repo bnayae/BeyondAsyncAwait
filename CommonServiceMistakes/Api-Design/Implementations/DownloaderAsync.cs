@@ -12,8 +12,7 @@ namespace Bnaya.Samples
         {
             using (var http = new HttpClient())
             {
-                // must block (cause thread-pool starvation)
-                var result = await http.GetByteArrayAsync(url); 
+                var result = await http.GetByteArrayAsync(url).ConfigureAwait(false); 
                 return result;
             }
         }

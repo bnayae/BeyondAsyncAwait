@@ -37,7 +37,7 @@ namespace AsyncRelayMediator.Service
             Console.WriteLine($"[{message.NextDestination}]");
             Console.ResetColor();
             while (!Console.KeyAvailable) // emulate user data validation 
-                await Task.Delay(10);
+                await Task.Delay(10).ConfigureAwait(false);
             Console.ReadKey(true);
 
             Console.ForegroundColor = ConsoleColor.Green;

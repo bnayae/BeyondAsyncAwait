@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public interface IDownloader
-    {
-        byte[] Download(string url);
-    }
+public interface IDownloader
+{
+    byte[] Download(string url);
+}
 }

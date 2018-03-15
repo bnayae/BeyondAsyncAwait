@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#pragma warning disable Await1 // Method is not configured to be awaited
 
 namespace Bnaya.Samples
 {

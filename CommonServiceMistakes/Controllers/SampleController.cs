@@ -64,7 +64,7 @@ namespace Bnaya.Samples.Controllers
             Debug.Write(".");
             return Task.Run(async () =>
             {
-                await Task.Delay(Delay); // represent IO call
+                await Task.Delay(Delay).ConfigureAwait(false); // represent IO call
                 return $"#{i:00}";
             });
         }
@@ -74,7 +74,7 @@ namespace Bnaya.Samples.Controllers
         [HttpGet]
         public async Task<string> GetRight(int i)
         {
-            await Task.Delay(Delay);//.ConfigureAwait(false); // represent IO call
+            await Task.Delay(Delay).ConfigureAwait(false);//.ConfigureAwait(false); // represent IO call
             return $"#{i:00}";
         }
     }

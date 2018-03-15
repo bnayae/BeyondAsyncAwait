@@ -34,7 +34,7 @@ namespace Bnaya.Samples.Controllers
         public async Task<IActionResult> GetAsync(int size, string topic)
         {
             string url = string.Format(URL_PATTERN, size, topic);
-            byte[] image = await _downloader.DownloadAsync(url);
+            byte[] image = await _downloader.DownloadAsync(url).ConfigureAwait(false);
             var response = File(image, MEDIA_TYPE);
             return response; 
         }       

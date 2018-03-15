@@ -207,7 +207,7 @@ namespace Bnaya.Samples
             {
                 for (int i = 0; i < 100000; i++)
                 {
-                    await writer.WriteAsync("I will never cause ThreadPool starvation...");
+                    await writer.WriteAsync("I will never cause ThreadPool starvation...").ConfigureAwait(false);
                 }
             }
         }
@@ -224,7 +224,7 @@ namespace Bnaya.Samples
             {
                 ThreadPool.GetAvailableThreads(out var w, out var io);
                 Console.WriteLine($"\r\nIn Used:[Workers = {wMax - w}, IO = {ioMax - io}]");
-                await Task.Delay(30);
+                await Task.Delay(30).ConfigureAwait(false);
             }
         }
 

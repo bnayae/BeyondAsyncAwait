@@ -27,7 +27,7 @@ namespace Bnaya.Samples
         {
             Console.WriteLine(title);
             byte[] buffer = Encoding.UTF8.GetBytes("API Design");
-            string content = await strategy();
+            string content = await strategy().ConfigureAwait(false);
             Console.WriteLine(content);
         }
 

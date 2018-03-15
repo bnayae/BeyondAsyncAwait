@@ -200,18 +200,10 @@ namespace ApiDesignWpfClient
 
             using (var http = new HttpClient())
             {
-                try
-                {
-
-                    var response = await http.GetAsync(url).ConfigureAwait(false);
-                    byte[] data = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
-                    _durationUpdater.Report(sw.Elapsed);
-                    _imageUpdater.Report(data);
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
+                var response = await http.GetAsync(url).ConfigureAwait(false);
+                byte[] data = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+                _durationUpdater.Report(sw.Elapsed);
+                _imageUpdater.Report(data);
             }
 
             Interlocked.Increment(ref _completed); // not on the UI thread

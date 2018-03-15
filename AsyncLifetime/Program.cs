@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+#pragma warning disable Await1 // Method is not configured to be awaited
 
 namespace Bnaya.Samples
 {
@@ -18,7 +19,7 @@ namespace Bnaya.Samples
             A.CallTo(() => setting.GetAsync()) // the fake will return the config with 1 second delay
                 .Returns(Task.Run(async () =>
                             {
-                                await Task.Delay(10_000);
+                                await Task.Delay(10_000).ConfigureAwait(false);
                                 return new Config();
                             }));
 

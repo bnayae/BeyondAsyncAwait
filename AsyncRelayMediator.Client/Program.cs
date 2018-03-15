@@ -58,7 +58,7 @@ namespace AsyncRelayMediator.Client
         {
             Console.WriteLine("Sending ...");
             await Addressable.SendAsync(
-                            "Start", route);
+                            "Start", route).ConfigureAwait(false);
             Console.WriteLine("Done");
 
         }

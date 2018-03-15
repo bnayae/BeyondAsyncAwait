@@ -84,7 +84,7 @@ namespace CommonServiceMistakesClient
                 using (var http = new HttpClient() { Timeout = TimeSpan.FromSeconds(15) })
                 {
                     Console.WriteLine("Calling ....");
-                    string result = await http.GetStringAsync(info.Url);
+                    string result = await http.GetStringAsync(info.Url).ConfigureAwait(false);
                     Console.WriteLine(result);
                 }
             }
@@ -146,7 +146,7 @@ namespace CommonServiceMistakesClient
                 var tasks = from i in Enumerable.Range(0, times)
                             let url = $"{root}{i}"
                             select InvokeAsync(http, url);
-                string[] responses = await Task.WhenAll(tasks);
+                string[] responses = await Task.WhenAll(tasks).ConfigureAwait(false);
                 sw.Stop();
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine($"\r\n\r\nDURATION: {sw.Elapsed.TotalSeconds:N3} seconds");
@@ -168,7 +168,7 @@ namespace CommonServiceMistakesClient
         {
             var latency = Stopwatch.StartNew();
             Console.Write("-");
-            string response = await http.GetStringAsync(url);
+            string response = await http.GetStringAsync(url).ConfigureAwait(false);
             latency.Stop();
             Console.Write($"{latency.Elapsed.TotalSeconds:0.0}, ");
             //Console.Write("|");
