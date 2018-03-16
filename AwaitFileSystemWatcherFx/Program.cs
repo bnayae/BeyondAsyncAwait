@@ -11,10 +11,11 @@ namespace Bnaya.Samples
         {
             var cts = new CancellationTokenSource(TimeSpan.FromMinutes(1));
 
-
-            var fsw = new FileSystemWatcher(Path.GetFullPath("Data"));
+            string listenOn = Path.GetFullPath("Data");
+            var fsw = new FileSystemWatcher(listenOn);
             Console.WriteLine(fsw.Path);
-            Task t = ListenAsync(fsw, cts.Token);
+            Task t = ListenOnceAsync(fsw);
+            //Task t = ContinuesListenAsync(fsw, cts.Token);
             while (!t.IsCompleted)
             {
                 Console.Write(".");
@@ -25,7 +26,13 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
-        private static async Task ListenAsync(
+        private static async Task ListenOnceAsync(FileSystemWatcher fsw)
+        {
+            string result = await fsw; // will call the GetAwaiter extension method
+            Console.WriteLine(result);
+        }
+
+        private static async Task ContinuesListenAsync(
             FileSystemWatcher fsw,
             CancellationToken ct)
         {
@@ -36,6 +43,7 @@ namespace Bnaya.Samples
                 while (!ct.IsCancellationRequested)
                 {
                     string result = await fsw;
+                    Console.Clear();
                     Console.WriteLine(result);
                 }
             }
