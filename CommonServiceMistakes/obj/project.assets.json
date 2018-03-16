@@ -10875,9 +10875,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\14 Common Service Mistakes.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\017 Common Service Mistakes.csproj",
       "projectName": "CommonServiceMistakes",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\14 Common Service Mistakes.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\017 Common Service Mistakes.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\obj\\",
       "projectStyle": "PackageReference",

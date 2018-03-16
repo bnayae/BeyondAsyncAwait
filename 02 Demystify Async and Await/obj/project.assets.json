@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\02 Demystify Async and Await\\02 Demystify Async and Await.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\02 Demystify Async and Await\\004 Demystify Async and Await.csproj",
       "projectName": "Demystify Async and Await",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\02 Demystify Async and Await\\02 Demystify Async and Await.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\02 Demystify Async and Await\\004 Demystify Async and Await.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\02 Demystify Async and Await\\obj\\",
       "projectStyle": "PackageReference",

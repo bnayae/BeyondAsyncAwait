@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\05 Loop Patterns\\05 Loop Patterns.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\05 Loop Patterns\\007 Loop Patterns.csproj",
       "projectName": "Loop Patterns",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\05 Loop Patterns\\05 Loop Patterns.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\05 Loop Patterns\\007 Loop Patterns.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\05 Loop Patterns\\obj\\",
       "projectStyle": "PackageReference",

@@ -693,9 +693,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\06 Readable Async Exception\\06 Readable Async Exception.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\06 Readable Async Exception\\010 Readable Async Exception.csproj",
       "projectName": "ReadableAsyncException",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\06 Readable Async Exception\\06 Readable Async Exception.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\06 Readable Async Exception\\010 Readable Async Exception.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\06 Readable Async Exception\\obj\\",
       "projectStyle": "PackageReference",

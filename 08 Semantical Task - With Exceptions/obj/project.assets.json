@@ -693,9 +693,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\08 ~Semantical Task - With Exceptions.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\011 ~Semantical Task - With Exceptions.csproj",
       "projectName": "SemanticalTaskWithExceptions",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\08 ~Semantical Task - With Exceptions.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\011 ~Semantical Task - With Exceptions.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\obj\\",
       "projectStyle": "PackageReference",

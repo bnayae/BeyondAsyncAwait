@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\10 Lazy Cancellation\\10 Lazy Cancellation.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\10 Lazy Cancellation\\012 Lazy Cancellation.csproj",
       "projectName": "LazyCancellation",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\10 Lazy Cancellation\\10 Lazy Cancellation.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\10 Lazy Cancellation\\012 Lazy Cancellation.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\10 Lazy Cancellation\\obj\\",
       "projectStyle": "PackageReference",

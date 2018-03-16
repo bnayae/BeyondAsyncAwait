@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\09 Void Async\\02.1 Void Async.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\09 Void Async\\005 Void Async.csproj",
       "projectName": "VoidAsync",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\09 Void Async\\02.1 Void Async.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\09 Void Async\\005 Void Async.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\09 Void Async\\obj\\",
       "projectStyle": "PackageReference",

@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\00 Thread vs Pool Core.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\001 Thread vs Pool Core.csproj",
       "projectName": "ThreadVsPoolCore",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\00 Thread vs Pool Core.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\001 Thread vs Pool Core.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\00 Thread vs Pool Core\\obj\\",
       "projectStyle": "PackageReference",

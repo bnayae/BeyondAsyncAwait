@@ -673,9 +673,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\0   ThreadPool.csproj",
+      "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\000  ThreadPool.csproj",
       "projectName": "ThreadPool",
-      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\0   ThreadPool.csproj",
+      "projectPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\000  ThreadPool.csproj",
       "packagesPath": "C:\\Users\\bnaya\\.nuget\\packages\\",
       "outputPath": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\000 ThreadPool\\obj\\",
       "projectStyle": "PackageReference",
