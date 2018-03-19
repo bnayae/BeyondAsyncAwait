@@ -104,8 +104,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006 ~Multi Async Exception"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "026 BatchSync", "BatchSync\026 BatchSync.csproj", "{CEDC5D3E-C428-49F0-A4E7-7ADD2E6F6327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "028 TaskLikeSample", "TaskLikeSample\028 TaskLikeSample.csproj", "{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -294,10 +292,6 @@ Global
 		{CEDC5D3E-C428-49F0-A4E7-7ADD2E6F6327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEDC5D3E-C428-49F0-A4E7-7ADD2E6F6327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEDC5D3E-C428-49F0-A4E7-7ADD2E6F6327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77D3C721-B730-4D15-B9EB-FCEDDCB9BB91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
