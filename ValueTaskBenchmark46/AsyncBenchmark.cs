@@ -14,7 +14,8 @@ namespace Bnaya.Samples
     [ClrJob]
     //[CoreJob]
     //[MonoJob]
-    [RankColumn, MinColumn, MaxColumn]
+    [MemoryDiagnoser]
+    [RankColumn, MeanColumn, CategoriesColumn] //, MinColumn, MaxColumn]
     //[SimpleJob(RunStrategy.Throughput, launchCount: 10, warmupCount: 0, targetCount: 100)]
     [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
     public class AsyncBenchmark
@@ -40,7 +41,7 @@ namespace Bnaya.Samples
         }
 
         [BenchmarkCategory("Async+FromResult")]
-        [Benchmark(Description = "await ValueTask")] //, OperationsPerInvoke = OPERATIONS_PER_INVOKE)]
+        [Benchmark(Baseline = true, Description = "await ValueTask")] //, OperationsPerInvoke = OPERATIONS_PER_INVOKE)]
         public async ValueTask<int> ValueTaskAsyncFromResult()
         {
             await new ValueTask<int>(1);
@@ -61,7 +62,7 @@ namespace Bnaya.Samples
         }
 
         [BenchmarkCategory("Async+FromResult+ConfigureAwait")]
-        [Benchmark(Description = "await ValueTask.Configure")] //, OperationsPerInvoke = OPERATIONS_PER_INVOKE)]
+        [Benchmark(Baseline = true, Description = "await ValueTask.Configure")] //, OperationsPerInvoke = OPERATIONS_PER_INVOKE)]
         public async ValueTask<int> ValueTaskAsyncFromResultConfigureAwait()
         {
             await new ValueTask<int>(1).ConfigureAwait(false);
