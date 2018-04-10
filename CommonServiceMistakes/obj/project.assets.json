@@ -10871,9 +10871,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\CommonServiceMistakes\\017 Common Service Mistakes.csproj",
       "projectName": "CommonServiceMistakes",

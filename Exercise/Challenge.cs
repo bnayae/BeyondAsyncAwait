@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 // IMPORTANT: this file (Challenge.cs) properties Build Action is set to None
 //            Set it to Compile before trying to build or debug this project
+//            (right click -> properties)
 namespace Exercise
 {
     public static class Challenge
