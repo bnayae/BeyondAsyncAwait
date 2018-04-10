@@ -13,7 +13,7 @@ namespace Bnaya.Samples
 
         static void Main(string[] args)
         {
-            Console.WriteLine(@"This sample compare 3 different scenarios (Thread vs. Thread-Pool):");
+            Console.WriteLine("This sample compare 3 different scenarios (Thread vs. Thread-Pool):");
 
             //Console.WriteLine($"Stat: {Process.GetCurrentProcess().ProcessName}");
 

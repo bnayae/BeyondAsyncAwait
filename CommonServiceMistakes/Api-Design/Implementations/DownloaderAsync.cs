@@ -12,7 +12,7 @@ namespace Bnaya.Samples
         {
             using (var http = new HttpClient())
             {
-                var result = await http.GetByteArrayAsync(url).ConfigureAwait(false); 
+                var result = await http.GetByteArrayAsync(url).ConfigureAwait(false);
                 return result;
             }
         }

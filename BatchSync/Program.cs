@@ -6,7 +6,7 @@ using System.Threading.Tasks.Dataflow;
 
 namespace BatchSync
 {
-    class Program
+    static class Program
     {
 
         static void Main(string[] args)

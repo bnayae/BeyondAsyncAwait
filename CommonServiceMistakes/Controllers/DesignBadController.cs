@@ -23,7 +23,7 @@ namespace Bnaya.Samples.Controllers
         private readonly IDownloader _downloader;
 
         // Constructor injection
-        public DesignBadController(IDownloader downloader) 
+        public DesignBadController(IDownloader downloader)
         {
             _downloader = downloader;
         }
@@ -49,6 +49,6 @@ namespace Bnaya.Samples.Controllers
             byte[] image = _downloader.Download(url);
             var response = File(image, MEDIA_TYPE);
             return Task.FromResult<IActionResult>(response); // not very helpful
-        }       
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Bnaya.Samples
             instance.EnableRaisingEvents = true;
             instance.Filter = "*.txt";
             instance.Deleted += (s, e) =>
-                {   
+                {
                     action();
                     tcs.SetResult(e.FullPath);
                 };

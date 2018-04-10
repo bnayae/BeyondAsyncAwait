@@ -13,7 +13,7 @@ namespace Bnaya.Samples
             using (var http = new HttpClient())
             {
                 // must block (cause thread-pool starvation)
-                var result = http.GetByteArrayAsync(url).Result; 
+                var result = http.GetByteArrayAsync(url).Result;
                 return result;
             }
         }

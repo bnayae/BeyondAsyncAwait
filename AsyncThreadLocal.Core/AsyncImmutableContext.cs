@@ -18,7 +18,7 @@ namespace Bnaya.Samples
         private AsyncLocal<IImmutableList<string>> _contexts =
             new AsyncLocal<IImmutableList<string>>();
 
-        private IImmutableList<string> _context => 
+        private IImmutableList<string> _context =>
             _contexts.Value ?? ImmutableList<string>.Empty;
 
         #region Add
@@ -35,7 +35,7 @@ namespace Bnaya.Samples
         #region GetContext
 
         public string GetContext<T>(
-            T title, 
+            T title,
             [CallerMemberName]string source = null)
         {
             string items = string.Join("\r\n", _context);

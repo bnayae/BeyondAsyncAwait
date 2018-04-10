@@ -16,7 +16,7 @@ namespace _02._1_Async_Download
         static void Main(string[] args)
         {
             Task t = ProcessAsync();
-           
+
             while (!t.IsCompleted)
             {
                 Console.Write(".");
@@ -35,7 +35,7 @@ namespace _02._1_Async_Download
             foreach (byte[] data in images)
             {
                 await SaveAsync($"Image {i++}.jpg", data);
-            }           
+            }
         }
         private static async Task<byte[]> DownloadAsync (string url)
         {

@@ -51,7 +51,7 @@ namespace CommonServiceMistakesFx.Controllers
 
         private async Task ExecAsync(int i)
         {
-            await Task.Delay(1).ConfigureAwait(false); 
+            await Task.Delay(1).ConfigureAwait(false);
             // return on non-synchronization context
             Thread.Sleep(2000);
         }

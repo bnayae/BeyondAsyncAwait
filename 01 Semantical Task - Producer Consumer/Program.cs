@@ -25,7 +25,7 @@ namespace Bnaya.Samples
             // start the second message processing loop
             _tmr = new Timer(SecondStageAsync, null, TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(5));
             // start the third message processing loop
-            Task _ = TrdStageAsync(); 
+            Task _ = TrdStageAsync();
             // define the last message processing handler
             _finalProcesing = new ActionBlock<Completeble<string>>(ProcessFinalStageAsync);
 
@@ -41,7 +41,7 @@ namespace Bnaya.Samples
                 Console.Write(".");
                 Thread.Sleep(100);
             }
-            
+
             Console.WriteLine($"\r\nDone: {t.Result}");
             _secondQueue.CompleteAdding();
             Console.ReadKey(true);
@@ -49,7 +49,6 @@ namespace Bnaya.Samples
 
         #endregion // Main
 
- 
         #region StartAsync -=> FirstStageAsync
 
         private static Task<string[]> StartAsync()
@@ -101,7 +100,7 @@ namespace Bnaya.Samples
             // make the rest of the code async 
             // otherwise you will have dead lock (GetConsumingEnumerable is 
             // blocking API therefore could be dangerous)
-            await Task.Delay(1);  
+            await Task.Delay(1);
 
             foreach (Completeble<string> message in _secondQueue.GetConsumingEnumerable())
             {

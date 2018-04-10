@@ -27,7 +27,7 @@ namespace Bnaya.Samples.Controllers
         // Constructor injection
         public DesignBetterController(
             IDownloaderValueAsync downloader,
-            IMemoryCache cache) 
+            IMemoryCache cache)
         {
             _downloader = downloader;
             _cache = cache;
@@ -57,7 +57,7 @@ namespace Bnaya.Samples.Controllers
 
             #endregion // _cache.Set(url, response)
 
-            return response; 
-        }       
+            return response;
+        }
     }
 }

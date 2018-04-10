@@ -17,6 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011 ~Semantical Task - With
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5DFC83C2-EE4E-418B-AF32-D7E3DB0DE2A8}"
 	ProjectSection(SolutionItems) = preProject
+		Extensions.txt = Extensions.txt
 		Links.txt = Links.txt
 	EndProjectSection
 EndProject
@@ -39,8 +40,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "000  ThreadPool", "000 ThreadPool\000  ThreadPool.csproj", "{F73CE361-A0C7-4058-8E43-3E0F71C9FB63}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022 ~AsyncThreadLocal.Core", "AsyncThreadLocal.Core\022 ~AsyncThreadLocal.Core.csproj", "{A1F1B949-FBDA-4C26-A13E-473889B93294}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{221788FB-BD6A-4CE4-9F0E-817172FFD4A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "021 OpenFilePitfallFx", "OpenFilePitfallFx\021 OpenFilePitfallFx.csproj", "{7632C2DE-0BAC-4AA0-8A3A-23624427B5A3}"
 EndProject
@@ -174,8 +173,6 @@ Global
 		{A1F1B949-FBDA-4C26-A13E-473889B93294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F1B949-FBDA-4C26-A13E-473889B93294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F1B949-FBDA-4C26-A13E-473889B93294}.Release|Any CPU.Build.0 = Release|Any CPU
-		{221788FB-BD6A-4CE4-9F0E-817172FFD4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{221788FB-BD6A-4CE4-9F0E-817172FFD4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7632C2DE-0BAC-4AA0-8A3A-23624427B5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7632C2DE-0BAC-4AA0-8A3A-23624427B5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7632C2DE-0BAC-4AA0-8A3A-23624427B5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU

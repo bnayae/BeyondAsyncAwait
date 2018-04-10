@@ -11,12 +11,13 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    [ClrJob]
+    [ClrJob, RyuJitX64Job, LegacyJitX64Job]
     //[CoreJob]
     //[MonoJob]
     [MemoryDiagnoser]
     [RankColumn, MeanColumn, CategoriesColumn] //, MinColumn, MaxColumn]
-    //[SimpleJob(RunStrategy.Throughput, launchCount: 10, warmupCount: 0, targetCount: 100)]
+    [SimpleJob(RunStrategy.Throughput, launchCount: 5, warmupCount: 5, targetCount: 40, id: "Throughput")]
+    [SimpleJob(RunStrategy.Monitoring, launchCount: 5, warmupCount: 5, targetCount: 40, id: "Monitoring")]
     [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
     public class AsyncBenchmark
     {

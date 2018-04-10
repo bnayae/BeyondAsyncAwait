@@ -64,7 +64,7 @@ namespace CommonServiceMistakesFx.Controllers
             return Task.Run(async () =>
             {
                 // represent IO call
-                await Task.Delay(Delay).ConfigureAwait(false); 
+                await Task.Delay(Delay).ConfigureAwait(false);
                 return $"#{i:00}";
             });
         }
@@ -76,7 +76,7 @@ namespace CommonServiceMistakesFx.Controllers
         {
             Debug.Write(".");
             // represent IO call
-            await Task.Delay(Delay).ConfigureAwait(false); 
+            await Task.Delay(Delay).ConfigureAwait(false);
             return $"#{i:00}";
         }
     }

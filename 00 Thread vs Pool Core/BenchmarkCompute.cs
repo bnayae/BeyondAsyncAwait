@@ -63,7 +63,7 @@ namespace Bnaya.Samples
         #region UnitOfWork
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
-        private void UnitOfWork()
+        private static void UnitOfWork()
         {
             for (int i = 0; i < WORK_LEVEL; i++)
             {

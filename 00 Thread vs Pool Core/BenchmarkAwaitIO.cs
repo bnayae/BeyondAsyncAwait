@@ -63,7 +63,7 @@ namespace Bnaya.Samples
         #region UnitOfWork
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
-        private async Task UnitOfWork()
+        private static async Task UnitOfWork()
         {
             await Task.Delay(WORK_LEVEL); // Thread goes back to the pool
         }

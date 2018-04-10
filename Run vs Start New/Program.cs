@@ -50,7 +50,7 @@ namespace Bnaya.Samples
             {
                 await Task.Delay(1000);
                 Console.Write("2 ");
-            }); 
+            });
             Console.Write("3 ");
         }
 
@@ -68,7 +68,7 @@ namespace Bnaya.Samples
             {
                 await Task.Delay(1000);
                 Console.Write("2 ");
-            }).Unwrap(); 
+            }).Unwrap();
             Console.Write("3 ");
         }
 

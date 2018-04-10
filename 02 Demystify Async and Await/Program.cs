@@ -21,7 +21,7 @@ namespace Bnaya.Samples
                 Console.Write(".");
                 Thread.Sleep(50);
             }
-            
+
             Console.ReadKey();
         }
 

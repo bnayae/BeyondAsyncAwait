@@ -21,7 +21,7 @@ namespace Bnaya.Samples
                 Console.Write($"{i}# ");
             }
         }
- 
+
         public async Task TryExecAsync(int i)
         {
             using (var scope = await _gate.TryAcquireAsync().ConfigureAwait(false))
@@ -36,6 +36,6 @@ namespace Bnaya.Samples
                 }
             }
         }
-       
+
     }
 }

@@ -23,7 +23,7 @@ namespace Bnaya.Samples.Controllers
         private readonly IDownloaderAsync _downloader;
 
         // Constructor injection
-        public DesignOkController(IDownloaderAsync downloader) 
+        public DesignOkController(IDownloaderAsync downloader)
         {
             _downloader = downloader;
         }
@@ -36,7 +36,7 @@ namespace Bnaya.Samples.Controllers
             string url = string.Format(URL_PATTERN, size, topic);
             byte[] image = await _downloader.DownloadAsync(url).ConfigureAwait(false);
             var response = File(image, MEDIA_TYPE);
-            return response; 
-        }       
+            return response;
+        }
     }
 }

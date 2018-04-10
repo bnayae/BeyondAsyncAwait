@@ -39,7 +39,7 @@ namespace Bnaya.Samples
         #region GetContext
 
         public string GetContext<T>(
-            T title, 
+            T title,
             [CallerMemberName]string source = null)
         {
             var context = _contexts.Value ?? Enumerable.Empty<string>();

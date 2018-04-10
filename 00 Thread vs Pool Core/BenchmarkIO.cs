@@ -63,7 +63,7 @@ namespace Bnaya.Samples
         #region UnitOfWork
 
         [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
-        private void UnitOfWork()
+        private static void UnitOfWork()
         {
             Thread.Sleep(WORK_LEVEL);
         }

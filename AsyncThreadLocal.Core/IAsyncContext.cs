@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    public interface IAsyncContext 
+    public interface IAsyncContext
     {
         string GetContext<T>(T title, [CallerMemberName]string source = null);
 

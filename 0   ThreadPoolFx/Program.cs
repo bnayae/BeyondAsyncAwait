@@ -43,7 +43,7 @@ namespace Bnaya.Samples
             var sw = Stopwatch.StartNew();
             while (sw.Elapsed < duration)
             {
-               
+
             }
         }
     }

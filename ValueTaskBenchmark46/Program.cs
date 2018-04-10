@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

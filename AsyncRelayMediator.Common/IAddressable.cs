@@ -8,6 +8,6 @@ namespace AsyncRelayMediator.Common
 {
     public interface IAddressable
     {
-        void Send(Message message); 
+        void Send(Message message);
     }
 }

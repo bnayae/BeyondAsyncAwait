@@ -28,7 +28,7 @@ namespace AsyncRelayMediator.Common
             string data,
             IEnumerable<string> route)
         {
-            Route = ImmutableQueue.CreateRange(route.Select(m => m.ToString()));
+            Route = ImmutableQueue.CreateRange(route.Select(m => m));
             RouteId = routeId;
             Data = data;
         }

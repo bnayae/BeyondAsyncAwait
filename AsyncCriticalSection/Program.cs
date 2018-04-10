@@ -6,7 +6,7 @@ namespace Bnaya.Samples
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             var f = new Foo();

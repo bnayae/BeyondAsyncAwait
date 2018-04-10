@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Sela.Samples
 {
-    class Program
+    static class Program
     {
         private static int _count = 0;
         private const int WORK_DURATION_SECONDS = 2;
@@ -28,7 +28,7 @@ namespace Sela.Samples
         }
 
         private static void A(int i)
-        { 
+        {
             var s = new string('*', (i + 1));
             Console.Write("A");
             //if(i < 2)

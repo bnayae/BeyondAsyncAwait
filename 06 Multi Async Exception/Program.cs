@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace Bnaya.Samples
             try
             {
                 Console.WriteLine("Start");
-                Task t1 = Task.Run(async () => 
+                Task t1 = Task.Run(async () =>
                 {
                     await Task.Delay(3000);
                     throw new IndexOutOfRangeException("Y");
@@ -50,7 +50,7 @@ namespace Bnaya.Samples
             {
 
                 await Task.Delay(2);
-                
+
                 await Task.Run(() => { });
                 await Task.Factory.StartNew(() => { });
             }

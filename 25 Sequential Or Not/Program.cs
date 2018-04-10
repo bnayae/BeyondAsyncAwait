@@ -20,7 +20,7 @@ namespace Bnaya.Samples
             // the output of transform block is sequential 
             // (dictate by the order of the original input)
             var block = new TransformBlock<int, string>(async i =>
-            {   
+            {
                 int duration = i % 5 * 1000; // transformation duration
                 await Task.Delay(duration).ConfigureAwait(false);
                 Console.WriteLine($"\t{i} Transformed after {duration} ms,");
@@ -83,7 +83,7 @@ namespace Bnaya.Samples
             int degreeOfParallelism = options.MaxDegreeOfParallelism;
             options.MaxDegreeOfParallelism = 1; // reset to single task
             options.BoundedCapacity = 1; // otherwise the first one will take it all
-            
+
             // instead of single block with multi-task
             // having multi-blocks with single task
             // each block map the input to the output
