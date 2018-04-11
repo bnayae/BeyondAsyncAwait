@@ -115,7 +115,7 @@ namespace Bnaya.Samples.Controllers
 
         #endregion // GetRainbowAsync
 
-        #region GetMergeAsync
+        #region GetRainbowAsync
 
         // GET api/imagemanip/merge/{size}/{topic?}
         [Route("merge/{size}/{topic?}")]
@@ -147,14 +147,14 @@ namespace Bnaya.Samples.Controllers
             {
                 SKCanvas canvas = surface.Canvas;
                 canvas.DrawColor(SKColors.White);
-
+               
 
                 // draw the bitmap through the filter
                 var rect = SKRect.Create(imageInfo.Size);
                 canvas.DrawBitmap(bitmap0, rect, paint);
                 rect = SKRect.Create(size, 0, size, size);
                 canvas.DrawBitmap(bitmap1, rect, paint);
-
+                
                 SKData data = surface.Snapshot().Encode(SKEncodedImageFormat.Jpeg, 80);
                 data.SaveTo(outStream);
                 byte[] manipedImage = outStream.ToArray();
@@ -163,7 +163,7 @@ namespace Bnaya.Samples.Controllers
             }
         }
 
-        #endregion // GetMergeAsync
+        #endregion // GetRainbowAsync
 
         #region GetWithFilterAsync
 
@@ -176,11 +176,11 @@ namespace Bnaya.Samples.Controllers
             SKBlendMode blendMode = SKBlendMode.Overlay)
         {
             byte[] manipedImage = await GetBytesWithFilterAsync(
-                                            size,
-                                            topic,
-                                            imageFilter,
-                                            colorFilter,
-                                            shader,
+                                            size, 
+                                            topic, 
+                                            imageFilter, 
+                                            colorFilter, 
+                                            shader, 
                                             blendMode).ConfigureAwait(false);
             var response = File(manipedImage, MEDIA_TYPE);
             return response;
@@ -196,7 +196,7 @@ namespace Bnaya.Samples.Controllers
         {
             Trace.WriteLine("Start");
             string url;
-            if (string.IsNullOrEmpty(topic))
+            if(string.IsNullOrEmpty(topic))
                 url = string.Format(URL_PATTERN_RND, size);
             else
                 url = string.Format(URL_PATTERN, size, topic);
