@@ -20,14 +20,15 @@ namespace Bnaya.Samples.Controllers
     public class ImageManipController : Controller
     {
         private const string URL_PATTERN = "https://source.unsplash.com/{0}x{0}/?{1}/";
+        private const string URL_PATTERN_RND = "https://source.unsplash.com/random/{0}x{0}";
         private const string MEDIA_TYPE = "image/jpeg";
 
         #region GetBlurAsync
 
-        // GET api/imagemanip/blur/{size}/{topic}/{blurStrength}
-        [Route("blur/{size}/{topic}/{blurStrength}")]
+        // GET api/imagemanip/blur/{size}/{topic?}/{blurStrength?}
+        [Route("blur/{size}/{topic?}/{blurStrength?}")]
         [HttpGet]
-        public async ValueTask<IActionResult> GetBlurAsync(int size, string topic, int blurStrength)
+        public async ValueTask<IActionResult> GetBlurAsync(int size, string topic = null, int blurStrength = 5)
         {
             using (var filter = SKImageFilter.CreateBlur(blurStrength, blurStrength))
             {
@@ -40,10 +41,10 @@ namespace Bnaya.Samples.Controllers
 
         #region GetGrayscaleAsync
 
-        // GET api/imagemanip/grayscale/{size}/{topic}/{contrast?}
-        [Route("grayscale/{size}/{topic}/{contrast?}")]
+        // GET api/imagemanip/grayscale/{size}/{topic?}/{contrast?}
+        [Route("grayscale/{size}/{topic?}/{contrast?}")]
         [HttpGet]
-        public async ValueTask<IActionResult> GetGrayscaleAsync(int size, string topic, float contrast = 0.06F)
+        public async ValueTask<IActionResult> GetGrayscaleAsync(int size, string topic = null, float contrast = 0.06F)
         {
             int halfSize = size / 2;
             var rotate = SKMatrix.MakeRotationDegrees(30, halfSize, halfSize);
@@ -60,10 +61,10 @@ namespace Bnaya.Samples.Controllers
 
         #region GetRotateAsync
 
-        // GET api/imagemanip/rotate/{size}/{topic}/{degrees}
-        [Route("rotate/{size}/{topic}/{degrees?}")]
+        // GET api/imagemanip/rotate/{size}/{topic?}/{degrees}
+        [Route("rotate/{size}/{topic?}/{degrees?}")]
         [HttpGet]
-        public async ValueTask<IActionResult> GetRotateAsync(int size, string topic, int degrees = 30)
+        public async ValueTask<IActionResult> GetRotateAsync(int size, string topic = null, int degrees = 30)
         {
             int halfSize = size / 2;
             var rotate = SKMatrix.MakeRotationDegrees(degrees, halfSize, halfSize);
@@ -79,18 +80,18 @@ namespace Bnaya.Samples.Controllers
 
         #region GetShaderAsync
 
-        // GET api/imagemanip/shader/{size}/{topic}
-        [Route("shader/{size}/{topic}")]
+        // GET api/imagemanip/shader/{size}/{topic?}
+        [Route("shader/{size}/{topic?}")]
         [HttpGet]
-        public async ValueTask<IActionResult> GetShaderAsync(int size, string topic)
+        public async ValueTask<IActionResult> GetShaderAsync(int size, string topic = null)
         {
             int center = size / 2;
             var colors = new SKColor[] { new SKColor(0, 255, 90), new SKColor(50, 0, 255), new SKColor(255, 255, 0), new SKColor(0, 255, 255) };
             using (var sweep = SKShader.CreateSweepGradient(new SKPoint(center, center), colors, null))
-            using (var turbulence = SKShader.CreatePerlinNoiseTurbulence(0.02f, 0.02f, size/100, 0))
+            using (var turbulence = SKShader.CreatePerlinNoiseTurbulence(0.02f, 0.02f, size / 100, 0))
             using (var shader = SKShader.CreateCompose(sweep, turbulence))
             {
-                var response = await GetWithFilterAsync(size, topic, shader:shader);
+                var response = await GetWithFilterAsync(size, topic, shader: shader);
                 return response;
             }
         }
@@ -99,10 +100,10 @@ namespace Bnaya.Samples.Controllers
 
         #region GetRainbowAsync
 
-        // GET api/imagemanip/rainbow/{size}/{topic}
-        [Route("rainbow/{size}/{topic}")]
+        // GET api/imagemanip/rainbow/{size}/{topic?}
+        [Route("rainbow/{size}/{topic?}")]
         [HttpGet]
-        public async ValueTask<IActionResult> GetRainbowAsync(int size, string topic)
+        public async ValueTask<IActionResult> GetRainbowAsync(int size, string topic = null)
         {
             var colors = new SKColor[] { SKColors.Red, SKColors.Yellow, SKColors.Green, SKColors.Blue, SKColors.Purple };
             using (var shader = SKShader.CreateLinearGradient(new SKPoint(0, 0), new SKPoint(size, size / 3), colors, null, SKShaderTileMode.Clamp))
@@ -118,17 +119,22 @@ namespace Bnaya.Samples.Controllers
 
         public async ValueTask<IActionResult> GetWithFilterAsync(
             int size,
-            string topic,
+            string topic = null,
             SKImageFilter imageFilter = null,
             SKColorFilter colorFilter = null,
             SKShader shader = null,
             SKBlendMode blendMode = SKBlendMode.Overlay)
         {
-            string url = string.Format(URL_PATTERN, size, topic);
+            string url;
+            if(string.IsNullOrEmpty(topic))
+                url = string.Format(URL_PATTERN_RND, size);
+            else
+                url = string.Format(URL_PATTERN, size, topic);
+
             var imageInfo = new SKImageInfo(size, size);
             using (var http = new HttpClient())
             {
-                var image = await http.GetByteArrayAsync(url).ConfigureAwait(false);                
+                var image = await http.GetByteArrayAsync(url).ConfigureAwait(false);
                 using (var outStream = new MemoryStream())
                 using (var bitmap = SKBitmap.Decode(image, imageInfo))
                 using (var surface = SKSurface.Create(bitmap.Info))

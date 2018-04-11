@@ -71,9 +71,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "016 ~Async Init", "016.1 As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "022 AsyncLocal Simple", "17 AsyncLocal Simple\022 AsyncLocal Simple.csproj", "{451977D5-2D86-412E-88AA-AE3C2EB83369}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{D06D9236-B7E8-47E4-812D-3911FA7AE224}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "100 Exercise", "Exercise\100 Exercise.csproj", "{D06D9236-B7E8-47E4-812D-3911FA7AE224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise - Solution", "Exercise - Solution\Exercise - Solution.csproj", "{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "102 Exercise - Solution", "Exercise - Solution\102 Exercise - Solution.csproj", "{CFD7F40E-C744-4C54-9F6E-5C23FB18C316}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006 Async Download", "02.1 Async Download\006 Async Download.csproj", "{973801BB-9703-4D30-B097-EE02799B9308}"
 EndProject
@@ -97,13 +97,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "019 ApiDesignWpfClient", "A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "More", "More", "{6951F710-2D51-4AC7-80C0-37CEA3605F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTaskBenchmark46", "ValueTaskBenchmark46\ValueTaskBenchmark46.csproj", "{5004FA3D-0302-4AF0-90DE-A53365744A52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "~ ValueTaskBenchmark46", "ValueTaskBenchmark46\~ ValueTaskBenchmark46.csproj", "{5004FA3D-0302-4AF0-90DE-A53365744A52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006 ~Multi Async Exception", "06 Multi Async Exception\006 ~Multi Async Exception.csproj", "{D59FCDBE-FA0D-4229-A226-E05A35FE905C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "026 BatchSync", "BatchSync\026 BatchSync.csproj", "{CEDC5D3E-C428-49F0-A4E7-7ADD2E6F6327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManipServices", "ImageManipServices\ImageManipServices.csproj", "{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "101 ImageManipServices", "ImageManipServices\101 ImageManipServices.csproj", "{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -315,7 +315,6 @@ Global
 		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{5004FA3D-0302-4AF0-90DE-A53365744A52} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{D59FCDBE-FA0D-4229-A226-E05A35FE905C} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
-		{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}
