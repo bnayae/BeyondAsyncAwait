@@ -1,0 +1,31 @@
+Method,Rank,Mean,Gen 0,Allocated,Categories,Job,Jit,Platform,LaunchCount,RunStrategy,TargetCount,UnrollFactor,WarmupCount,,,Error,StdDev,Median,Scaled,ScaledSD
+FromResult,1,6.773 ns,0.021,44 B,FromResult,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,0.3373 ns,0.9568 ns,6.277 ns,0.86,0.14
+'new ValueTask',2,7.923 ns,-,0 B,FromResult,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,0.2528 ns,0.7455 ns,7.794 ns,1,0
+'await Task',1,"14,551.067 ns",0.1221,259 B,Async+FromResult,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,353.1744 ns,377.8926 ns,"14,446.519 ns",0.92,0.04
+'await ValueTask',2,"15,801.812 ns",0.061,180 B,Async+FromResult,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,655.7724 ns,581.3251 ns,"15,591.202 ns",1,0
+'await Task.Configure',1,"16,333.837 ns",0.1221,267 B,Async+FromResult+ConfigureAwait,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,322.8690 ns,606.4262 ns,"16,160.397 ns",0.99,0.04
+'await ValueTask.Configure',1,"16,480.776 ns",0.061,188 B,Async+FromResult+ConfigureAwait,Clr,LegacyJit,X86,Default,Default,Default,16,Default,,,337.8914 ns,375.5654 ns,"16,403.569 ns",1,0
+FromResult,1,12.602 ns,0.0381,80 B,FromResult,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,0.2175 ns,0.2035 ns,12.541 ns,0.62,0.02
+'new ValueTask',2,20.267 ns,-,0 B,FromResult,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,0.5488 ns,0.5872 ns,20.163 ns,1,0
+'await Task',1,"18,183.270 ns",0.2136,486 B,Async+FromResult,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,363.7042 ns,497.8424 ns,"18,022.209 ns",0.98,0.03
+'await ValueTask',2,"18,549.182 ns",0.1526,338 B,Async+FromResult,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,316.2845 ns,264.1119 ns,"18,449.551 ns",1,0
+'await Task.Configure',1,"21,156.453 ns",0.2136,502 B,Async+FromResult+ConfigureAwait,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,415.3782 ns,554.5179 ns,"21,097.241 ns",0.96,0.03
+'await ValueTask.Configure',2,"22,108.890 ns",0.1526,354 B,Async+FromResult+ConfigureAwait,LegacyJitX64,LegacyJit,X64,Default,Default,Default,16,Default,,,441.2396 ns,525.2643 ns,"22,009.560 ns",1,0
+FromResult,2,"3,346.500 ns",-,0 B,FromResult,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,572.7392 ns,"2,425.0137 ns","2,800.000 ns",3.81,3.12
+'new ValueTask',1,986.500 ns,-,0 B,FromResult,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,96.0514 ns,406.6875 ns,900.000 ns,1,0
+'await Task',1,"67,609.000 ns",-,16384 B,Async+FromResult,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,"6,099.0977 ns","25,823.9599 ns","63,050.000 ns",1.2,0.56
+'await ValueTask',1,"62,318.000 ns",-,0 B,Async+FromResult,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,"6,903.9791 ns","29,231.8780 ns","57,900.000 ns",1,0
+'await Task.Configure',2,"69,744.000 ns",-,16384 B,Async+FromResult+ConfigureAwait,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,"7,078.3442 ns","29,970.1504 ns","61,550.000 ns",1.22,0.6
+'await ValueTask.Configure',1,"60,188.500 ns",-,0 B,Async+FromResult+ConfigureAwait,Monitoring,LegacyJit,X86,5,Monitoring,40,1,5,,,"3,709.1828 ns","15,704.9113 ns","58,500.000 ns",1,0
+FromResult,1,9.235 ns,0.0381,80 B,FromResult,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,0.5398 ns,0.6000 ns,8.997 ns,0.51,0.03
+'new ValueTask',2,17.976 ns,-,0 B,FromResult,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,0.1708 ns,0.1514 ns,17.983 ns,1,0
+'await Task',1,"18,351.523 ns",0.2136,485 B,Async+FromResult,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,362.9709 ns,804.3185 ns,"18,090.750 ns",1.01,0.05
+'await ValueTask',1,"18,095.683 ns",0.1526,337 B,Async+FromResult,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,358.2498 ns,367.8961 ns,"17,933.672 ns",1,0
+'await Task.Configure',1,"17,596.151 ns",0.2136,502 B,Async+FromResult+ConfigureAwait,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,349.9123 ns,523.7322 ns,"17,396.237 ns",1,0.03
+'await ValueTask.Configure',1,"17,621.703 ns",0.1526,353 B,Async+FromResult+ConfigureAwait,RyuJitX64,RyuJit,X64,Default,Default,Default,16,Default,,,346.5708 ns,289.4023 ns,"17,548.807 ns",1,0
+FromResult,1,6.472 ns,0.021,44 B,FromResult,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,0.0471 ns,0.1863 ns,6.443 ns,0.79,0.04
+'new ValueTask',2,8.192 ns,-,0 B,FromResult,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,0.0862 ns,0.3398 ns,8.113 ns,1,0
+'await Task',1,"17,451.101 ns",0.1221,260 B,Async+FromResult,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,179.9123 ns,749.8959 ns,"17,186.164 ns",1,0.06
+'await ValueTask',1,"17,578.010 ns",0.061,180 B,Async+FromResult,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,206.1321 ns,861.4635 ns,"17,248.998 ns",1,0
+'await Task.Configure',2,"17,322.391 ns",0.1221,267 B,Async+FromResult+ConfigureAwait,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,201.1919 ns,847.4595 ns,"17,174.216 ns",1.04,0.08
+'await ValueTask.Configure',1,"16,787.186 ns",0.061,188 B,Async+FromResult+ConfigureAwait,Throughput,LegacyJit,X86,5,Throughput,40,16,5,,,268.0540 ns,"1,126.1536 ns","16,381.821 ns",1,0
