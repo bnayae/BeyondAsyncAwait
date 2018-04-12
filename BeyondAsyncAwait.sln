@@ -105,6 +105,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "026 BatchSync", "BatchSync\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "101 ImageManipServices", "ImageManipServices\101 ImageManipServices.csproj", "{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101 ImageManipServicesLegacy", "ImageManipServicesLegacy\101 ImageManipServicesLegacy.csproj", "{22A79696-F3CF-4106-9913-F4F3C1221D8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -295,6 +297,10 @@ Global
 		{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
