@@ -56,7 +56,7 @@
       <Version>1.5.0</Version>
     </PackageReference>
     <PackageReference Include="Bnaya.CSharp.AsyncExtensions">
-      <Version>1.0.15</Version>
+      <Version>1.0.18</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

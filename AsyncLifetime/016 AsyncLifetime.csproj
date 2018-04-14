@@ -18,7 +18,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.15" />
+    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.18" />
     <PackageReference Include="FakeItEasy" Version="4.5.1" />
   </ItemGroup>
 

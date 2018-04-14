@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 #pragma warning disable Await1 // Method is not configured to be awaited
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace Bnaya.Samples
 {
@@ -52,7 +53,7 @@ namespace Bnaya.Samples
         private static void SafeCancellation()
         {
             var cts = new CancellationTokenSource();
-            cts.Token.RegisterWeak(() => throw new InvalidCastException("Shit may happen"));
+            cts.Token.Register(() => throw new InvalidCastException("Shit may happen"));
 
             #region Risky Cancellation
 

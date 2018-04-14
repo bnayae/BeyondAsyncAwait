@@ -2,8 +2,11 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Bnaya.CSharp.AsyncExtensions/1.0.15": {
+      "Bnaya.CSharp.AsyncExtensions/1.0.18": {
         "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.4.0"
+        },
         "compile": {
           "lib/netstandard2.0/Bnaya.CSharp.AsyncExtensions.dll": {}
         },
@@ -205,16 +208,25 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "System.Threading.Tasks.Extensions/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
       }
     }
   },
   "libraries": {
-    "Bnaya.CSharp.AsyncExtensions/1.0.15": {
-      "sha512": "vzjwAj9Ynb6aNuUsInnV+LvXeM7ZyfaGlfa5zP/+6ZDvs2+EZs9vWHcOeozq50AvNqr/cnQJlsnA5xxkmC00WQ==",
+    "Bnaya.CSharp.AsyncExtensions/1.0.18": {
+      "sha512": "q6V0ilPfgAIyXePKf7BE1cvvTlZZ3ZMMQlNW606iK3SLzMyfIWL5eeDj6sMjZHxwML4TwirjuACEqXO8kBiZaw==",
       "type": "package",
-      "path": "bnaya.csharp.asyncextensions/1.0.15",
+      "path": "bnaya.csharp.asyncextensions/1.0.18",
       "files": [
-        "bnaya.csharp.asyncextensions.1.0.15.nupkg.sha512",
+        "bnaya.csharp.asyncextensions.1.0.18.nupkg.sha512",
         "bnaya.csharp.asyncextensions.nuspec",
         "lib/netstandard2.0/Bnaya.CSharp.AsyncExtensions.dll"
       ]
@@ -675,11 +687,32 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "System.Threading.Tasks.Extensions/4.4.0": {
+      "sha512": "SPKfFGbpQsK5Srz2Kq3URgvC90yoOyBE8H1quDA2+MAJ2HAzFmV3biOgPv2Ck3mPAvdKngo3QHi2BNwUQDRVvA==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "ref/netcoreapp2.0/_._",
+        "system.threading.tasks.extensions.4.4.0.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Bnaya.CSharp.AsyncExtensions >= 1.0.15",
+      "Bnaya.CSharp.AsyncExtensions >= 1.0.18",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -689,9 +722,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\TFS\\GIT\\Async\\BeyondAsyncAwait\\08 Semantical Task - With Exceptions\\011 ~Semantical Task - With Exceptions.csproj",
       "projectName": "SemanticalTaskWithExceptions",
@@ -732,7 +762,7 @@
         "dependencies": {
           "Bnaya.CSharp.AsyncExtensions": {
             "target": "Package",
-            "version": "[1.0.15, )"
+            "version": "[1.0.18, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
