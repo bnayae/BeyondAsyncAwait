@@ -43,6 +43,7 @@ namespace Bnaya.Samples
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Format(options));
+                //Console.WriteLine(ex.FormatWithLineNumber(options));
             }
         }
 

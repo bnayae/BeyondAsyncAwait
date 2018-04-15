@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "Bnaya.CSharp.AsyncExtensions/1.0.18": {
+      "Bnaya.CSharp.AsyncExtensions/1.0.19": {
         "type": "package",
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.4.0"
@@ -221,12 +221,12 @@
     }
   },
   "libraries": {
-    "Bnaya.CSharp.AsyncExtensions/1.0.18": {
-      "sha512": "q6V0ilPfgAIyXePKf7BE1cvvTlZZ3ZMMQlNW606iK3SLzMyfIWL5eeDj6sMjZHxwML4TwirjuACEqXO8kBiZaw==",
+    "Bnaya.CSharp.AsyncExtensions/1.0.19": {
+      "sha512": "YGNpU1YSrE3Kj+pzh2DreNFRYLT3XehzoR/AGAhvQzue25iGe40lL6HPEpEUAUYIWoRj0p9L9z4WWX8Pde0CJg==",
       "type": "package",
-      "path": "bnaya.csharp.asyncextensions/1.0.18",
+      "path": "bnaya.csharp.asyncextensions/1.0.19",
       "files": [
-        "bnaya.csharp.asyncextensions.1.0.18.nupkg.sha512",
+        "bnaya.csharp.asyncextensions.1.0.19.nupkg.sha512",
         "bnaya.csharp.asyncextensions.nuspec",
         "lib/netstandard2.0/Bnaya.CSharp.AsyncExtensions.dll"
       ]
@@ -712,7 +712,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Bnaya.CSharp.AsyncExtensions >= 1.0.18",
+      "Bnaya.CSharp.AsyncExtensions >= 1.0.19",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -762,7 +762,7 @@
         "dependencies": {
           "Bnaya.CSharp.AsyncExtensions": {
             "target": "Package",
-            "version": "[1.0.18, )"
+            "version": "[1.0.19, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

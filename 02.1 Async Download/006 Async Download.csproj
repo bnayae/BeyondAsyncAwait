@@ -67,6 +67,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>6.0.4</Version>
     </PackageReference>
+    <PackageReference Include="SixLabors.ImageSharp.Drawing">
+      <Version>1.0.0-beta0003</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

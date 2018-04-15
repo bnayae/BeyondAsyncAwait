@@ -11,9 +11,9 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Info("Main");
-            //Task t = CanBeTrickyAsync();
+            Task t = CanBeTrickyAsync();
             //Task t = AlsoTrickyAsync();
-            Task t = ExpectedAsync();
+            //Task t = ExpectedAsync();
             //Task t = MultiAwaitAsync();
             Info("Main");
             while (!t.IsCompleted)
