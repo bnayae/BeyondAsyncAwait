@@ -108,7 +108,6 @@ namespace Bnaya.Samples
                             {
                                 await Task.Delay(100).ConfigureAwait(false);
                             }
-
                         }
 
                         _result = $@"##  {e.Name}: {e.ChangeType} ##

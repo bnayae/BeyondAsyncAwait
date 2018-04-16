@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Loop Patterns</AssemblyName>
+    <RootNamespace>Bnaya.Samples</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.20" />
+  </ItemGroup>
+
+</Project>

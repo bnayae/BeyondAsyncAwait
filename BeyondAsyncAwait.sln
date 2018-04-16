@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007 ~Parallel Loop Pitfall", "03 Parallel Loop Pitfall\007 ~Parallel Loop Pitfall.csproj", "{01C6158E-F11C-4DA0-AAC5-1736FE913BCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008 Parallel Loop Pitfall NotCore", "04 03 Parallel Loop Pitfall NotCore\008 Parallel Loop Pitfall NotCore.csproj", "{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007 Parallel Loop Pitfall NotCore", "04 03 Parallel Loop Pitfall NotCore\007 Parallel Loop Pitfall NotCore.csproj", "{4C9B56C6-91D8-4288-B76E-1FFFD1645D03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007 Loop Patterns", "05 Loop Patterns\007 Loop Patterns.csproj", "{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008 Loop Patterns", "05 Loop Patterns\008 Loop Patterns.csproj", "{4F66C574-74C9-4DF1-B3D9-08FC156FBBC2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010 Readable Async Exception", "06 Readable Async Exception\010 Readable Async Exception.csproj", "{9CA101FA-E97D-4A44-9126-00F3A1856B54}"
 EndProject
@@ -106,6 +106,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "101 ImageManipServices", "ImageManipServices\101 ImageManipServices.csproj", "{7E0878B6-B4EA-4A91-A987-9F49AFF75F5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101 ImageManipServicesLegacy", "ImageManipServicesLegacy\101 ImageManipServicesLegacy.csproj", "{22A79696-F3CF-4106-9913-F4F3C1221D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIandConfigureAwait", "UIandConfigureAwait\UIandConfigureAwait.csproj", "{162CDB45-8C02-4431-982C-2BC26736ED0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer Techniques", "Timer Techniques\Timer Techniques.csproj", "{E3D91E8F-5C44-493D-A785-F39314D880E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +305,14 @@ Global
 		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22A79696-F3CF-4106-9913-F4F3C1221D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162CDB45-8C02-4431-982C-2BC26736ED0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162CDB45-8C02-4431-982C-2BC26736ED0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162CDB45-8C02-4431-982C-2BC26736ED0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162CDB45-8C02-4431-982C-2BC26736ED0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D91E8F-5C44-493D-A785-F39314D880E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D91E8F-5C44-493D-A785-F39314D880E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D91E8F-5C44-493D-A785-F39314D880E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D91E8F-5C44-493D-A785-F39314D880E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +335,7 @@ Global
 		{5FBFEA7A-7DB8-40BD-862D-67ECC9C6C225} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{5004FA3D-0302-4AF0-90DE-A53365744A52} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{D59FCDBE-FA0D-4229-A226-E05A35FE905C} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
+		{E3D91E8F-5C44-493D-A785-F39314D880E4} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}

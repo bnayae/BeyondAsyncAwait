@@ -50,7 +50,7 @@ namespace BatchSync
         private static (int, double) ChannelB(int input)
         {
             int calc = input;
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 10_000; i++)
             {
                 if ((calc * calc) % 2 == 0)
                     calc += calc % 10;

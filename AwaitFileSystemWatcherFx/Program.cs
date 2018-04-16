@@ -9,8 +9,6 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            var cts = new CancellationTokenSource(TimeSpan.FromMinutes(1));
-
             string listenOn = Path.GetFullPath("Data");
             var fsw = new FileSystemWatcher(listenOn);
             Console.WriteLine(fsw.Path);

@@ -9,8 +9,8 @@ namespace Bnaya.Samples
         private const int ITERATIONS = 15;
         static void Main(string[] args)
         {
-            Task t = SequentialForkAsync();
-            //Task t = NonSequentialForkAsync();
+            //Task t = SequentialForkAsync();
+            Task t = NonSequentialForkAsync();
 
             Console.ReadKey();
         }

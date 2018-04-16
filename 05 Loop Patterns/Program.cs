@@ -65,6 +65,19 @@ namespace Bnaya.Samples
 
             #endregion // Non-Sequential with Tdf
 
+            #region NofX
+
+            Console.WriteLine("Start N of X");
+            Task t4 = NofX(20);
+            while (!t4.IsCompleted)
+            {
+                Console.Write(".");
+                Thread.Sleep(50);
+            }
+            Console.WriteLine("Done");
+
+            #endregion // NofX
+
             Console.ReadKey(true);
         }
 
@@ -126,11 +139,30 @@ namespace Bnaya.Samples
 
         #endregion // NonSequentialWithTdfAsync
 
+        #region NofX
+
+        private static async Task NofX(int n)
+        {
+            var tasks = from i in Enumerable.Range(0, n)
+                        select SingleStep1Async(i);
+            await tasks.WhenN(2);
+            Console.WriteLine("COMPLETE");
+        }
+
+        #endregion // NofX
+
         #region SingleStepAsync
+
+        private static async Task<int> SingleStep1Async(int i)
+        {
+            await Task.Delay(600 * ((i +1 ) % 3));
+            Console.Write($"{i}, ");
+            return i;
+        }
 
         private static async Task SingleStepAsync(int i)
         {
-            await Task.Delay(500);
+            await Task.Delay(300 * i % 3);
             Console.Write($"{i}, ");
         }
 

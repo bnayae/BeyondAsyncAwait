@@ -7,8 +7,8 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            Task _ = DefaultAsync(10);
-            //Task _ = FormatAsync(10);
+            //Task _ = DefaultAsync(10);
+            Task _ = FormatAsync(10);
             //Task _ = FormatAsync(10, ErrorFormattingOption.FormatDuplication);
             //Task _ = DefaultMultiAsync();
             //Task _ = FormatMultiAsync();
@@ -42,7 +42,8 @@ namespace Bnaya.Samples
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Format(options));
+                //Console.WriteLine(ex.Format(options));
+                Console.WriteLine(ex.FormatWithLineNumber());
             }
         }
 
@@ -117,7 +118,7 @@ namespace Bnaya.Samples
         private static async Task NonSequentialRootAsync(int j)
         {
             await Task.Delay(1);
-            await NonSequentialSplitAsync(DateTime.Now.AddDays(j));
+            await NonSequentialSplitAsync(DateTime.Now.AddDays(j)).ThrowAll();
         }
 
         #endregion // NonSequentialRootAsync
