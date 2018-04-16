@@ -11,20 +11,62 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            #region Sequential (for loop)
+            //#region Sequential (for loop)
 
-            Console.WriteLine("Start Sequential");
-            Task t = SequentialAsync(10);
-            while (!t.IsCompleted)
-            {
-                Console.Write(".");
-                Thread.Sleep(50);
-            }
+            //Console.WriteLine("Start Sequential");
+            //Task t = SequentialAsync(10);
+            //while (!t.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
 
-            #endregion // Sequential
+            //#endregion // Sequential
 
-            Console.WriteLine("\r\n---------------------------------------------");
+            //Console.WriteLine("\r\n---------------------------------------------");
 
+            //#region Non-Sequential (LINQ of Tasks)
+
+            //Console.WriteLine("Start Non-Sequential");
+            //Task t1 = NonSequentialAsync(10);
+            //while (!t1.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
+
+            //#endregion // Non-Sequential
+
+            //Console.WriteLine("\r\n---------------------------------------------");
+
+            //#region Sequential with Tdf
+
+            //Console.WriteLine("Start Sequential over TPL Dataflow");
+            //Task t2 = SequentialWithTdfAsync(10);
+            //while (!t2.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
+
+            //#endregion // Sequential with Tdf
+
+            //Console.WriteLine("\r\n---------------------------------------------");
+
+            //#region Non-Sequential with Tdf
+
+            //Console.WriteLine("Start Non-Sequential over TPL Dataflow");
+            //Task t3 = NonSequentialWithTdfAsync(10);
+            //while (!t3.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
+
+            //#endregion // Non-Sequential with Tdf
+
+            //Console.ReadKey(true);
+ 
             #region Non-Sequential (LINQ of Tasks)
 
             Console.WriteLine("Start Non-Sequential");
@@ -36,37 +78,7 @@ namespace Bnaya.Samples
             }
 
             #endregion // Non-Sequential
-
-            Console.WriteLine("\r\n---------------------------------------------");
-
-            #region Sequential with Tdf
-
-            Console.WriteLine("Start Sequential over TPL Dataflow");
-            Task t2 = SequentialWithTdfAsync(10);
-            while (!t2.IsCompleted)
-            {
-                Console.Write(".");
-                Thread.Sleep(50);
-            }
-
-            #endregion // Sequential with Tdf
-
-            Console.WriteLine("\r\n---------------------------------------------");
-
-            #region Non-Sequential with Tdf
-
-            Console.WriteLine("Start Non-Sequential over TPL Dataflow");
-            Task t3 = NonSequentialWithTdfAsync(10);
-            while (!t3.IsCompleted)
-            {
-                Console.Write(".");
-                Thread.Sleep(50);
-            }
-
-            #endregion // Non-Sequential with Tdf
-
-            Console.ReadKey(true);
-        }
+       }
 
         #region SequentialAsync
 
@@ -126,11 +138,23 @@ namespace Bnaya.Samples
 
         #endregion // NonSequentialWithTdfAsync
 
+        #region CompleteWhen3rd
+
+        //private static async Task CompleteWhen3rd(int n)
+        //{
+        //    var tasks = from i in Enumerable.Range(0, n)
+        //                select SingleStepAsync(i);
+        //    await tasks.WhenN(n / 3);
+        //    Console.Write("WhenN ");
+        //}
+
+        #endregion // CompleteWhen3rd
+
         #region SingleStepAsync
 
         private static async Task SingleStepAsync(int i)
         {
-            await Task.Delay(500);
+            await Task.Delay(200 * i % 3);
             Console.Write($"{i}, ");
         }
 
