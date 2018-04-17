@@ -1,0 +1,16 @@
+﻿Visual Studio 2017 Shortcuts
+https://msdn.microsoft.com/en-us/library/da5kh0wa(v=vs.140).aspx
+
+Task != Thread
+http://blogs.microsoft.co.il/bnaya/2016/03/29/demystify-async-and-await-part-1-of-2/
+
+Demystify async / await
+http://blogs.microsoft.co.il/bnaya/2016/03/29/demystify-async-and-await-part-2-of-2/
+
+Task.Factory vs Task.Run
+http://blogs.microsoft.co.il/bnaya/2017/01/24/task-run-vs-task-factory-startnew-part-1/
+http://blogs.microsoft.co.il/bnaya/2017/01/26/task-run-vs-task-factory-startnew-part-2/
+
+AsyncLocal
+https://blog.stephencleary.com/2013/04/implicit-async-context-asynclocal.html
+
