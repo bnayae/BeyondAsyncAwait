@@ -1,5 +1,0 @@
-﻿Roslynator [https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017]
-
-HSR Parallel Checker for C# 7 [http://parallel-checker.com/]
-
-ConfigureAwait Fixer [https://marketplace.visualstudio.com/items?itemName=AdamChodera.ConfigureAwaitFixer]
