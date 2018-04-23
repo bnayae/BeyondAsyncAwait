@@ -12,8 +12,10 @@ namespace Bnaya.Samples
         {
             Info("Main");
             Task t = CanBeTrickyAsync();
+            //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
             //Task t = ExpectedAsync();
+            //Task t = ExpectedDemystifyAsync();
             //Task t = MultiAwaitAsync();
             Info("Main");
             while (!t.IsCompleted)
@@ -34,28 +36,7 @@ namespace Bnaya.Samples
             Info("CanBeTrickyAsync End");
         }
 
-
-        //private static Task CanBeTrickyAsync()
-        //{
-        //    Info("CanBeTrickyAsync Start");
-        //    Thread.Sleep(2000);
-        //    Info("CanBeTrickyAsync End");
-        //    return Task.CompletedTask;
-        //}
-
         #endregion // CanBeTrickyAsync
-
-        #region AlsoTrickyAsync
-
-        private static async Task AlsoTrickyAsync()
-        {
-            Info("AlsoTrickyAsync Start");
-            await Task.CompletedTask;
-            Thread.Sleep(2000);
-            Info("AlsoTrickyAsync End");
-        }
-
-        #endregion // AlsoTrickyAsync
 
         #region CanBeTrickyDemystifyAsync
 
@@ -69,16 +50,58 @@ namespace Bnaya.Samples
 
         #endregion // CanBeTrickyDemystifyAsync
 
+        #region AlsoTrickyAsync
+
+        private static async Task AlsoTrickyAsync()
+        {
+            Info("AlsoTrickyAsync Start");
+            await Task.CompletedTask;
+            Thread.Sleep(2000);
+            Info("AlsoTrickyAsync End");
+        }
+
+        #endregion // AlsoTrickyAsync
+
         #region ExpectedAsync
 
         private static async Task ExpectedAsync()
         {
             Info("ExpectedAsync Start");
             await Task.Delay(2000);
+            //await MyDelay(TimeSpan.FromSeconds(2));
             Info("ExpectedAsync End");
         }
 
         #endregion // ExpectedAsync
+
+        #region ExpectedDemystifyAsync
+
+        private static Task ExpectedDemystifyAsync()
+        {
+            Info("ExpectedAsync Start");
+            Task t = Task.Delay(2000);
+            Task r = t.ContinueWith(c =>
+            {
+                //await MyDelay(TimeSpan.FromSeconds(2));
+                Info("ExpectedAsync End");
+            });
+            return r;
+        }
+
+        #endregion // ExpectedDemystifyAsync
+
+        #region RunSomethingAsync
+
+        //private static async Task RunSomethingAsync()
+        //{
+        //    Info("ExpectedAsync Start");
+        //    Task.Run(() =>
+        //    {
+        //    });
+        //    Info("ExpectedAsync End");
+        //}
+
+        #endregion // RunSomethingAsync
 
         #region MultiAwaitAsync
 
@@ -105,5 +128,17 @@ namespace Bnaya.Samples
         }
 
         #endregion // Info
+
+        #region MyDelay
+
+        private static Task MyDelay(TimeSpan duration)
+        {
+            var tcs = new TaskCompletionSource<object>();
+            // GC may collect the timer!!!
+            var tmr = new Timer(s => tcs.TrySetResult(null), null, duration, TimeSpan.Zero);
+            return tcs.Task;
+        }
+
+        #endregion // MyDelay
     }
 }

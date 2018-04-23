@@ -43,16 +43,17 @@ namespace Bnaya.Samples
 
         #region FirstStageAsync > _firstQueue
 
-        private static async Task<string> FirstStageAsync(string input)
+        private static /*async*/ Task<string> FirstStageAsync(string input)
         {
             string data = $"{input} -> first stage";
 
             var message = Completeble.Create(data);
             _firstQueue.Enqueue(message); // enqueue and complete
             Console.Write(" 1st ");
-            string result = await message.Task;  // this is the magic
-            Console.WriteLine($"\r\n{result}");
-            return result;
+            return message.Task;
+            //string result = await message.Task;  // this is the magic
+            //Console.WriteLine($"\r\n{result}");
+            //return result;
         }
 
         #endregion // FirstStageAsync > _firstQueue
@@ -61,8 +62,7 @@ namespace Bnaya.Samples
 
         private static void SecondStageAsync(object state)
         {
-            Completeble<string> message;
-            while (_firstQueue.TryDequeue(out message))
+            while (_firstQueue.TryDequeue(out Completeble<string> message))
             {
                 string data = $"{message.Value} -> second stage";
                 Console.Write(" 2nd ");

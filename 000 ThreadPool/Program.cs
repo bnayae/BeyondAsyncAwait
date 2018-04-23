@@ -8,8 +8,8 @@ namespace Bnaya.Samples
 {
     class Program
     {
-        private static int _count = 25;
-        private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(10);
+        private static int _count = 125;
+        private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(100);
 
         static void Main(string[] args)
         {
