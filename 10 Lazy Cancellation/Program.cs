@@ -27,7 +27,15 @@ namespace Bnaya.Samples
 
             Task b = a.ContinueWith(t => Console.WriteLine("B"), token);
 
+           
             Task c = b.ContinueWith(t => Console.WriteLine("C"));
+
+            //while (!b.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(30);
+            //}
+            //Console.WriteLine(b.Status);
         }
 
         private static void Lazy(CancellationToken token)
@@ -43,6 +51,13 @@ namespace Bnaya.Samples
                  TaskScheduler.Default);
 
             Task c = b.ContinueWith(t => Console.WriteLine("C"));
+
+            //while (!b.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(30);
+            //}
+            //Console.WriteLine(b.Status);
         }
     }
 }

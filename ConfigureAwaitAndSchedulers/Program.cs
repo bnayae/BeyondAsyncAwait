@@ -28,7 +28,7 @@ namespace Bnaya.Samples
                             Write("#3 [Start New + Scheduler]");
 
                             // Configure Await False will forget the TaskScheduler.Current
-                            await Task.Delay(1).ConfigureAwait(false);
+                            await Task.Delay(1);//.ConfigureAwait(false);
 
                             Write("#4 Factory (after await)");
                             await Task.Run(() => Write("#5 [Run]: "));

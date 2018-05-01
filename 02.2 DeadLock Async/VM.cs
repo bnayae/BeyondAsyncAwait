@@ -11,7 +11,8 @@ namespace _02._2_DeadLock_Async
 {
     public class VM : INotifyPropertyChanged
     {
-        private const string URL = "http://lorempixel.com/1200/1200/animals/";
+        //private const string URL = "http://lorempixel.com/800/800/animals/";
+        private const string URL = "https://source.unsplash.com/800x800/?dog";
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -20,13 +21,14 @@ namespace _02._2_DeadLock_Async
             Process();
         }
 
-        private void Process()
+        private async Task Process()
         {
             for (int i = 0; i < 10; i++)
             {
-                Data = DownloadAsync(URL).Result; // deadlock
+                Data = await DownloadAsync(URL);//.Result; // deadlock
                 //Data = await DownloadAsync(URL);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Data)));
+
             }
         }
 
@@ -34,7 +36,7 @@ namespace _02._2_DeadLock_Async
         {
             using (var http = new HttpClient())
             {
-                byte[] data = await http.GetByteArrayAsync(url);
+                byte[] data = await http.GetByteArrayAsync(url).ConfigureAwait(false);
                 // cannot get into the this line because the calling method
                 // hold the synchronization context (.Result)
                 return data;
