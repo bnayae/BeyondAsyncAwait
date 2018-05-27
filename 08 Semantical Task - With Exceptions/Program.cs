@@ -67,7 +67,7 @@ namespace Bnaya.Samples
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine();
-                Console.WriteLine(ex.Format(false));
+                Console.WriteLine(ex.Format(ErrorFormattingOption.FormatDuplication | ErrorFormattingOption.IncludeLineNumber));
                 Console.ResetColor();
                 throw;
             }

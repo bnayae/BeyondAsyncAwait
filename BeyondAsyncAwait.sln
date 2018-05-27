@@ -65,7 +65,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009 Run vs Start New", "Run
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "027 AwaitFileSystemWatcherFx", "AwaitFileSystemWatcherFx\027 AwaitFileSystemWatcherFx.csproj", "{4A099FEE-4494-4166-AFB1-A1F76F6171B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014 DeadLock Async", "02.2 DeadLock Async\014 DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014 UI DeadLock Async", "02.2 DeadLock Async\014 UI DeadLock Async.csproj", "{1185035E-1EF8-4FCC-B1F6-66E4B649F28E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "016 ~Async Init", "016.1 Async Init\016 ~Async Init.csproj", "{51F4B4A9-BD33-4705-8C66-BF35129FEBA9}"
 EndProject
@@ -107,7 +107,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "101 ImageManipServices", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "101 ImageManipServicesLegacy", "ImageManipServicesLegacy\101 ImageManipServicesLegacy.csproj", "{22A79696-F3CF-4106-9913-F4F3C1221D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIandConfigureAwait", "UIandConfigureAwait\UIandConfigureAwait.csproj", "{162CDB45-8C02-4431-982C-2BC26736ED0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014 UI False parallel forking", "UIandConfigureAwait\014 UI False parallel forking.csproj", "{162CDB45-8C02-4431-982C-2BC26736ED0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer Techniques", "Timer Techniques\Timer Techniques.csproj", "{E3D91E8F-5C44-493D-A785-F39314D880E4}"
 EndProject

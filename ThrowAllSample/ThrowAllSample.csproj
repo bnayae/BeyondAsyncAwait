@@ -34,8 +34,8 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bnaya.CSharp.AsyncExtensions, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bnaya.CSharp.AsyncExtensions.1.0.21\lib\netstandard2.0\Bnaya.CSharp.AsyncExtensions.dll</HintPath>
+    <Reference Include="Bnaya.CSharp.AsyncExtensions, Version=1.0.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bnaya.CSharp.AsyncExtensions.1.0.23\lib\netstandard2.0\Bnaya.CSharp.AsyncExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

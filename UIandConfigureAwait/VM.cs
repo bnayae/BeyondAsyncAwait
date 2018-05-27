@@ -20,22 +20,29 @@ using System.Windows.Input;
 
 namespace UIandConfigureAwait
 {
-    public class VM : INotifyPropertyChanged
+    public class VM : INotifyPropertyChanged, IDisposable
     {
         private const string URL_PATTERN = "https://source.unsplash.com/{0}x{0}/?{1}/";
         private const string URL_PATTERN_RND = "https://source.unsplash.com/random/{0}x{0}";
         private const string MEDIA_TYPE = "image/jpeg";
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private IProgress<string> _progress;
-        private CancellationTokenSource _cancellation = new CancellationTokenSource();
+        private IProgress<string> _progress; // the progress of the processing steps
+        private CancellationTokenSource _cancellation = new CancellationTokenSource(); // cancellation option
+
+        #region Ctor
 
         public VM()
         {
-            Cancel = new MyCommand(_cancellation);
+            Cancel = new CancellationCommand(_cancellation); // let the 
             _progress = new Progress<string>(data => Reports.Add(data));
-            Task _ = GetMergeAsync(2000);
+
+            Task fireForget = GetMergeAsync(2000);
         }
+
+        #endregion // Ctor
+
+        #region Picture
 
         private byte[] _picture;
 
@@ -49,13 +56,30 @@ namespace UIandConfigureAwait
             }
         }
 
-        private int _advance;
+        #endregion // Picture
 
-        public int Advance => _advance;
+        #region ExecutionProgress
+
+        private int _executionProgress;
+
+        /// <summary>
+        /// Gets the execution progress.
+        /// </summary>
+        public int ExecutionProgress => _executionProgress;
+
+        #endregion // ExecutionProgress
+
+        #region Reports (ObservableCollection)
 
         public ObservableCollection<string> Reports { get; } = new ObservableCollection<string>();
 
+        #endregion // Reports (ObservableCollection)
+
+        #region Cancel
+
         public ICommand Cancel { get; }
+
+        #endregion // Cancel
 
         #region GetMergeAsync
 
@@ -97,8 +121,8 @@ namespace UIandConfigureAwait
                 return null;
             }
             //Advance += 1;
-            Interlocked.Increment(ref _advance);
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Advance)));
+            Interlocked.Increment(ref _executionProgress);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ExecutionProgress)));
             Trace.WriteLine("Start");
             _progress.Report("Start");
             string url;
@@ -123,8 +147,8 @@ namespace UIandConfigureAwait
                         .OilPaint()
                         .Grayscale());
                 Trace.WriteLine("Processed");
-                Interlocked.Increment(ref _advance);
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Advance)));
+                Interlocked.Increment(ref _executionProgress);
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ExecutionProgress)));
                 _progress.Report("Processed");
                 return imageProcessor;
             }
@@ -132,12 +156,23 @@ namespace UIandConfigureAwait
 
         #endregion // GetWithFilterAsync
 
-        private class MyCommand : ICommand
+        #region Dispose
+
+        public void Dispose()
+        {
+            _cancellation.Dispose();
+        }
+
+        #endregion // Dispose
+
+        #region CancellationCommand
+
+        private class CancellationCommand : ICommand
         {
             public event EventHandler CanExecuteChanged;
             private CancellationTokenSource _cts;
 
-            public MyCommand(CancellationTokenSource  cts)
+            public CancellationCommand(CancellationTokenSource cts)
             {
                 _cts = cts;
             }
@@ -150,5 +185,7 @@ namespace UIandConfigureAwait
                 _cts.Cancel();
             }
         }
+
+        #endregion // CancellationCommand
     }
 }

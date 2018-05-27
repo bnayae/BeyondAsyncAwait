@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.20" />
+    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.23" />
   </ItemGroup>
 
 </Project>
