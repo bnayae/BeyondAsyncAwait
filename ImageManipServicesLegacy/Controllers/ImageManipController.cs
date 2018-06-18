@@ -86,10 +86,13 @@ namespace Bnaya.Samples.Controllers
                 url = string.Format(URL_PATTERN_RND, size);
             else
                 url = string.Format(URL_PATTERN, size, topic);
-
+            //SynchronizationContext.Current.Send()
             using (var http = new HttpClient())
             {
-                var image = await http.GetByteArrayAsync(url).ConfigureAwait(false);
+                Trace.WriteLine($"SynchronizationContext = {SynchronizationContext.Current != null}");
+
+                var image = await http.GetByteArrayAsync(url);
+                                        //.ConfigureAwait(false);
                 Trace.WriteLine("Processing");
 
                 Image<Rgba32> imageProcessor = Image.Load(image);

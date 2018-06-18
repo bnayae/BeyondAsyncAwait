@@ -108,7 +108,7 @@ namespace Bnaya.Samples
         {
             WriteInfo(title);
             var sw = Stopwatch.StartNew();
-            while (sw.ElapsedMilliseconds < duration) ;
+            while (sw.ElapsedMilliseconds < duration);
         }
 
         #endregion // DoWork

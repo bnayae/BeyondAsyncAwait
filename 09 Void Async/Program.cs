@@ -13,8 +13,8 @@ namespace Bnaya.Samples
 
             //BadIdeaAsync();
             //Task fireForget = GoodIdeaAsync();
-            WhenYouMustAsync();
-            //WhenYouMust7Async();
+            //WhenYouMustAsync();
+            WhenYouMust7Async();
 
             Console.WriteLine("Still working");
             //Thread.Sleep(1000);

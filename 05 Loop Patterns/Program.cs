@@ -68,13 +68,13 @@ namespace Bnaya.Samples
 
             #region CompleteWhenN
 
-            Console.WriteLine("complete when n");
-            Task t4 = CompleteWhenN();
-            while (!t4.IsCompleted)
-            {
-                Console.Write(".");
-                Thread.Sleep(50);
-            }
+            //Console.WriteLine("complete when n");
+            //Task t4 = CompleteWhenN();
+            //while (!t4.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
 
             #endregion // CompleteWhenN
 
@@ -180,9 +180,9 @@ namespace Bnaya.Samples
 
         private static async Task SingleStepAsync(int i)
         {
-            int delay = Abs(3000 - (i * 100));
+            int delay = 1500; // Abs(1500 - (i * 100));
 
-            await Task.Delay(delay);
+            await Task.Delay(delay).ConfigureAwait(false);
             Console.Write($"{i}, ");
         }
 
