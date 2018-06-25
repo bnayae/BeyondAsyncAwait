@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Math;
 #pragma warning disable Await1 // Method is not configured to be awaited
 #pragma warning disable CS0618 // Type or member is obsolete
 
@@ -10,15 +12,19 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            Task a = CheckDeadlockAsync();
+            //Task a = CheckDeadlockAsync();
             //Task b = CheckTimeoutAsync();
             //Task c = MultiExceptionAsync();
             //Task d = ExecAsync();
 
             //SafeCancellation();
 
+            Task e = CompleteWhenN();
+
             Console.ReadKey();
         }
+
+        #region CheckDeadlockAsync
 
         private static async Task CheckDeadlockAsync()
         {
@@ -37,6 +43,10 @@ namespace Bnaya.Samples
             }
         }
 
+        #endregion // CheckDeadlockAsync
+
+        #region CheckTimeoutAsync
+
         private static async Task CheckTimeoutAsync()
         {
             try
@@ -49,6 +59,10 @@ namespace Bnaya.Samples
                 Console.WriteLine("Took longer than expected");
             }
         }
+
+        #endregion // CheckTimeoutAsync
+
+        #region SafeCancellation
 
         private static void SafeCancellation()
         {
@@ -88,6 +102,10 @@ namespace Bnaya.Samples
             #endregion // CancelSafe (advance)
         }
 
+        #endregion // SafeCancellation
+
+        #region MultiExceptionAsync
+
         private static async Task MultiExceptionAsync()
         {
             Task a = Task.Run(() => throw new IndexOutOfRangeException("Error A"));
@@ -111,6 +129,59 @@ namespace Bnaya.Samples
                 Console.WriteLine("Catch single exception");
             }
         }
+
+        #endregion // MultiExceptionAsync
+
+        #region CompleteWhenN
+
+        private static async Task CompleteWhenN()
+        {
+            var cts = new CancellationTokenSource();
+            var tasks = from i in Enumerable.Range(0, 20)
+                        select SingleStepWithResultAsync(i, cts.Token);
+            await tasks.When(i => i > 4 && i < 8); // more common to use it with Task<bool>
+            //await tasks.WhenN(2);
+            //await tasks.WhenN(2, i => i % 2 == 0);
+            //await tasks.WhenN(4, cts); // cancel signaling (to none completed tasks)
+            Console.WriteLine("COMPLETE");
+        }
+
+        #endregion // CompleteWhenN
+
+        #region SingleStepAsync / SingleStepWithResultAsync
+
+        private static async Task<int> SingleStepWithResultAsync(
+                                int i,
+                                CancellationToken cancellationToken)
+        {
+            #region ThrowIfCancellationRequested
+
+            //cancellationToken.ThrowIfCancellationRequested();
+            if (cancellationToken.IsCancellationRequested)
+            {
+                Console.Write("X");
+                throw new OperationCanceledException();
+            }
+
+            #endregion // ThrowIfCancellationRequested
+            int delay = Abs(3000 - (i * 100));
+
+            await Task.Delay(delay);
+            Console.Write($"{i}, ");
+            return i;
+        }
+
+        private static async Task SingleStepAsync(int i)
+        {
+            int delay = Abs(3000 - (i * 100));
+
+            await Task.Delay(delay);
+            Console.Write($"{i}, ");
+        }
+
+        #endregion // SingleStepAsync / SingleStepWithResultAsync
+
+        #region Execution Flow: ExecAsync -> Exec1Async -> Exec2Async -> Exec3Async -> throw
 
         private static async Task ExecAsync()
         {
@@ -139,5 +210,7 @@ namespace Bnaya.Samples
             await Task.Delay(1);
             throw new InvalidOperationException("Some error");
         }
+
+        #endregion // Execution Flow: ExecAsync -> Exec1Async -> Exec2Async -> Exec3Async -> throw
     }
 }

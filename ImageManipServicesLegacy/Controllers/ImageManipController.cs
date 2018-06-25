@@ -52,7 +52,7 @@ namespace Bnaya.Samples.Controllers
             Task<Image<Rgba32>> t1 = GetWithFilterAsync(size, topic);
             Task<Image<Rgba32>> t2 = GetWithFilterAsync(size, topic);
 
-            var results = await Task.WhenAll(t1, t2).ConfigureAwait(false);
+            var results = await Task.WhenAll(t1, t2);//.ConfigureAwait(false);
 
             using (Image<Rgba32> img0 = results[0])
             using (Image<Rgba32> img1 = results[1])
@@ -86,10 +86,13 @@ namespace Bnaya.Samples.Controllers
                 url = string.Format(URL_PATTERN_RND, size);
             else
                 url = string.Format(URL_PATTERN, size, topic);
-
+            //SynchronizationContext.Current.Send()
             using (var http = new HttpClient())
             {
-                var image = await http.GetByteArrayAsync(url);//.ConfigureAwait(false);
+                Trace.WriteLine($"SynchronizationContext = {SynchronizationContext.Current != null}");
+
+                var image = await http.GetByteArrayAsync(url);
+                                        //.ConfigureAwait(false);
                 Trace.WriteLine("Processing");
 
                 Image<Rgba32> imageProcessor = Image.Load(image);

@@ -1,0 +1,16 @@
+Create Web API that has correlation between Request.
+
+Task<string> Request1Async(string correlationKey)
+Task<string> Request1Async(string correlationKey)
+
+Assume that all request handled on the same server (share same memory).
+
+The returns of each Request should return result only when the second 
+request arrived.
+
+if the order of the request is Request1Async follow by Request2Async,
+the result should be $"{correlationKey} 1,2"
+
+if the order of the request is Request2Async follow by Request1Async,
+the result should be $"{correlationKey} 2,1"
+

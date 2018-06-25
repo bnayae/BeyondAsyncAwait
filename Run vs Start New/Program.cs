@@ -9,11 +9,11 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Console.WriteLine("Start");
-            //Task _ = StartNewAsync();
+            Task _ = StartNewAsync();
             //Task _ = RunAsync();
             //Task _ = StartNewAsRunAsync();
             //Task _ = ParentChildAsync();
-            Task _ = ParentChildSolutionAsync();
+            //Task _ = ParentChildSolutionAsync();
             //Task _ = ParentChildRunAsync();
             //Task _ = ParentChildLikeRunAsync();
 
@@ -106,13 +106,13 @@ namespace Bnaya.Samples
             {
                 Task.Factory.StartNew(() =>
                 {
-                    Thread.Sleep(1000);
-                    Console.Write(".");
                     Task.Factory.StartNew(() =>
                     {
                         Thread.Sleep(500);
                         Console.Write("!");
                     }, options);
+                    Thread.Sleep(1000);
+                    Console.Write(".");
                 }, options);
             });
             Console.Write("X");

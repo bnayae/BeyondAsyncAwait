@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using static System.Math;
 #pragma warning disable Await1 // Method is not configured to be awaited
 
 namespace Bnaya.Samples
@@ -11,7 +12,7 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            //#region Sequential (for loop)
+            #region Sequential (for loop)
 
             //Console.WriteLine("Start Sequential");
             //Task t = SequentialAsync(10);
@@ -21,11 +22,11 @@ namespace Bnaya.Samples
             //    Thread.Sleep(50);
             //}
 
-            //#endregion // Sequential
+            #endregion // Sequential
 
-            //Console.WriteLine("\r\n---------------------------------------------");
+            Console.WriteLine("\r\n---------------------------------------------");
 
-            //#region Non-Sequential (LINQ of Tasks)
+            #region Non-Sequential (LINQ of Tasks)
 
             //Console.WriteLine("Start Non-Sequential");
             //Task t1 = NonSequentialAsync(10);
@@ -35,11 +36,11 @@ namespace Bnaya.Samples
             //    Thread.Sleep(50);
             //}
 
-            //#endregion // Non-Sequential
+            #endregion // Non-Sequential
 
             //Console.WriteLine("\r\n---------------------------------------------");
 
-            //#region Sequential with Tdf
+            #region Sequential with Tdf
 
             //Console.WriteLine("Start Sequential over TPL Dataflow");
             //Task t2 = SequentialWithTdfAsync(10);
@@ -49,31 +50,31 @@ namespace Bnaya.Samples
             //    Thread.Sleep(50);
             //}
 
-            //#endregion // Sequential with Tdf
+            #endregion // Sequential with Tdf
 
-            //Console.WriteLine("\r\n---------------------------------------------");
+            Console.WriteLine("\r\n---------------------------------------------");
 
-            //#region Non-Sequential with Tdf
+            #region Non-Sequential with Tdf
 
             //Console.WriteLine("Start Non-Sequential over TPL Dataflow");
-            //Task t3 = NonSequentialWithTdfAsync(10);
+            //Task t3 = NonSequentialWithTdfAsync(4);
             //while (!t3.IsCompleted)
             //{
             //    Console.Write(".");
             //    Thread.Sleep(50);
             //}
 
-            //#endregion // Non-Sequential with Tdf
+            #endregion // Non-Sequential with Tdf
 
             #region CompleteWhenN
 
-            Console.WriteLine("Complete When N");
-            Task t4 = CompleteWhenN();
-            while (!t4.IsCompleted)
-            {
-                Console.Write(".");
-                Thread.Sleep(50);
-            }
+            //Console.WriteLine("complete when n");
+            //Task t4 = CompleteWhenN();
+            //while (!t4.IsCompleted)
+            //{
+            //    Console.Write(".");
+            //    Thread.Sleep(50);
+            //}
 
             #endregion // CompleteWhenN
 
@@ -142,29 +143,49 @@ namespace Bnaya.Samples
 
         private static async Task CompleteWhenN()
         {
+            var cts = new CancellationTokenSource();
             var tasks = from i in Enumerable.Range(0, 20)
-                        select SingleStep1Async(i);
-            await tasks.WhenN(2);
+                        select SingleStepWithResultAsync(i, cts.Token);
+            await tasks.When(i => i > 4 && i < 8); // more common to use it with Task<bool>
+            //await tasks.WhenN(2);
+            //await tasks.WhenN(2, i => i % 2 == 0);
+            //await tasks.WhenN(4, cts); // cancel signaling (to none completed tasks)
             Console.WriteLine("COMPLETE");
         }
 
         #endregion // CompleteWhenN
 
-        #region SingleStepAsync
+        #region SingleStepAsync / SingleStepWithResultAsync
 
-        private static async Task<int> SingleStep1Async(int i)
+        private static async Task<int> SingleStepWithResultAsync(
+                                int i,
+                                CancellationToken cancellationToken)
         {
-            await Task.Delay(i < 2 ? 500 : 2000);
+            #region ThrowIfCancellationRequested
+
+            //cancellationToken.ThrowIfCancellationRequested();
+            if (cancellationToken.IsCancellationRequested)
+            {
+                Console.Write("X");
+                throw new OperationCanceledException();
+            }
+
+            #endregion // ThrowIfCancellationRequested
+            int delay = Abs(3000 - (i * 100));
+
+            await Task.Delay(delay);
             Console.Write($"{i}, ");
             return i;
         }
 
         private static async Task SingleStepAsync(int i)
         {
-            await Task.Delay(i < 2 ? 500 : 2000);
+            int delay = 1500; // Abs(1500 - (i * 100));
+
+            await Task.Delay(delay).ConfigureAwait(false);
             Console.Write($"{i}, ");
         }
 
-        #endregion // SingleStepAsync
+        #endregion // SingleStepAsync / SingleStepWithResultAsync
     }
 }

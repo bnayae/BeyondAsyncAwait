@@ -8,20 +8,21 @@ namespace Bnaya.Samples
 {
     class Program
     {
-        private static int _count = 125;
-        private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(100);
+        private const int COUNT = 25;
+        private static int _count = COUNT;
+        private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(6);
 
         static void Main(string[] args)
         {
             Console.WriteLine("This sample emphasize the behavior of the thread-pool");
 
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < COUNT; i++)
             {
                 ThreadPool.QueueUserWorkItem(state =>
                 {
                     Console.Write(">");
-                    ExecuteIoLike(DURATION);
-                    //ExecuteComputeLike(DURATION);
+                    //ExecuteIoLike(DURATION);
+                    ExecuteComputeLike(DURATION);
                     Console.Write("|");
                     var x = Interlocked.Decrement(ref _count);
                 }, i);

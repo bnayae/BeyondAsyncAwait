@@ -15,7 +15,7 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="294*"/>
         </Grid.RowDefinitions>
-        <ProgressBar Value="{Binding Advance, Mode=OneWay}" Maximum="4" />
+        <ProgressBar Value="{Binding ExecutionProgress, Mode=OneWay}" Maximum="4" />
         <Button Content="Cancel" Command="{Binding Cancel}" Grid.Column="1"/>
         <Image Source="{Binding Picture}" Grid.Row="1" />
         <ListView ItemsSource="{Binding Reports, Mode=OneWay}" Grid.Column="1" Grid.Row="1"/>

@@ -1,0 +1,16 @@
+﻿<Window
+    x:Class="Demystify_Configure_Await_False.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Demystify_Configure_Await_False"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBlock x:Name="a" Margin="10,10,-10.691,314.655" />
+        <TextBlock x:Name="b" Margin="0,274,0.309,-0.345" />
+    </Grid>
+</Window>

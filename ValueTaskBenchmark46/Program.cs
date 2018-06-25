@@ -14,7 +14,8 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<AsyncBenchmark>();
+            //var summary = BenchmarkRunner.Run<AsyncBenchmark>();
+            var summary = BenchmarkRunner.Run<ValueOrNotBenchmark>();
             Console.WriteLine(summary);
 
         }

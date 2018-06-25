@@ -11,10 +11,10 @@ namespace Bnaya.Samples
         static void Main(string[] args)
         {
             Info("Main");
-            Task t = CanBeTrickyAsync();
+            //Task t = CanBeTrickyAsync();
             //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
-            //Task t = ExpectedAsync();
+            Task t = ExpectedAsync();
             //Task t = ExpectedDemystifyAsync();
             //Task t = MultiAwaitAsync();
             Info("Main");
@@ -62,6 +62,27 @@ namespace Bnaya.Samples
 
         #endregion // AlsoTrickyAsync
 
+        #region AlsoTrickyDemystifyAsync
+
+        private static Task AlsoTrickyDemystifyAsync()
+        {
+            Info("AlsoTrickyDemystifyAsync Start");
+            Task t = Task.CompletedTask;
+            if (t.IsCompleted)
+            {
+                Info("AlsoTrickyDemystifyAsync End (Optimized)");
+                return Task.CompletedTask;
+            }
+            Task r = t.ContinueWith(c =>
+            {
+                //await MyDelay(TimeSpan.FromSeconds(2));
+                Info("AlsoTrickyDemystifyAsync End");
+            });
+            return r;
+        }
+
+        #endregion // AlsoTrickyDemystifyAsync
+
         #region ExpectedAsync
 
         private static async Task ExpectedAsync()
@@ -79,7 +100,12 @@ namespace Bnaya.Samples
         private static Task ExpectedDemystifyAsync()
         {
             Info("ExpectedAsync Start");
-            Task t = Task.Delay(2000);
+            Task t = Task.Delay(2000); // Task.CompletedTask;
+            if (t.IsCompleted)
+            {
+                Info("ExpectedAsync End (Optimized)");
+                return Task.CompletedTask;
+            }
             Task r = t.ContinueWith(c =>
             {
                 //await MyDelay(TimeSpan.FromSeconds(2));
@@ -124,7 +150,7 @@ namespace Bnaya.Samples
         private static void Info(string title)
         {
             var trd = Thread.CurrentThread;
-            Console.WriteLine($"{title} [{trd.ManagedThreadId}]");
+            Console.WriteLine($"{title} [{trd.ManagedThreadId}]: Pool = {trd.IsThreadPoolThread}");
         }
 
         #endregion // Info

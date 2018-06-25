@@ -21,7 +21,7 @@ namespace Bnaya.Samples
             // (dictate by the order of the original input)
             var block = new TransformBlock<int, string>(async i =>
             {
-                int duration = i % 5 * 1000; // transformation duration
+                int duration = ((i % 5) + 1) * 1000; // transformation duration
                 await Task.Delay(duration).ConfigureAwait(false);
                 Console.WriteLine($"\t{i} Transformed after {duration} ms,");
                 return $"{i} = {duration} ms";
@@ -45,7 +45,7 @@ namespace Bnaya.Samples
         {
             var block = CreateMultiTransform<int, string>(async i =>
             {
-                int duration = i % 5 * 1000;
+                int duration = ((i % 5) + 1) * 1000; // transformation duration
                 await Task.Delay(duration).ConfigureAwait(false);
                 Console.WriteLine($"\t{i} Transformed after {duration} ms,");
                 return $"{i} = {duration} ms";
