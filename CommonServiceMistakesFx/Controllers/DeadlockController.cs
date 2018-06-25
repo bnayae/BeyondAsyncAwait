@@ -50,5 +50,15 @@ namespace CommonServiceMistakesFx.Controllers
             await Task.Delay(500).ConfigureAwait(false); // avoid synchronization context
             return 43;
         }
+
+        // GET api/deadlock/getaway
+        [Route("fine")]
+        [HttpGet]
+        public async Task<string> GetNoDeadlockGetawaySync()
+        {
+            int result = await OutOfContextsync().ConfigureAwait(false);
+            return $"Complete [{result}], {SynchronizationContext.Current != null}";
+        }
+
     }
 }

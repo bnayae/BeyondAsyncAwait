@@ -24,7 +24,8 @@ namespace _02._1_Async_Download
         static void Main(string[] args)
         {
             Task t = JoinSimpleDownloadAndSaveAsync();
-            //Task t = DownloadForkEffectJoinSave();
+            //Task t = DownloadForkEffectJoinSave(0);
+            //Task t = DownloadForkEffectJoinSaveAll();
 
             while (!t.IsCompleted)
             {
@@ -42,6 +43,9 @@ namespace _02._1_Async_Download
             Task t1 = SimpleDownloadAndSaveAsync(1);
             Task t2 = SimpleDownloadAndSaveAsync(2);
             await Task.WhenAll(t1, t2);
+            //var tasks = Enumerable.Range(0, 20)
+            //                .Select(i => SimpleDownloadAndSaveAsync(i));
+            //await Task.WhenAll(tasks);
             Console.WriteLine("Both complete");
         }
 
@@ -76,7 +80,9 @@ namespace _02._1_Async_Download
 
         private static async Task SaveAsync(string name, byte[] data)
         {
-            using (var fs = new FileStream(name, FileMode.Create, FileAccess.Write, FileShare.None, 4096, FileOptions.Asynchronous))
+            using (var fs = new FileStream(name, FileMode.Create, 
+                                        FileAccess.Write, FileShare.None, 
+                                        4096, FileOptions.Asynchronous))
             {
                 Console.Write(" Saving ");
                 await fs.WriteAsync(data, 0, data.Length);
@@ -88,7 +94,13 @@ namespace _02._1_Async_Download
 
         #region DownloadForkEffectJoinSave
 
-        private static async Task DownloadForkEffectJoinSave()
+        private static async Task DownloadForkEffectJoinSaveAll()
+        {
+            var tasks = Enumerable.Range(0, 20)
+                .Select(DownloadForkEffectJoinSave);
+            await Task.WhenAll(tasks);
+        }
+        private static async Task DownloadForkEffectJoinSave(int i)
         {
             // download
             byte[] image = await DownloadAsync(URL);
@@ -101,7 +113,7 @@ namespace _02._1_Async_Download
 
             // merge the images
             byte[] mergedImage = MergeImages(images[0], images[1]);
-            await SaveAsync("Merged Image.jpg", mergedImage);
+            await SaveAsync($"Merged Image {i}.jpg", mergedImage);
         }
 
         #endregion // DownloadForkEffectJoinSave
