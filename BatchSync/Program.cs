@@ -66,11 +66,8 @@ namespace BatchSync
 
         public static void Present(string[] data)
         {
-            for (int i = 0; i < data.Length; i++)
-            {
-                Console.Write(data[i]);
-            }
-            Console.WriteLine();
+            string format = string.Join(",", data);
+            Console.WriteLine(format);
         }
 
         #endregion // Present
