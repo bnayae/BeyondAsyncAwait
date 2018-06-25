@@ -21,7 +21,7 @@ namespace Bnaya.Samples
             _config = await setting.GetAsync().ConfigureAwait(false);
         }
 
-        public async Task<int> GetData()
+        public async Task<int> GetDataAsync()
         {
             try
             {
