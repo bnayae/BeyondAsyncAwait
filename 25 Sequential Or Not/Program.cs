@@ -15,20 +15,17 @@ namespace Bnaya.Samples
             Console.ReadKey();
         }
 
+        #region SequentialForkAsync
+
         private static async Task SequentialForkAsync()
         {
             // the output of transform block is sequential 
             // (dictate by the order of the original input)
-            var block = new TransformBlock<int, string>(async i =>
-            {
-                int duration = ((i % 5) + 1) * 1000; // transformation duration
-                await Task.Delay(duration).ConfigureAwait(false);
-                Console.WriteLine($"\t{i} Transformed after {duration} ms,");
-                return $"{i} = {duration} ms";
-            }, new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = ITERATIONS });
+            var block = new TransformBlock<int, string>(i => UnitOfWork(i), 
+                                            new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = ITERATIONS });
 
             // the action block will get the transformation in the original order
-            var ab = new ActionBlock<string>(m => Console.WriteLine(m));
+            var ab = new ActionBlock<string>(m => Console.WriteLine($"# Action: {m}"));
             block.LinkTo(ab, new DataflowLinkOptions { PropagateCompletion = true });
 
             for (int i = 0; i < ITERATIONS; i++)
@@ -40,18 +37,18 @@ namespace Bnaya.Samples
             await ab.Completion.ConfigureAwait(false);
             Console.WriteLine("Done");
         }
+
+        #endregion // SequentialForkAsync
+
+        #region NonSequentialForkAsync
 
         private static async Task NonSequentialForkAsync()
         {
-            var block = CreateMultiTransform<int, string>(async i =>
-            {
-                int duration = ((i % 5) + 1) * 1000; // transformation duration
-                await Task.Delay(duration).ConfigureAwait(false);
-                Console.WriteLine($"\t{i} Transformed after {duration} ms,");
-                return $"{i} = {duration} ms";
-            }, new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = ITERATIONS });
+            var block = CreateMultiTransform<int, string>(UnitOfWork,
+                            new ExecutionDataflowBlockOptions
+                                    { MaxDegreeOfParallelism = ITERATIONS });
 
-            var ab = new ActionBlock<string>(m => Console.WriteLine(m));
+            var ab = new ActionBlock<string>(m => Console.WriteLine($"# Action: {m}"));
             block.LinkTo(ab, new DataflowLinkOptions { PropagateCompletion = true });
             for (int i = 0; i < ITERATIONS; i++)
             {
@@ -63,6 +60,21 @@ namespace Bnaya.Samples
             Console.WriteLine("Done");
         }
 
+        #endregion // NonSequentialForkAsync
+
+        #region UnitOfWork
+
+        private static async Task<string> UnitOfWork(int i)
+        {
+            int duration = ((i % 5) + 1) * 1000; // transformation duration
+            await Task.Delay(duration).ConfigureAwait(false);
+            Console.WriteLine($"\t\t# Transform: {i} Transformed after {duration} ms,");
+            return $"{i} = {duration} ms";
+        }
+
+        #endregion // UnitOfWork
+
+        #region CreateMultiTransform
 
         /// <summary>
         /// Create non-sequential transform behavior by composition of blocks.
@@ -99,5 +111,7 @@ namespace Bnaya.Samples
             Task _ = Task.WhenAll(blockes).ContinueWith(m => output.Complete());
             return DataflowBlock.Encapsulate(input, output); // wrap the functionality
         }
+
+        #endregion // CreateMultiTransform
     }
 }

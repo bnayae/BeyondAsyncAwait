@@ -11,10 +11,10 @@ namespace Bnaya.Samples
         {
             Console.WriteLine("Avoid async Void!!!");
 
-            //BadIdeaAsync();
+            BadIdeaAsync();
             //Task fireForget = GoodIdeaAsync();
             //WhenYouMustAsync();
-            WhenYouMust7Async();
+            //WhenYouMust7Async();
 
             Console.WriteLine("Still working");
             //Thread.Sleep(1000);
