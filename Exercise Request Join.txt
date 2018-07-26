@@ -1,7 +1,7 @@
 Create Web API that has correlation between Request.
 
 Task<string> Request1Async(string correlationKey)
-Task<string> Request1Async(string correlationKey)
+Task<string> Request2Async(string correlationKey)
 
 Assume that all request handled on the same server (share same memory).
 
