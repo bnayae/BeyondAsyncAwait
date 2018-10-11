@@ -1,0 +1,15 @@
+Write infrastructure that encapsulate two ways communication 
+based on outgoing and callback queue.
+
+int ---> Outgoing Queue ---+
+						   |
+						   |
+						Process-+
+							    |
+							    |
+ +-- Callback Queue <--string---+
+ |
+ Dequeue + Event loop
+
+Into the following abstraction:
+Task<string> SendAsync(int delay)

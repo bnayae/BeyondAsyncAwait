@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Info("Main");
-            Task t = CanBeTrickyAsync();
+            //Task t = CanBeTrickyAsync();
             //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
-            //Task t = ExpectedAsync();
+            Task t = ExpectedAsync();
             //Task t = ExpectedDemystifyAsync();
             //Task t = MultiAwaitAsync();
             Info("Main");
