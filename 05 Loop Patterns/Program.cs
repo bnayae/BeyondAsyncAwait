@@ -15,7 +15,7 @@ namespace Bnaya.Samples
             #region Sequential (for loop)
 
             //Console.WriteLine("Start Sequential");
-            //Task t = SequentialAsync(10);
+            //Task t = SequentialAsync(5);
             //while (!t.IsCompleted)
             //{
             //    Console.Write(".");
@@ -24,12 +24,10 @@ namespace Bnaya.Samples
 
             #endregion // Sequential
 
-            Console.WriteLine("\r\n---------------------------------------------");
-
             #region Non-Sequential (LINQ of Tasks)
 
             //Console.WriteLine("Start Non-Sequential");
-            //Task t1 = NonSequentialAsync(10);
+            //Task t1 = NonSequentialAsync(30);
             //while (!t1.IsCompleted)
             //{
             //    Console.Write(".");
@@ -38,12 +36,10 @@ namespace Bnaya.Samples
 
             #endregion // Non-Sequential
 
-            //Console.WriteLine("\r\n---------------------------------------------");
-
             #region Sequential with Tdf
 
             //Console.WriteLine("Start Sequential over TPL Dataflow");
-            //Task t2 = SequentialWithTdfAsync(10);
+            //Task t2 = SequentialWithTdfAsync(5);
             //while (!t2.IsCompleted)
             //{
             //    Console.Write(".");
@@ -52,17 +48,15 @@ namespace Bnaya.Samples
 
             #endregion // Sequential with Tdf
 
-            Console.WriteLine("\r\n---------------------------------------------");
-
             #region Non-Sequential with Tdf
 
-            //Console.WriteLine("Start Non-Sequential over TPL Dataflow");
-            //Task t3 = NonSequentialWithTdfAsync(4);
-            //while (!t3.IsCompleted)
-            //{
-            //    Console.Write(".");
-            //    Thread.Sleep(50);
-            //}
+            Console.WriteLine("Start Non-Sequential over TPL Dataflow");
+            Task t3 = NonSequentialWithTdfAsync(20, 4);
+            while (!t3.IsCompleted)
+            {
+                Console.Write(".");
+                Thread.Sleep(50);
+            }
 
             #endregion // Non-Sequential with Tdf
 
@@ -109,7 +103,7 @@ namespace Bnaya.Samples
         private static Task SequentialWithTdfAsync(int n)
         {
             var abSequential = new ActionBlock<int>(SingleStepAsync);
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < n; i++)
             {
                 abSequential.Post(i);
             }
@@ -121,15 +115,15 @@ namespace Bnaya.Samples
 
         #region NonSequentialWithTdfAsync
 
-        private static Task NonSequentialWithTdfAsync(int n)
+        private static Task NonSequentialWithTdfAsync(int n, int max)
         {
             var options = new ExecutionDataflowBlockOptions
                 {
-                    MaxDegreeOfParallelism = n
+                    MaxDegreeOfParallelism = max
                 };
             var abSequential = new ActionBlock<int>(SingleStepAsync,
                                                     options);
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < n; i++)
             {
                 abSequential.Post(i);
             }
@@ -141,7 +135,7 @@ namespace Bnaya.Samples
 
         #region CompleteWhenN
 
-        private static async Task CompleteWhenN()
+        private static async Task CompleteWhenNAsync()
         {
             var cts = new CancellationTokenSource();
             var tasks = from i in Enumerable.Range(0, 20)

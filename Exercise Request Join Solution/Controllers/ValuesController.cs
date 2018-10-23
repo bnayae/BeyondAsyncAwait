@@ -17,7 +17,7 @@ namespace Exercise_Request_Join_Solution.Controllers
         // GET api/values
         [HttpGet]
         [Route("a/{correlateKey}")]
-        public Task<string> GetA(string correlateKey)
+        public Task<string> GetAAsync(string correlateKey)
         {
             var tuple = _map.AddOrUpdate(correlateKey,
                             c => ("A", new TaskCompletionSource<string>(), 1),
@@ -40,7 +40,7 @@ namespace Exercise_Request_Join_Solution.Controllers
 
         [HttpGet]
         [Route("B/{correlateKey}")]
-        public Task<string> GetB(string correlateKey)
+        public Task<string> GetBAsync(string correlateKey)
         {
             var tuple = _map.GetOrAdd(correlateKey, c => ("B", new TaskCompletionSource<string>(), 1));
             if (tuple.AB == "A")

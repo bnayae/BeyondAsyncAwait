@@ -37,7 +37,7 @@ namespace System.Threading.Tasks
     /// with a cached task as a common result or a <see cref="LightTask{TResult}"/>.  If the consumer of the result 
     /// wants to use it as a <see cref="Task{TResult}"/>, such as to use with in methods like Task.WhenAll and Task.WhenAny, 
     /// the <see cref="LightTask{TResult}"/> would first need to be converted into a <see cref="Task{TResult}"/> using 
-    /// <see cref="LightTask{TResult}.AsTask"/>, which leads to an allocation that would have been avoided if a cached 
+    /// <see cref="LightTask{TResult}.AsTaskAsync"/>, which leads to an allocation that would have been avoided if a cached 
     /// <see cref="Task{TResult}"/> had been used in the first place.
     /// </para>
     /// <para>
@@ -122,7 +122,7 @@ namespace System.Threading.Tasks
         /// either return the wrapped task object if one exists, or it'll manufacture a new
         /// task object to represent the result.
         /// </summary>
-        public Task<TResult> AsTask()
+        public Task<TResult> AsTaskAsync()
         {
             // Return the task if we were constructed from one, otherwise manufacture one.  We don't
             // cache the generated task into _task as it would end up changing both equality comparison
@@ -134,7 +134,7 @@ namespace System.Threading.Tasks
         public static implicit operator Task<TResult>(LightTask<TResult> instance)
         {
             //implicit cast logic
-            return instance.AsTask();
+            return instance.AsTaskAsync();
         }
 
         // will block wrap a task

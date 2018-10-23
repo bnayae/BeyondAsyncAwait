@@ -35,6 +35,7 @@ namespace AsyncRelayMediator.Common
 
         #endregion // Ctor
 
+        [NonSerialized]
         public readonly Guid RouteId;
         public string NextDestination => Route?.Peek();
         [NonSerialized]

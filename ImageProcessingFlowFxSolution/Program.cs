@@ -17,7 +17,7 @@ using static System.Math;
 
 namespace ImageProcessingFlowFxSolution
 {
-    class Program
+    static class Program
     {
         private const string URL = "https://source.unsplash.com/1200x1200/?dog/";
         private static TransformBlock<int, byte[]> _downloader;
@@ -28,7 +28,7 @@ namespace ImageProcessingFlowFxSolution
         private static TransformBlock<Image<Rgba32>[], byte[]> _merge;
         private static ActionBlock<byte[]> _save;
 
-        static void Main(string[] args)
+        static void Main()
         {
             if (!Directory.Exists("Images"))
                 Directory.CreateDirectory("Images");
@@ -88,7 +88,7 @@ namespace ImageProcessingFlowFxSolution
             Console.WriteLine($"Effect: {title} is starting");
 
             Image<Rgba32> imageProcessor = Image.Load(image);
-            imageProcessor.Mutate(x => operation(x));
+            imageProcessor.Mutate(x => operation?.Invoke(x));
 
             Console.WriteLine($"Effect: {title} is complete");
             return imageProcessor;
@@ -98,7 +98,7 @@ namespace ImageProcessingFlowFxSolution
 
         #region MergeAsync
 
-        private static async Task<byte[]> MergeAsync(Image<Rgba32>[] images)
+        private static Task<byte[]> MergeAsync(Image<Rgba32>[] images)
         {
             Console.WriteLine("Merging");
             using (Image<Rgba32> img0 = images[0])
@@ -114,7 +114,7 @@ namespace ImageProcessingFlowFxSolution
                 imageProcessor.SaveAsJpeg(outStream);
                 byte[] merged = outStream.ToArray();
                 Console.WriteLine("Merged");
-                return merged;
+                return Task.FromResult(merged);
             }
         }
 

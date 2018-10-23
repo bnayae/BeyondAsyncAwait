@@ -19,7 +19,7 @@ namespace BatchSync
             var chB = new TransformBlock<int, string>(
                 (Func<int, string>)ChannelB);
             var chC = new TransformBlock<int, string>(
-                (Func<int, Task<string>>)ChannelC);
+                (Func<int, Task<string>>)ChannelCAsync);
 
             var presenter = new ActionBlock<string[]>((Action<string[]>)Present);
 
@@ -54,7 +54,7 @@ namespace BatchSync
 
         #region ChannelC
 
-        private static async Task<string> ChannelC(int input)
+        private static async Task<string> ChannelCAsync(int input)
         {
             await Task.Delay((input % 5) * 500).ConfigureAwait(false);
             return new string('%', input);

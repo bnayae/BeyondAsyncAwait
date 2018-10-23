@@ -13,7 +13,7 @@ namespace Bnaya.Samples
         private static TaskScheduler _scheduler = new PoolScheduler(2);
         static void Main(string[] args)
         {
-            Write("Main");
+            Write(nameof(Main));
             Task t = ExecAsync();
 
             Console.ReadKey();

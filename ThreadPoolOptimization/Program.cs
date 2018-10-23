@@ -78,7 +78,7 @@ namespace Bnaya.Samples
             switch (ExecMode)
             {
                 case Mode.ThreadPool:
-                    ThreadPool.QueueUserWorkItem(state => action());
+                    ThreadPool.QueueUserWorkItem(state => action?.Invoke());
                     break;
                 case Mode.Task:
                     //Task.Run(action);

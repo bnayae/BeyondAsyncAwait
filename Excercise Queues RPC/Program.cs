@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    class Program
+    static class Program
     {
         private static Server _server;
         private static RpcBridge<int, string> _rpc;

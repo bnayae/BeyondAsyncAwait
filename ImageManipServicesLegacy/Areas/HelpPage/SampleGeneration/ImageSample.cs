@@ -15,7 +15,7 @@ namespace ImageManipServicesLegacy.Areas.HelpPage
         {
             if (src == null)
             {
-                throw new ArgumentNullException("src");
+                throw new ArgumentNullException(nameof(src));
             }
             Src = src;
         }

@@ -18,7 +18,7 @@ namespace Bnaya.Samples
 
         protected override Task OnInitAsync(ISetting setting)
         {
-            _name = "Bnaya";
+            _name = nameof(Bnaya);
             Trace.Write(_name.GetType().ToString());
             return base.OnInitAsync(setting);
         }

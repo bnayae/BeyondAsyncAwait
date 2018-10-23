@@ -9,7 +9,7 @@ namespace CommonServiceMistakesFx.Areas.HelpPage
         {
             get
             {
-                return "HelpPage";
+                return nameof(HelpPage);
             }
         }
 

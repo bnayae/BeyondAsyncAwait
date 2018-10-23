@@ -30,7 +30,7 @@ namespace Sela.Samples
         private static void A(int i)
         {
             var s = new string('*', (i + 1));
-            Console.Write("A");
+            Console.Write(nameof(A));
             //if(i < 2)
             //    Task.Factory.StartNew(() => Q(999));
             B(s);
@@ -39,7 +39,7 @@ namespace Sela.Samples
 
         private static void B(string i)
         {
-            Console.Write("B");
+            Console.Write(nameof(B));
             DoWork();
             int count = Interlocked.Increment(ref _count);
             if (count % 3 == 0)
@@ -53,14 +53,14 @@ namespace Sela.Samples
 
         private static void C(int count)
         {
-            Console.Write("C");
+            Console.Write(nameof(C));
             DoWork();
             D(count);
         }
 
         private static void D(int count)
         {
-            Console.Write("D");
+            Console.Write(nameof(D));
             if (count % 2 == 0)
                 E();
             else
@@ -69,14 +69,14 @@ namespace Sela.Samples
 
         private static void E()
         {
-            Console.Write("E");
+            Console.Write(nameof(E));
             DoWork();
             Console.ReadKey();
         }
 
         private static void F()
         {
-            Console.Write("F");
+            Console.Write(nameof(F));
             DoWork();
             Console.ReadKey();
         }

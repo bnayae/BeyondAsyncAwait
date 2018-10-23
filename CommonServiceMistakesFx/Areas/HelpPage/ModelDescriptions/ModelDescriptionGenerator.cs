@@ -90,7 +90,7 @@ namespace CommonServiceMistakesFx.Areas.HelpPage.ModelDescriptions
         {
             if (config == null)
             {
-                throw new ArgumentNullException("config");
+                throw new ArgumentNullException(nameof(config));
             }
 
             _documentationProvider = new Lazy<IModelDocumentationProvider>(() => config.Services.GetDocumentationProvider() as IModelDocumentationProvider);
@@ -111,7 +111,7 @@ namespace CommonServiceMistakesFx.Areas.HelpPage.ModelDescriptions
         {
             if (modelType == null)
             {
-                throw new ArgumentNullException("modelType");
+                throw new ArgumentNullException(nameof(modelType));
             }
 
             Type underlyingType = Nullable.GetUnderlyingType(modelType);

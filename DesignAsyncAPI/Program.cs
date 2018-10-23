@@ -16,7 +16,7 @@ namespace Bnaya.Samples
             Console.ReadKey(true);
         }
 
-        private static async ValueTask<int> ExeAcync() => await new ValueTask<int>(1);
+        private static async ValueTask<int> ExeAcyncAsync() => await new ValueTask<int>(1);
 
         #region GetContent
 
@@ -77,8 +77,8 @@ namespace Bnaya.Samples
         {
             var logic = new Logic();
 
-            await logic.TapFashion(() => Task.FromResult(GetContent()), "Sync -> Wrap").ConfigureAwait(false);
-            await logic.TapFashion(GetContentAsync, "TAP -> async").ConfigureAwait(false);
+            await logic.TapFashionAsync(() => Task.FromResult(GetContent()), "Sync -> Wrap").ConfigureAwait(false);
+            await logic.TapFashionAsync(GetContentAsync, "TAP -> async").ConfigureAwait(false);
         }
 
         #endregion // ExecAsync
@@ -90,14 +90,14 @@ namespace Bnaya.Samples
             var logic = new Logic();
 
             string syncContent = GetContent();
-            await logic.VTapFashion(() => new ValueTask<string>(syncContent), "Sync -> Wrap");
-            await logic.VTapFashion(() => syncContent.ToValueTask(), "TAP -> Wrap(sync)");
+            await logic.VTapFashionAsync(() => new ValueTask<string>(syncContent), "Sync -> Wrap");
+            await logic.VTapFashionAsync(() => syncContent.ToValueTask(), "TAP -> Wrap(sync)");
 
             Task<string> asyncContent = GetContentAsync();
-            await logic.VTapFashion(() => new ValueTask<string>(asyncContent), "TAP -> async");
-            await logic.VTapFashion(async () => await asyncContent.ConfigureAwait(false), "TAP -> async");
+            await logic.VTapFashionAsync(() => new ValueTask<string>(asyncContent), "TAP -> async");
+            await logic.VTapFashionAsync(async () => await asyncContent.ConfigureAwait(false), "TAP -> async");
 
-            await logic.VTapFashion(GetValueContentAsync, "VTAP -> async");
+            await logic.VTapFashionAsync(GetValueContentAsync, "VTAP -> async");
         }
 
         #endregion // ExecValueAsync
@@ -108,8 +108,8 @@ namespace Bnaya.Samples
         {
             var logic = new Logic();
 
-            await logic.LTapFashion(() => GetContent(), "OldFashion -> sync");
-            await logic.LTapFashion(() => GetContentAsync(), "TAP -> async");
+            await logic.LTapFashionAsync(() => GetContent(), "OldFashion -> sync");
+            await logic.LTapFashionAsync(() => GetContentAsync(), "TAP -> async");
         }
 
         #endregion // ExecLightAsync

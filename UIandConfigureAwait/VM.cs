@@ -117,7 +117,7 @@ namespace UIandConfigureAwait
         {
             if (ct.IsCancellationRequested)
             {
-                _progress.Report("Cancel");
+                _progress.Report(nameof(Cancel));
                 return null;
             }
             //Advance += 1;
@@ -136,7 +136,7 @@ namespace UIandConfigureAwait
                 var image = await http.GetByteArrayAsync(url).ConfigureAwait(false);
                 if (ct.IsCancellationRequested)
                 {
-                    _progress.Report("Cancel");
+                    _progress.Report(nameof(Cancel));
                     return null;
                 }
                 Trace.WriteLine("Processing");

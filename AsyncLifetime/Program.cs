@@ -25,12 +25,12 @@ namespace Bnaya.Samples
 
             #endregion // ISetting setting = ... (mock)            
 
-            await AsyncInitPattern(setting);
+            await AsyncInitPatternAsync(setting);
             //await AsyncFactoryPattern(setting);
             Console.ReadKey();
         }
 
-        private static async Task AsyncFactoryPattern(ISetting setting)
+        private static async Task AsyncFactoryPatternAsync(ISetting setting)
         {
             IExecuterFactory factory = new ExecuterFactory(setting);
             IExecuter executer = await factory.CreateAsync();
@@ -38,7 +38,7 @@ namespace Bnaya.Samples
             int b = executer.GetData(); // synchronous    
         }
 
-        private static async Task AsyncInitPattern(ISetting setting)
+        private static async Task AsyncInitPatternAsync(ISetting setting)
         {
             var logic = new Logic(setting);
             int a = await logic.GetDataAsync(); // asynchronous

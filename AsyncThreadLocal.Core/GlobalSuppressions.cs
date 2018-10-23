@@ -12,3 +12,7 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.Program.SeqAsync(System.Int32)~System.Threading.Tasks.Task")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "RCS1102:Make class static.", Justification = "<Pending>", Scope = "type", Target = "~T:Bnaya.Samples.Program")]
 
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.AsyncContext.Add``1(``0,System.String)~System.Collections.Generic.IEnumerable{System.String}")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.AsyncContext.GetContext``1(``0,System.String)~System.String")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.AsyncImmutableContext.GetContext``1(``0,System.String)~System.String")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.Program.ForkJoinAsync(System.Int32)~System.Threading.Tasks.Task")]

@@ -3,6 +3,9 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+#pragma warning disable RCS1163 // Unused parameter.
+#pragma warning disable CC0068 // Unused Method
+#pragma warning disable CC0022 // Should dispose object
 
 namespace Bnaya.Samples
 {
@@ -10,14 +13,14 @@ namespace Bnaya.Samples
     {
         private static void Main(string[] args)
         {
-            Info("Main");
+            Info(nameof(Main));
             //Task t = CanBeTrickyAsync();
             //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
             Task t = ExpectedAsync();
             //Task t = ExpectedDemystifyAsync();
             //Task t = MultiAwaitAsync();
-            Info("Main");
+            Info(nameof(Main));
             while (!t.IsCompleted)
             {
                 Console.Write(".");
@@ -157,7 +160,7 @@ namespace Bnaya.Samples
 
         #region MyDelay
 
-        private static Task MyDelay(TimeSpan duration)
+        private static Task MyDelayAsync(TimeSpan duration)
         {
             var tcs = new TaskCompletionSource<object>();
             // GC may collect the timer!!!

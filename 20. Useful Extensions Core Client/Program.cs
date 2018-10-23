@@ -19,7 +19,7 @@ namespace Bnaya.Samples
 
             //SafeCancellation();
 
-            Task e = CompleteWhenN();
+            Task e = CompleteWhenNAsync();
 
             Console.ReadKey();
         }
@@ -134,7 +134,7 @@ namespace Bnaya.Samples
 
         #region CompleteWhenN
 
-        private static async Task CompleteWhenN()
+        private static async Task CompleteWhenNAsync()
         {
             var cts = new CancellationTokenSource();
             var tasks = from i in Enumerable.Range(0, 20)

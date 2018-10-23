@@ -6,3 +6,10 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.", Justification = "<Pending>", Scope = "module")]
 
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancies in Symbol Declarations", "RECS0154:Parameter is never used", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnDeserialized(System.Runtime.Serialization.StreamingContext)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancies in Symbol Declarations", "RECS0154:Parameter is never used", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnSerialized(System.Runtime.Serialization.StreamingContext)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancies in Symbol Declarations", "RECS0154:Parameter is never used", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnSerializing(System.Runtime.Serialization.StreamingContext)")]
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnDeserialized(System.Runtime.Serialization.StreamingContext)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnSerialized(System.Runtime.Serialization.StreamingContext)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:AsyncRelayMediator.Common.Message.OnSerializing(System.Runtime.Serialization.StreamingContext)")]

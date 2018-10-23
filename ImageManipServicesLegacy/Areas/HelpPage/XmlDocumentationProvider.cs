@@ -29,7 +29,7 @@ namespace ImageManipServicesLegacy.Areas.HelpPage
         {
             if (documentPath == null)
             {
-                throw new ArgumentNullException("documentPath");
+                throw new ArgumentNullException(nameof(documentPath));
             }
             XPathDocument xpath = new XPathDocument(documentPath);
             _documentNavigator = xpath.CreateNavigator();

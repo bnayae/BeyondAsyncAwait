@@ -125,6 +125,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercises", "Exercises", "{00A3216C-4703-4C06-840E-A02EB304E338}"
 	ProjectSection(SolutionItems) = preProject
 		Excercise Queues RPC.txt = Excercise Queues RPC.txt
+		Exercise Download Throttle.txt = Exercise Download Throttle.txt
 		Exercise Request Join.txt = Exercise Request Join.txt
 	EndProjectSection
 EndProject
@@ -132,7 +133,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessingFlowFxSoluti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise-CustomAsyncCriticalSection", "CustomAsyncCriticalSection\Exercise-CustomAsyncCriticalSection.csproj", "{E209FCF5-B945-4F04-9439-7314FE315041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excercise Queues RPC", "Excercise Queues RPC\Excercise Queues RPC.csproj", "{E73210BC-4C98-4491-9B13-018CA1FA3065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excercise Queues RPC", "Excercise Queues RPC\Excercise Queues RPC.csproj", "{E73210BC-4C98-4491-9B13-018CA1FA3065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopStyleApi", "AopStyleApi\AopStyleApi.csproj", "{A512E102-8D28-49D5-8C19-88F13033FD18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -597,6 +600,14 @@ Global
 		{E73210BC-4C98-4491-9B13-018CA1FA3065}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E73210BC-4C98-4491-9B13-018CA1FA3065}.Release|x86.ActiveCfg = Release|Any CPU
 		{E73210BC-4C98-4491-9B13-018CA1FA3065}.Release|x86.Build.0 = Release|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Debug|x86.Build.0 = Debug|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Release|x86.ActiveCfg = Release|Any CPU
+		{A512E102-8D28-49D5-8C19-88F13033FD18}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -628,6 +639,7 @@ Global
 		{A269233A-9DCA-4C29-98F7-20F9EAD24350} = {00A3216C-4703-4C06-840E-A02EB304E338}
 		{E209FCF5-B945-4F04-9439-7314FE315041} = {00A3216C-4703-4C06-840E-A02EB304E338}
 		{E73210BC-4C98-4491-9B13-018CA1FA3065} = {00A3216C-4703-4C06-840E-A02EB304E338}
+		{A512E102-8D28-49D5-8C19-88F13033FD18} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}

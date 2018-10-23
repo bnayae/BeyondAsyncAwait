@@ -22,7 +22,7 @@ namespace Bnaya.Samples
 
         #region TapFashion
 
-        public async Task TapFashion(
+        public async Task TapFashionAsync(
             Func<Task<string>> strategy, string title)
         {
             Console.WriteLine(title);
@@ -35,7 +35,7 @@ namespace Bnaya.Samples
 
         #region VTapFashion
 
-        public async ValueTask<object> VTapFashion(
+        public async ValueTask<object> VTapFashionAsync(
             Func<ValueTask<string>> strategy, string title)
         {
             Console.WriteLine(title);
@@ -49,7 +49,7 @@ namespace Bnaya.Samples
 
         #region LTapFashion
 
-        public async LightTask<object> LTapFashion(
+        public async LightTask<object> LTapFashionAsync(
             Func<LightTask<string>> strategy, string title)
         {
             Console.WriteLine(title);

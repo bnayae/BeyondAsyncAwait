@@ -24,7 +24,7 @@ namespace Bnaya.Samples
                     await Task.Delay(3000);
                     throw new IndexOutOfRangeException("Y");
                 });
-                Task t2 = Task.Run(() => throw new ArgumentOutOfRangeException("X"));
+                Task t2 = Task.Run(() => throw new ArgumentOutOfRangeException(nameof(X)));
                 await Task.WhenAll(t1, t2).ThrowAll();
                             //.ContinueWith(c =>
                             //{
@@ -32,11 +32,11 @@ namespace Bnaya.Samples
                             //    if (c.Exception != null)
                             //        throw c.Exception;
                             //});
-                await Task.Factory.StartNew(() => { });
+                //await Task.Factory.StartNew(() => { });
             }
             catch (AggregateException ex)
             {
-                Console.WriteLine($"### {ex}");
+                Console.WriteLine($"### {ex.Format( ErrorFormattingOption.IncludeLineNumber)}");
             }
             catch (Exception ex)
             {

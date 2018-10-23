@@ -1,0 +1,6 @@
+Send 100,000 request to https://source.unsplash.com/1000x1000/?dog/
+Throttle by not more than 10 request at any specific time (max 10 concurrent request).
+Tip: Use ActionBlock
+Each Request should Download Image and save the image to a Storage (HD)
+
+The entire operation should be canceled after 2 second (via canellation token)

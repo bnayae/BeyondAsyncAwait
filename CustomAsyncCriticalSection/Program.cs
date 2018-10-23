@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Bnaya.Samples
 {
-    class Program
+    static class Program
     {
         private static MyLock _lock = new MyLock();
 

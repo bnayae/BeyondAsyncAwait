@@ -20,8 +20,10 @@ namespace Bnaya.Samples
         {
             _requestChannel = requestChannel;
             _responseChannel = responseChannel;
-            Thread t = new Thread(WatchLoop);
-            t.Name = nameof(WatchLoop);
+            Thread t = new Thread(WatchLoop)
+            {
+                Name = nameof(WatchLoop)
+            };
             t.Start();
         }
 

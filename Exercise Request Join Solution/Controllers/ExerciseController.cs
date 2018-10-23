@@ -16,18 +16,18 @@ namespace Exercise_Request_Join_Solution.Controllers
         // GET api/exercise/a/{correlationKey}
         [HttpGet]
         [Route("a/{correlationKey}")]
-        public Task<string> GetA(string correlationKey)
+        public Task<string> GetAAsync(string correlationKey)
         {
             Correlation state = _storage.GetOrAdd(correlationKey, c => new Correlation(c));
-            return state.Increment(AB.A);
+            return state.IncrementAsync(AB.A);
         }
         // GET api/exercise/a/{correlationKey}
         [HttpGet]
         [Route("b/{correlationKey}")]
-        public Task<string> GetB(string correlationKey)
+        public Task<string> GetBAsync(string correlationKey)
         {
             Correlation state = _storage.GetOrAdd(correlationKey, c => new Correlation(c));
-            return state.Increment(AB.B);
+            return state.IncrementAsync(AB.B);
         }
 
         private class Correlation
@@ -46,7 +46,7 @@ namespace Exercise_Request_Join_Solution.Controllers
 
             #region With Lock
 
-            public Task<string> Increment(AB kind)
+            public Task<string> IncrementAsync(AB kind)
             {
                 lock (_gate)
                 {

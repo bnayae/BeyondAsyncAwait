@@ -8,7 +8,7 @@ namespace CommonServiceMistakesClient
 {
     class Program
     {
-        private const int MAX = 100;
+        private const int MAX = 200;
 
         private static readonly (string Title, string Server)[] SERVERS =
         {

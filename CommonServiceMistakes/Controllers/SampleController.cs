@@ -36,7 +36,7 @@ namespace Bnaya.Samples.Controllers
         // GET api/sample/stupid/{i}
         [Route("stupid/{i}")]
         [HttpGet]
-        public async Task<string> GetStupid(int i)
+        public async Task<string> GetStupidAsync(int i)
         {   // yes, this one is stupid (but sometimes stupid code can be spot at production ;-) 
             Debug.Write(".");
             Thread.Sleep(Delay); // represent IO call
@@ -46,7 +46,7 @@ namespace Bnaya.Samples.Controllers
         // GET api/sample/silly/{i}
         [Route("silly/{i}")]
         [HttpGet]
-        public Task<string> GetSilly(int i)
+        public Task<string> GetSillyAsync(int i)
         {   // Still blocking the thread pool 
             Debug.Write(".");
             return Task.Run(() =>
@@ -59,7 +59,7 @@ namespace Bnaya.Samples.Controllers
         // GET api/sample/needless/{i}
         [Route("needless/{i}")]
         [HttpGet]
-        public Task<string> GetNeedless(int i)
+        public Task<string> GetNeedlessAsync(int i)
         {   // swapping one Thread from a pool with another is needless
             Debug.Write(".");
             return Task.Run(async () =>
@@ -72,7 +72,7 @@ namespace Bnaya.Samples.Controllers
         // GET api/sample/right/{i}
         [Route("right/{i}")]
         [HttpGet]
-        public async Task<string> GetRight(int i)
+        public async Task<string> GetRightAsync(int i)
         {
             await Task.Delay(Delay).ConfigureAwait(false);//.ConfigureAwait(false); // represent IO call
             return $"#{i:00}";

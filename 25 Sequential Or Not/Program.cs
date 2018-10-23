@@ -21,7 +21,7 @@ namespace Bnaya.Samples
         {
             // the output of transform block is sequential 
             // (dictate by the order of the original input)
-            var block = new TransformBlock<int, string>(i => UnitOfWork(i), 
+            var block = new TransformBlock<int, string>(i => UnitOfWorkAsync(i), 
                                             new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = ITERATIONS });
 
             // the action block will get the transformation in the original order
@@ -44,7 +44,7 @@ namespace Bnaya.Samples
 
         private static async Task NonSequentialForkAsync()
         {
-            var block = CreateMultiTransform<int, string>(UnitOfWork,
+            var block = CreateMultiTransform<int, string>(UnitOfWorkAsync,
                             new ExecutionDataflowBlockOptions
                                     { MaxDegreeOfParallelism = ITERATIONS });
 
@@ -64,7 +64,7 @@ namespace Bnaya.Samples
 
         #region UnitOfWork
 
-        private static async Task<string> UnitOfWork(int i)
+        private static async Task<string> UnitOfWorkAsync(int i)
         {
             int duration = ((i % 5) + 1) * 1000; // transformation duration
             await Task.Delay(duration).ConfigureAwait(false);

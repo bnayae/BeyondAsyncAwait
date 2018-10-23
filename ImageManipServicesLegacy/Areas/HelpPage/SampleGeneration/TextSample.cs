@@ -11,7 +11,7 @@ namespace ImageManipServicesLegacy.Areas.HelpPage
         {
             if (text == null)
             {
-                throw new ArgumentNullException("text");
+                throw new ArgumentNullException(nameof(text));
             }
             Text = text;
         }

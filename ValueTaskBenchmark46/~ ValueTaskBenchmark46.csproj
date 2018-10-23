@@ -140,6 +140,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions2.cs" />
     <Compile Include="ValueOrNotBenchmark.cs" />
     <Compile Include="AsyncBenchmark.cs" />
     <Compile Include="CustomConfig.cs" />

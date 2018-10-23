@@ -16,7 +16,7 @@ namespace Bnaya.Samples
             Parallel.ForEach(data, item => Console.Write($"{item}, "));
         }
 
-        #region GetComputeData
+        #region GetBlockingData
 
         private static IEnumerable<int> GetBlockingData()
         {
@@ -27,7 +27,7 @@ namespace Bnaya.Samples
             }
         }
 
-        #endregion // GetComputeData
+        #endregion // GetBlockingData
 
         #region GetComputeData
 
