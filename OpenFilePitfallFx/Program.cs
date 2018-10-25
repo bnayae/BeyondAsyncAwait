@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 #pragma warning disable SG0018 // Path traversal
 namespace Bnaya.Samples
 {
-    class Program
+    internal class Program
     {
         private const string SOURCE_FILE_NAME = "sample.txt";
         private const string TARGET_FILE_NAME = "sample.copy.txt";
@@ -15,7 +15,7 @@ namespace Bnaya.Samples
         private const int CONSOLE_RATIO = 100;
         private static bool _openForAsync = false;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine(".NET Core don't include the file's APM API");
             ThreadPool.QueueUserWorkItem(s => { });
@@ -86,7 +86,7 @@ namespace Bnaya.Samples
         /// file to an output file.  Reads and writes are interlaced, and proceed in chunks
         /// of 8KB at a time (displaying progress to the console).
         /// </summary>
-        static void APMWithFiles()
+        private static void APMWithFiles()
         {
             FileStream reader, writer;
             int i = 0;
@@ -145,7 +145,7 @@ namespace Bnaya.Samples
         /// file to an output file.  Reads and writes are interlaced, and proceed in chunks
         /// of 8KB at a time (displaying progress to the console).
         /// </summary>
-        static void TPLWithFiles()
+        private static void TPLWithFiles()
         {
             int i = 0;
             FileStream reader, writer;
@@ -175,7 +175,7 @@ namespace Bnaya.Samples
                     Task<int> tr = reader.ReadAsync(buffer1, 0, buffer1.Length);
                     do
                     {
-                        if(i % CONSOLE_RATIO == 0   )
+                        if (i % CONSOLE_RATIO == 0)
                             Console.Write("R");
                     } while (!tr.IsCompleted);
 
@@ -223,8 +223,12 @@ namespace Bnaya.Samples
             while (!ct.IsCancellationRequested)
             {
                 ThreadPool.GetAvailableThreads(out var w, out var io);
-                Console.WriteLine($"\r\nIn Used:[Workers = {wMax - w}, IO = {ioMax - io}]");
-                await Task.Delay(30).ConfigureAwait(false);
+                int ioCount = ioMax - io;
+                if (ioCount != 0)
+                {
+                    Console.WriteLine($"\r\nIn Used:[Workers = {wMax - w}, IO = {ioMax - io}]");
+                }
+                await Task.Delay(1).ConfigureAwait(false);
             }
         }
 

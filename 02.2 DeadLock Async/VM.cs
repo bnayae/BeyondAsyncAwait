@@ -25,8 +25,9 @@ namespace _02._2_DeadLock_Async
         {
             for (int i = 0; i < 10; i++)
             {
-                Data = await DownloadAsync(URL);//.Result; // deadlock
-                //Data = await DownloadAsync(URL);
+                Task<byte[]> t = DownloadAsync(URL);
+                //Data = t.Result; // deadlock
+                Data = await DownloadAsync(URL);//.ConfigureAwait(false);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Data)));
 
             }

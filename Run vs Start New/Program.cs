@@ -30,10 +30,12 @@ namespace Bnaya.Samples
             // Should be sequential
             await Task.Factory.StartNew(async () =>
             {
+                Console.Write("#");
                 await Task.Delay(1000);
                 Console.Write("2 ");
             }); // what is the return value of this call?
             Console.Write("3 ");
+
         }
 
         #endregion // StartNewAsync
@@ -90,6 +92,7 @@ namespace Bnaya.Samples
                     Thread.Sleep(1000);
                     Console.Write(".");
                 });
+                Console.Write("#");
             });
             Console.Write("X");
         }
@@ -114,6 +117,7 @@ namespace Bnaya.Samples
                     Thread.Sleep(1000);
                     Console.Write(".");
                 }, options);
+                Console.Write("#");
             });
             Console.Write("X");
         }
@@ -138,6 +142,7 @@ namespace Bnaya.Samples
                         Console.Write("!");
                     }, options);
                 }, options);
+                Console.Write("#");
             });
             Console.Write("X");
         }
