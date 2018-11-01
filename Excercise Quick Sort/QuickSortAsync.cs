@@ -66,7 +66,6 @@ namespace Bnaya.Samples
                     yield return r_;
                 }
             }
-
         }
 
         public static IEnumerable<T> Sort<T>(IEnumerable<T> data)

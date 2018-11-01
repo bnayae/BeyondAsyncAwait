@@ -41,7 +41,6 @@ namespace Bnaya.Samples
             {
                 yield return r_;
             }
-
         }
     }
 }
