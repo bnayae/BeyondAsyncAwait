@@ -10,7 +10,6 @@ namespace Bnaya.Samples
     static class Program
     {
         private static Server _server;
-        private static RpcBridge<int, string> _rpc;
         private static BlockingCollection<CorrelationItem<int>> _requestChannel;
         private static BlockingCollection<CorrelationItem<string>> _responseChannel;
 
@@ -18,32 +17,30 @@ namespace Bnaya.Samples
         {
             _requestChannel = new BlockingCollection<CorrelationItem<int>>();
             _responseChannel = new BlockingCollection<CorrelationItem<string>>();
-            _rpc = new RpcBridge<int, string>(_requestChannel, _responseChannel);
             _server = new Server(_requestChannel, _responseChannel);
 
+            //TODO: remove the Dequeue loop
+            Thread t = new Thread(DequeueLoop);
+            t.Start();
 
             int[] requets = { 1, 5, 1, 3 };
-            foreach (var r in requets) // TODO: unblocking calls
+            foreach (var r in requets) 
             {
-                Console.WriteLine($"Sending: {r}");
                 var item = new CorrelationItem<int>(r);
-                Task<string> t = _rpc.SendAsync(r);
-                t.ContinueWith(c => Console.WriteLine(c.Result));
+                Console.WriteLine($"Sending: {item.Value} [{item.Correlation:N}]");
+                _requestChannel.Add(item);
+                // TODO: replace _requestChannel.Add(item); with wrapper that return Task<string>
             }
-            //foreach (var r in requets) // TODO: unblocking calls
-            //{
-            //    Console.WriteLine($"Sending: {r}");
-            //    var item = new CorrelationItem<int>(r);
-            //    Task<string> result = _rpc.SendAsync(r);
-            //    while (!result.IsCompleted)
-            //    {
-            //        Console.Write(".");
-            //        Thread.Sleep(100);
-            //    }
-            //    Console.WriteLine($" Result = {result.Result}");
-            //}
 
             Console.ReadKey();
+        }
+
+        private static void DequeueLoop()
+        {
+            foreach (CorrelationItem<string> item in _responseChannel.GetConsumingEnumerable())
+            {
+                Console.WriteLine($"{item.Value} [{item.Correlation:N}]");
+            }
         }
     }
 }

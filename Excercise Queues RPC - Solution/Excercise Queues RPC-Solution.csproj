@@ -4,7 +4,6 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>Bnaya.Samples</RootNamespace>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
 </Project>

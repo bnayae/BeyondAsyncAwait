@@ -30,9 +30,12 @@ namespace Bnaya.Samples
             foreach (var r in _requestChannel.GetConsumingEnumerable())
             {
                 var request = r; // capture variable
-                Thread.Sleep(request.Value * 1000); // BAD PRACTICE (should be await Task.Delay)
-                var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
-                _responseChannel.TryAdd(item);
+                Task.Run(() =>
+                {
+                    Thread.Sleep(request.Value * 1000); // bad practice
+                    var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
+                    _responseChannel.TryAdd(item);
+                });
             }
         }
     }
