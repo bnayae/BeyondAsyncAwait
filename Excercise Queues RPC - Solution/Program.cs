@@ -22,8 +22,17 @@ namespace Bnaya.Samples
             _rpc = new RpcBridge<int, string>(_requestChannel, _responseChannel);
             _server = new Server(_requestChannel, _responseChannel);
 
-
             int[] requets = { 1, 5, 1, 3 };
+            char[] chars = { '.', '-', '~', '^' };
+            Complex(requets, chars);
+
+            //Continuation(requets);
+
+            Console.ReadKey();
+        }
+
+        private static void Complex(int[] requets, char[] chars)
+        {
             var responses = new List<Task<string>>();
             foreach (var r in requets) // TODO: unblocking calls
             {
@@ -36,7 +45,6 @@ namespace Bnaya.Samples
             // ==================== Loop all Task (until completion) in parallel =======================
 
 
-            char[] chars = { '.', '-', '~', '^' };
             for (int i = 0; i < responses.Count; i++)
             {
                 char c = chars[i];
@@ -52,20 +60,23 @@ namespace Bnaya.Samples
                 });
                 t.Start();
             }
+        }
 
-            #region Continue With
+        private static void Continuation(int[] requets)
+        {
+            foreach (var r in requets) // TODO: unblocking calls
+            {
+                Console.WriteLine($"Sending: {r}");
+                var item = new CorrelationItem<int>(r);
+                Task<string> t = _rpc.SendAsync(r);
+                t.ContinueWith(c => Console.WriteLine(c.Result));
+            }
 
-            //foreach (var r in requets) // TODO: unblocking calls
-            //{
-            //    Console.WriteLine($"Sending: {r}");
-            //    var item = new CorrelationItem<int>(r);
-            //    Task<string> t = _rpc.SendAsync(r);
-            //    t.ContinueWith(c => Console.WriteLine(c.Result));
-            //}
-
-            #endregion // Continue With
-
-            Console.ReadKey();
+            while (true)
+            {
+                Console.Write(".");
+                Thread.Sleep(100);
+            }
         }
     }
 }

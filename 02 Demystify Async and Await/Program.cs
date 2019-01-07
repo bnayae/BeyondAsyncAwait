@@ -103,7 +103,7 @@ namespace Bnaya.Samples
         private static Task ExpectedDemystifyAsync()
         {
             Info("ExpectedAsync Start");
-            Task t = Task.Delay(2000); // Task.CompletedTask;
+            Task t = Task.CompletedTask; // Task.Delay(2000); //
             if (t.IsCompleted)
             {
                 Info("ExpectedAsync End (Optimized)");
