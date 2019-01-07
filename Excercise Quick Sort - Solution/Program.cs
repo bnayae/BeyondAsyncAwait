@@ -26,11 +26,11 @@ namespace Bnaya.Samples
                 sw.Stop();
                 Show("Sync ", b, sw);
 
-                //TODO: implement QuickSortAsync
-                //sw.Restart();
-                //var c = await QuickSortAsync.SortAsync(a);
-                //sw.Stop();
-                //Show("Async", c, sw);
+
+                sw.Restart();
+                var c = await QuickSortAsync.SortAsync(a);
+                sw.Stop();
+                Show("Async", c, sw);
             }
             Console.ReadKey();
         }

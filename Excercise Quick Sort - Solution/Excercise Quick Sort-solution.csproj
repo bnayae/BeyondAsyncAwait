@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD0FE0F5-495A-4F1D-9523-93C9487FF52C}</ProjectGuid>
+    <ProjectGuid>{CC41ABB5-011D-42B9-9135-9D359ECCA228}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Excercise_Quick_Sort</RootNamespace>
-    <AssemblyName>Excercise Quick Sort</AssemblyName>
+    <AssemblyName>Excercise Quick Sort-solution</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="QuickSortAsync.cs" />
     <Compile Include="QuickSortSimplify.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
