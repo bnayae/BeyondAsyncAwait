@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,25 +24,46 @@ namespace Bnaya.Samples
 
 
             int[] requets = { 1, 5, 1, 3 };
+            var responses = new List<Task<string>>();
             foreach (var r in requets) // TODO: unblocking calls
             {
                 Console.WriteLine($"Sending: {r}");
                 var item = new CorrelationItem<int>(r);
-                Task<string> t = _rpc.SendAsync(r);
-                t.ContinueWith(c => Console.WriteLine(c.Result));
+                Task<string> result = _rpc.SendAsync(r);
+                responses.Add(result);
             }
+
+            // ==================== Loop all Task (until completion) in parallel =======================
+
+
+            char[] chars = { '.', '-', '~', '^' };
+            for (int i = 0; i < responses.Count; i++)
+            {
+                char c = chars[i];
+                Task<string> response = responses[i];
+                var t = new Thread(() =>
+                {
+                    while (!response.IsCompleted) // loop single task until completion
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(100);
+                    }
+                    Console.WriteLine($" Result = {response.Result}");
+                });
+                t.Start();
+            }
+
+            #region Continue With
+
             //foreach (var r in requets) // TODO: unblocking calls
             //{
             //    Console.WriteLine($"Sending: {r}");
             //    var item = new CorrelationItem<int>(r);
-            //    Task<string> result = _rpc.SendAsync(r);
-            //    while (!result.IsCompleted)
-            //    {
-            //        Console.Write(".");
-            //        Thread.Sleep(100);
-            //    }
-            //    Console.WriteLine($" Result = {result.Result}");
+            //    Task<string> t = _rpc.SendAsync(r);
+            //    t.ContinueWith(c => Console.WriteLine(c.Result));
             //}
+
+            #endregion // Continue With
 
             Console.ReadKey();
         }

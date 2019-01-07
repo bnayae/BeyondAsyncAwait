@@ -30,13 +30,33 @@ namespace Bnaya.Samples
             foreach (var r in _requestChannel.GetConsumingEnumerable())
             {
                 var request = r; // capture variable
-                Task.Run(() =>
+                var t = new Thread(() =>
                 {
-                    Thread.Sleep(request.Value * 1000); // bad practice
+                    Thread.Sleep(request.Value * 1000); // BAD PRACTICE
                     var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
                     _responseChannel.TryAdd(item);
                 });
+                t.Start();
             }
         }
+
+        #region WatchLoopAsync
+
+        private void WatchLoopAsync()
+        {
+            foreach (var r in _requestChannel.GetConsumingEnumerable())
+            {
+                var request = r; // capture variable
+                var t = Task.Run(async () =>
+                {
+                    await Task.Delay(request.Value * 1000).ConfigureAwait(false); 
+                    var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
+                    _responseChannel.TryAdd(item);
+                });
+                t.Start();
+            }
+        }
+
+        #endregion // WatchLoopAsync
     }
 }
