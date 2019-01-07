@@ -28,12 +28,13 @@ namespace ImageProcessingFlowFxSolution
         private static TransformBlock<Image<Rgba32>[], byte[]> _merge;
         private static ActionBlock<byte[]> _save;
 
-        static void Main()
+        static async Task Main()
         {
             if (!Directory.Exists("Images"))
                 Directory.CreateDirectory("Images");
 
-            _downloader = new TransformBlock<int, byte[]>(i => DownloadAsync(i));
+            //var opt = new ExecutionDataflowBlockOptions { BoundedCapacity = 1 };
+            _downloader = new TransformBlock<int, byte[]>(i => DownloadAsync(i), new ExecutionDataflowBlockOptions { BoundedCapacity = 2 });
 
             _broadcast = new BroadcastBlock<byte[]>(m => m);
 
@@ -55,9 +56,10 @@ namespace ImageProcessingFlowFxSolution
             _batch.LinkTo(_merge);
             _merge.LinkTo(_save);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 15; i++)
             {
-                _downloader.Post(i);
+                //_downloader.Post(i);
+                await _downloader.SendAsync(i);
             }
             Console.ReadKey();
         }
