@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,11 +42,11 @@ namespace Bnaya.Samples
                 if (left.Count > 0)
                     leftTask = Task.Run(() => SortAsync(left, depth));
                 else
-                    leftTask = Task.FromResult<IEnumerable<T>>(left);
+                    leftTask = Task.FromResult(Enumerable.Empty<T>());
                 if (right.Count > 0)
                     rightTask = Task.Run(() => SortAsync(right, depth));
                 else
-                    rightTask = Task.FromResult<IEnumerable<T>>(right);
+                    rightTask = Task.FromResult(Enumerable.Empty<T>());
             }
 
             IEnumerable<T>[] leftRight = await Task.WhenAll(leftTask, rightTask).ConfigureAwait(false);

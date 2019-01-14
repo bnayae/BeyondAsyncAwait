@@ -155,6 +155,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APM vs Task", "APM vs Task\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContinuationSample", "ContinuationSample\ContinuationSample.csproj", "{6A95DEFF-D9AF-4B85-930D-64088D93E370}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "From Sync To async", "More\From Sync To async\From Sync To async.csproj", "{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -698,6 +700,14 @@ Global
 		{6A95DEFF-D9AF-4B85-930D-64088D93E370}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A95DEFF-D9AF-4B85-930D-64088D93E370}.Release|x86.ActiveCfg = Release|Any CPU
 		{6A95DEFF-D9AF-4B85-930D-64088D93E370}.Release|x86.Build.0 = Release|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Debug|x86.Build.0 = Debug|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Release|x86.ActiveCfg = Release|Any CPU
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -739,6 +749,7 @@ Global
 		{B50F981B-4FE2-4CBD-9DEF-65E5F95E906B} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{B821A421-9A76-451C-BE5A-DB13A13DF3B3} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{6A95DEFF-D9AF-4B85-930D-64088D93E370} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
+		{B344C424-8FC7-480C-8DD5-57B8CD4A1C71} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}
