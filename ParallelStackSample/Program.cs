@@ -16,8 +16,17 @@ namespace Sela.Samples
 
         static void Main(string[] args)
         {
+            //var t = new Thread(() =>
+            //{
+            //    while (true)
+            //    {
+            //        A(10);
+            //    }
+            //});
+            //t.Start();
             Parallel.For(0, 30, A);
         }
+
         private static void Q(int i)
         {
             if(i == 555)
@@ -44,7 +53,7 @@ namespace Sela.Samples
             int count = Interlocked.Increment(ref _count);
             if (count % 3 == 0)
                 C(count);
-            //else if (count % 3 == 1)
+            else //if (count % 3 == 1)
                 D(count);
             //else
             //    Task.Factory.StartNew(() => Q(7777), TaskCreationOptions.AttachedToParent);

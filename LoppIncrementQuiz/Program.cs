@@ -26,8 +26,8 @@ namespace LoppIncrementQuiz
                 //WithInterlocked();
                 //_count = 0;
                 //WithLock();
-                _count = 0;
-                DataLocality();
+                //_count = 0;
+                //DataLocality();
                 Console.WriteLine("-------------------");
             }
 

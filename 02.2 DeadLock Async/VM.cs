@@ -13,6 +13,7 @@ namespace _02._2_DeadLock_Async
     {
         //private const string URL = "http://lorempixel.com/800/800/animals/";
         private const string URL = "https://source.unsplash.com/800x800/?dog";
+        //private const string URL = "https://postmediacalgaryherald2.files.wordpress.com/2019/01/Britney-the-morkie.jpg?quality=80&strip=all&w=659&h=494&crop=1&zoom=2";
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -25,7 +26,7 @@ namespace _02._2_DeadLock_Async
         {
             for (int i = 0; i < 10; i++)
             {
-                Task<byte[]> t = DownloadAsync(URL);
+                //Task<byte[]> t = DownloadAsync(URL);
                 //Data = t.Result; // deadlock
                 Data = await DownloadAsync(URL);//.ConfigureAwait(false);
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Data)));
@@ -37,7 +38,7 @@ namespace _02._2_DeadLock_Async
         {
             using (var http = new HttpClient())
             {
-                byte[] data = await http.GetByteArrayAsync(url).ConfigureAwait(false);
+                byte[] data = await http.GetByteArrayAsync(url);//.ConfigureAwait(false);
                 // cannot get into the this line because the calling method
                 // hold the synchronization context (.Result)
                 return data;

@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="_02._2_DeadLock_Async.App"
+    x:Class="ReactiveUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:_02._2_DeadLock_Async"
+    xmlns:local="clr-namespace:ReactiveUI"
     StartupUri="MainWindow.xaml">
     <Application.Resources />
 </Application>
