@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
@@ -28,12 +29,13 @@ namespace BatchSync
             chC.LinkTo(sync);
             sync.LinkTo(presenter);
 
-
+            
             for (int i = 1; i <= 20; i++)
             {
                 chA.Post(i);
                 chB.Post(i);
                 chC.Post(i);
+                //Thread.Sleep(2);
             }
 
             Console.ReadKey();

@@ -13,10 +13,10 @@ namespace _26_Post_vs_SendAsync
         {
             Console.WriteLine("Check Memory Allocation");
 
-            Feed();
+            //Feed();
 
-            //Task t = FeedAsync();
-            //t.Wait();
+            Task t = FeedAsync();
+            t.Wait();
 
             Console.ReadKey();
         }
@@ -24,7 +24,7 @@ namespace _26_Post_vs_SendAsync
         private static async Task ProcessAsync(int i)
         {
             Console.Write($" {i} ");
-            await Task.Delay(1200).ConfigureAwait(false);
+            await Task.Delay(1000).ConfigureAwait(false);
             Console.Write(".");
         }
 
@@ -39,7 +39,7 @@ namespace _26_Post_vs_SendAsync
             foreach (var item in QueueProvider())
             {
                 if(!_processor.Post(item))
-                    Console.Write(" Drop");
+                    Console.Write("X");
             }
         }
 
@@ -48,14 +48,14 @@ namespace _26_Post_vs_SendAsync
             _processor = new ActionBlock<int>(ProcessAsync,
                                     new ExecutionDataflowBlockOptions
                                             {
-                                                BoundedCapacity = 3 * 2 ,
-                                                MaxDegreeOfParallelism = 3
+                                                BoundedCapacity = 5 //3 * 2 ,
+                                                //MaxDegreeOfParallelism = 3
                                             }); // can be correlate to the degree of parallelism
             foreach (var item in QueueProvider())
             {
                 if (!await _processor.SendAsync(item).ConfigureAwait(false))
-                    Console.Write(" Drop");
-                Console.Write("#");
+                    Console.Write("X");
+                //Console.Write("#");
             }
         }
 
