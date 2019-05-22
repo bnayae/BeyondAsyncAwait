@@ -11,22 +11,18 @@ namespace Bnaya.Samples
     static class Program
     {
         private static Server _server;
-        private static RpcBridge<int, string> _rpc;
-        private static BlockingCollection<CorrelationItem<int>> _requestChannel;
-        private static BlockingCollection<CorrelationItem<string>> _responseChannel;
+        private static RpcBridge _rpc;
 
         static void Main(string[] args)
         {
-            _requestChannel = new BlockingCollection<CorrelationItem<int>>();
-            _responseChannel = new BlockingCollection<CorrelationItem<string>>();
-            _rpc = new RpcBridge<int, string>(_requestChannel, _responseChannel);
-            _server = new Server(_requestChannel, _responseChannel);
+            _rpc = new RpcBridge();
+            _server = new Server();
 
             int[] requets = { 1, 5, 1, 3 };
             char[] chars = { '.', '-', '~', '^' };
-            Complex(requets, chars);
+            //Complex(requets, chars);
 
-            //Continuation(requets);
+            Continuation(requets);
 
             Console.ReadKey();
         }
@@ -37,7 +33,6 @@ namespace Bnaya.Samples
             foreach (var r in requets) // TODO: unblocking calls
             {
                 Console.WriteLine($"Sending: {r}");
-                var item = new CorrelationItem<int>(r);
                 Task<string> result = _rpc.SendAsync(r);
                 responses.Add(result);
             }
@@ -67,7 +62,6 @@ namespace Bnaya.Samples
             foreach (var r in requets) // TODO: unblocking calls
             {
                 Console.WriteLine($"Sending: {r}");
-                var item = new CorrelationItem<int>(r);
                 Task<string> t = _rpc.SendAsync(r);
                 t.ContinueWith(c => Console.WriteLine(c.Result));
             }

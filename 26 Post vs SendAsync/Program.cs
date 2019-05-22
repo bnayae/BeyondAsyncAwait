@@ -55,7 +55,7 @@ namespace _26_Post_vs_SendAsync
             {
                 if (!await _processor.SendAsync(item).ConfigureAwait(false))
                     Console.Write("X");
-                //Console.Write("#");
+                Console.Write("#");
             }
         }
 

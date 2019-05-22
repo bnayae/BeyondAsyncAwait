@@ -11,9 +11,11 @@ namespace Bnaya.Samples
         {
             Console.WriteLine("Avoid async Void!!!");
 
-            BadIdeaAsync();
+            //BadIdeaAsync();
             //Task fireForget = GoodIdeaAsync();
-            //WhenYouMustAsync();
+            //fireForget.ContinueWith(c => Console.WriteLine(c.Exception.ToString()),
+            //    TaskContinuationOptions.OnlyOnFaulted);
+            WhenYouMustAsync();
             //WhenYouMust7Async();
 
             Console.WriteLine("Still working");
@@ -23,15 +25,15 @@ namespace Bnaya.Samples
                 Thread.Sleep(50);
                 Console.Write(".");
             }
-            Console.WriteLine("If you see this line you didn't crushed");
-            Console.ReadKey();
+            //Console.WriteLine("If you see this line you didn't crushed");
+            //Console.ReadKey();
         }
 
         #region BadIdeaAsync
 
         private static async void BadIdeaAsync()
         {
-            await Task.Delay(10);
+            await Task.Delay(3000);
             throw new NotSupportedException("Should it crash the application?");
         }
 
@@ -41,7 +43,7 @@ namespace Bnaya.Samples
 
         private static async Task GoodIdeaAsync()
         {
-            await Task.Delay(10);
+            await Task.Delay(3000);
             throw new NotSupportedException("Should it crash the application?");
         }
 

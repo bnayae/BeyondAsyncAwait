@@ -9,7 +9,7 @@ namespace _17_AsyncLocal_Simple
 {
     public class AsyncContext
     {
-        private AsyncLocal<string> _contexts = new AsyncLocal<string>();
+        private static AsyncLocal<string> _contexts = new AsyncLocal<string>();
 
         public async Task Exec1Async(string s, int i)
         {

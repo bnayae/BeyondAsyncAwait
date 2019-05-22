@@ -11,8 +11,8 @@ namespace Bnaya.Samples
             Console.WriteLine("Start");
             var cts = new CancellationTokenSource(TimeSpan.FromSeconds(1));
 
-            Default(cts.Token);
-            //Lazy(cts.Token);
+            //Default(cts.Token);
+            Lazy(cts.Token);
 
             Console.ReadKey();
         }
@@ -26,9 +26,11 @@ namespace Bnaya.Samples
             });
 
             Task b = a.ContinueWith(t => Console.WriteLine("B"), token);
+            //Task b = a.ContinueWith(t => Console.WriteLine($"B is {t.Status}"), token);
 
-           
+
             Task c = b.ContinueWith(t => Console.WriteLine("C"));
+            //Task c = b.ContinueWith(t => Console.WriteLine($"C is {t.Status}"));
 
             //while (!b.IsCompleted)
             //{
@@ -50,7 +52,7 @@ namespace Bnaya.Samples
                  TaskContinuationOptions.LazyCancellation,
                  TaskScheduler.Default);
 
-            Task c = b.ContinueWith(t => Console.WriteLine("C"));
+            Task c = b.ContinueWith(t => Console.WriteLine($"C is {t.Status}"));
 
             //while (!b.IsCompleted)
             //{

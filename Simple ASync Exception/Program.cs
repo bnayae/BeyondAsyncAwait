@@ -18,7 +18,7 @@ namespace Simple_ASync_Exception
                                     Console.WriteLine("B"));
 
                 throw new ArgumentNullException("X");
-                Console.WriteLine("C");
+                //Console.WriteLine("C");
             }
             catch (Exception ex)
             {

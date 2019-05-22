@@ -23,10 +23,12 @@ namespace _010_Multi_Exceptions
                     throw new ArgumentException("B");
                 });
 
-                Task t = Task.WhenAll(t1, t2);
+                await Task.WhenAll(t1, t2);
+                //Task t = Task.WhenAll(t1, t2);
                 //Task _ = t.ContinueWith(c => Console.WriteLine(
-                //            $"%%%%  {c.Exception?.GetType().Name} %%%%"));
-                await t.ThrowAll(); //.ContinueWith(c => throw c.Exception);
+                //            $"%%%%  {c.Exception?.GetType().Name} %%%%"), TaskContinuationOptions.OnlyOnFaulted);
+                //await t;
+                //await t.ThrowAll(); //.ContinueWith(c => throw c.Exception);
 
             }
             catch (AggregateException ex)

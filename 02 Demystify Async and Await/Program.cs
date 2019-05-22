@@ -17,9 +17,9 @@ namespace Bnaya.Samples
             //Task t = CanBeTrickyAsync();
             //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
-            Task t = ExpectedAsync();
+            //Task t = ExpectedAsync();
             //Task t = ExpectedDemystifyAsync();
-            //Task t = MultiAwaitAsync();
+            Task t = MultiAwaitAsync();
             Info(nameof(Main));
             while (!t.IsCompleted)
             {

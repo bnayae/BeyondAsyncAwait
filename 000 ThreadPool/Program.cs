@@ -8,7 +8,7 @@ namespace Bnaya.Samples
 {
     class Program
     {
-        private const int COUNT = 25;
+        private const int COUNT = 45;
         private static int _count = COUNT;
         private static readonly TimeSpan DURATION = TimeSpan.FromSeconds(6);
 
@@ -21,8 +21,8 @@ namespace Bnaya.Samples
                 ThreadPool.QueueUserWorkItem(state =>
                 {
                     Console.Write(">");
-                    ExecuteIoLike(DURATION);
-                    //ExecuteComputeLike(DURATION);
+                    //ExecuteIoLike(DURATION);
+                    ExecuteComputeLike(DURATION);
                     Console.Write("|");
                     var x = Interlocked.Decrement(ref _count);
                 }, i);

@@ -4,20 +4,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Bnaya.Samples.Storage;
 
 namespace Bnaya.Samples
 {
     public class Server
     {
-        private readonly BlockingCollection<CorrelationItem<int>> _requestChannel;
-        private readonly BlockingCollection<CorrelationItem<string>> _responseChannel;
 
-        public Server(
-            BlockingCollection<CorrelationItem<int>> requestChannel,
-            BlockingCollection<CorrelationItem<string>> responseChannel)
+        public Server()
         {
-            _requestChannel = requestChannel;
-            _responseChannel = responseChannel;
             Thread t = new Thread(WatchLoop)
             {
                 Name = nameof(WatchLoop)
@@ -27,14 +22,14 @@ namespace Bnaya.Samples
 
         private void WatchLoop()
         {
-            foreach (var r in _requestChannel.GetConsumingEnumerable())
+            foreach (var r in RequestChannel.GetConsumingEnumerable())
             {
                 var request = r; // capture variable
                 var t = new Thread(() =>
                 {
                     Thread.Sleep(request.Value * 1000); // BAD PRACTICE
                     var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
-                    _responseChannel.TryAdd(item);
+                    ResponseChannel.TryAdd(item);
                 });
                 t.Start();
             }
@@ -44,14 +39,14 @@ namespace Bnaya.Samples
 
         private void WatchLoopAsync()
         {
-            foreach (var r in _requestChannel.GetConsumingEnumerable())
+            foreach (var r in RequestChannel.GetConsumingEnumerable())
             {
                 var request = r; // capture variable
                 var t = Task.Run(async () =>
                 {
                     await Task.Delay(request.Value * 1000).ConfigureAwait(false); 
                     var item = new CorrelationItem<string>(request.Correlation, $"Data of {request.Value}");
-                    _responseChannel.TryAdd(item);
+                    ResponseChannel.TryAdd(item);
                 });
                 t.Start();
             }

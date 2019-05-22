@@ -19,12 +19,13 @@ namespace _02._1_Async_Download
 {
     class Program
     {
-        private const string URL = "https://source.unsplash.com/1200x1200/?woman";
+        //private const string URL = "https://source.unsplash.com/1200x1200/?woman";
+        private const string URL = "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg";
 
         static void Main(string[] args)
         {
-            Task t = JoinSimpleDownloadAndSaveAsync();
-            //Task t = DownloadForkEffectJoinSave(0);
+            //Task t = JoinSimpleDownloadAndSaveAsync();
+            Task t = DownloadForkEffectJoinSave(0);
             //Task t = DownloadForkEffectJoinSaveAll();
 
             while (!t.IsCompleted)
@@ -55,7 +56,7 @@ namespace _02._1_Async_Download
 
         private static async Task SimpleDownloadAndSaveAsync(int index)
         {
-            byte[] image = await DownloadAsync(URL);
+            byte[] image =  await DownloadAsync(URL);
             await SaveAsync($"Image {index}.jpg", image);
         }
 

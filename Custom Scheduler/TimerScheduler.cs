@@ -12,7 +12,7 @@ namespace Custom_Scheduler
     {
         private readonly ConcurrentQueue<Task> _queue = new ConcurrentQueue<Task>();
         private readonly Timer _tmr;
-        public static readonly TaskScheduler Default = new TimerScheduler();
+        public new static readonly TaskScheduler Default = new TimerScheduler();
 
         public TimerScheduler()
         {

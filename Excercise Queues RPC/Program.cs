@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+using static Bnaya.Samples.Storage;
 
 // TODO: TDF version
 
@@ -10,14 +11,10 @@ namespace Bnaya.Samples
     static class Program
     {
         private static Server _server;
-        private static BlockingCollection<CorrelationItem<int>> _requestChannel;
-        private static BlockingCollection<CorrelationItem<string>> _responseChannel;
 
         static void Main(string[] args)
         {
-            _requestChannel = new BlockingCollection<CorrelationItem<int>>();
-            _responseChannel = new BlockingCollection<CorrelationItem<string>>();
-            _server = new Server(_requestChannel, _responseChannel);
+            _server = new Server();
 
             //TODO: remove the Dequeue loop
             Thread t = new Thread(DequeueLoop);
@@ -28,7 +25,7 @@ namespace Bnaya.Samples
             {
                 var item = new CorrelationItem<int>(r);
                 Console.WriteLine($"Sending: {item.Value} [{item.Correlation:N}]");
-                _requestChannel.Add(item);
+                RequestChannel.Add(item);
                 // TODO: replace _requestChannel.Add(item); with wrapper that return Task<string>
             }
 
@@ -37,7 +34,7 @@ namespace Bnaya.Samples
 
         private static void DequeueLoop()
         {
-            foreach (CorrelationItem<string> item in _responseChannel.GetConsumingEnumerable())
+            foreach (CorrelationItem<string> item in ResponseChannel.GetConsumingEnumerable())
             {
                 Console.WriteLine($"{item.Value} [{item.Correlation:N}]");
             }

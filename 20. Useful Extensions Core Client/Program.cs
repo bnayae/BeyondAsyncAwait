@@ -12,14 +12,14 @@ namespace Bnaya.Samples
     {
         static void Main(string[] args)
         {
-            //Task a = CheckDeadlockAsync();
+            Task a = CheckDeadlockAsync();
             //Task b = CheckTimeoutAsync();
             //Task c = MultiExceptionAsync();
             //Task d = ExecAsync();
 
             //SafeCancellation();
 
-            Task e = CompleteWhenNAsync();
+            //Task e = CompleteWhenNAsync();
 
             Console.ReadKey();
         }
@@ -30,9 +30,10 @@ namespace Bnaya.Samples
         {
             try
             {
-                Task t = Task.Delay(1000);
+                Console.WriteLine("Start");
+                Task t = Task.Delay(5000);
                 // check for potential deadlock
-                if (await t.IsTimeoutAsync(TimeSpan.FromMilliseconds(100)).ConfigureAwait(false))
+                if (await t.IsTimeoutAsync(TimeSpan.FromMilliseconds(2000)).ConfigureAwait(false))
                     Console.WriteLine("Potential deadlock");
                 await t.ConfigureAwait(false);
                 Console.WriteLine("Eventually it pass");
@@ -52,7 +53,7 @@ namespace Bnaya.Samples
             try
             {
                 await Task.Delay(1000).WithTimeout(TimeSpan.FromMilliseconds(100));
-                throw new Exception("Expecting timeout");
+                Console.WriteLine("OK");
             }
             catch (TimeoutException)
             {
@@ -100,6 +101,8 @@ namespace Bnaya.Samples
             //    Console.WriteLine($"Cancellation throw: {ex.Format()}");
 
             #endregion // CancelSafe (advance)
+
+            Console.WriteLine("Pass exception");
         }
 
         #endregion // SafeCancellation
@@ -109,11 +112,18 @@ namespace Bnaya.Samples
         private static async Task MultiExceptionAsync()
         {
             Task a = Task.Run(() => throw new IndexOutOfRangeException("Error A"));
-            Task b = Task.Run(() => throw new IndexOutOfRangeException("Error B"));
+            Task b = Task.Run(() => throw new ArgumentException("Error B"));
 
             try
             {
-                await Task.WhenAll(a, b).ThrowAll();
+                await Task.WhenAll(a, b)
+                            //.ContinueWith(c =>
+                            //{
+                            //    if (c.Exception != null)
+                            //        throw c.Exception;
+                            //});
+                    .ThrowAll();
+                await Task.Run(() => { });
             }
             catch (AggregateException exs)
             {
@@ -124,9 +134,9 @@ namespace Bnaya.Samples
                     Console.WriteLine(ex.GetBaseException().Message);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Catch single exception");
+                Console.WriteLine($"Catch single exception: {ex}");
             }
         }
 

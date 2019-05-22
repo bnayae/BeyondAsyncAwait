@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace AopStyleApi
 {

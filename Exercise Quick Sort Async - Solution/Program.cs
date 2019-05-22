@@ -11,8 +11,7 @@ namespace Bnaya.Samples
     {
         private static readonly Random _rnd = new Random(Guid.NewGuid().GetHashCode());
 
-        //public static async Task Main()
-        public static void Main()
+        public static async Task Main()
         {
             var sw = new Stopwatch();
             //var a = new int[] { 3, 5, 2, 0, 1, 8, 7, 9 };
@@ -27,11 +26,11 @@ namespace Bnaya.Samples
                 sw.Stop();
                 Show("Sync ", b, sw);
 
-                //TODO: implement QuickSortAsync
-                //sw.Restart();
-                //var c = await QuickSortAsync.SortAsync(a);
-                //sw.Stop();
-                //Show("Async", c, sw);
+
+                sw.Restart();
+                var c = await QuickSortAsync.SortAsync(a);
+                sw.Stop();
+                Show("Async", c, sw);
             }
             Console.ReadKey();
         }

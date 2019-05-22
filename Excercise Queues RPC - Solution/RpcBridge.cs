@@ -4,22 +4,17 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Bnaya.Samples.Storage;
 
 namespace Bnaya.Samples
 {
-    public class RpcBridge<TRequest, TResponse>
+    public class RpcBridge
     {
-        private readonly BlockingCollection<CorrelationItem<TRequest>> _requestChannel;
-        private readonly BlockingCollection<CorrelationItem<TResponse>> _responseChannel;
-        private readonly ConcurrentDictionary<Guid, TaskCompletionSource<TResponse>> _map =
-            new ConcurrentDictionary<Guid, TaskCompletionSource<TResponse>>();
+        private readonly ConcurrentDictionary<Guid, TaskCompletionSource<string>> _map =
+            new ConcurrentDictionary<Guid, TaskCompletionSource<string>>();
 
-        public RpcBridge(
-            BlockingCollection<CorrelationItem<TRequest>> requestChannel,
-            BlockingCollection<CorrelationItem<TResponse>> responseChannel)
+        public RpcBridge()
         {
-            _requestChannel = requestChannel;
-            _responseChannel = responseChannel;
             Thread t = new Thread(WatchLoop)
             {
                 Name = nameof(WatchLoop)
@@ -29,22 +24,22 @@ namespace Bnaya.Samples
 
         private void WatchLoop()
         {
-            foreach (var response in _responseChannel.GetConsumingEnumerable())
+            foreach (var response in ResponseChannel.GetConsumingEnumerable())
             {
                 if (_map.TryRemove(response.Correlation,
-                                    out TaskCompletionSource<TResponse> tcs))
+                                    out TaskCompletionSource<string> tcs))
                 {
                     tcs.TrySetResult(response.Value);
                 }
             }
         }
 
-        public Task<TResponse> SendAsync(TRequest request)
+        public Task<string> SendAsync(int request)
         {
-            var tcs = new TaskCompletionSource<TResponse>();
-            var item = new CorrelationItem<TRequest>(request);
+            var tcs = new TaskCompletionSource<string>();
+            var item = new CorrelationItem<int>(request);
             _map.TryAdd(item.Correlation, tcs);
-            _requestChannel.TryAdd(item);
+            RequestChannel.TryAdd(item);
             return tcs.Task;
         }
     }

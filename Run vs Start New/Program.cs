@@ -30,7 +30,7 @@ namespace Bnaya.Samples
             // Should be sequential
             await Task.Factory.StartNew(async () =>
             {
-                Console.Write("#");
+                //Console.Write("#");
                 await Task.Delay(1000);
                 Console.Write("2 ");
             }); // what is the return value of this call?
