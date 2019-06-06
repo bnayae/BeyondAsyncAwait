@@ -28,6 +28,6 @@ namespace Bnaya.Samples
 
         public Task<T> Task => _taskSemantic.Task;
 
-        public bool TryComplete(T data) => _taskSemantic.TrySetResult(data);
+        public void TryComplete(T data) => _taskSemantic.TrySetResult(data);
     }
 }

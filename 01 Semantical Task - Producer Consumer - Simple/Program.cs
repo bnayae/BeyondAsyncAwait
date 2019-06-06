@@ -67,7 +67,7 @@ namespace Bnaya.Samples
                 string data = $"{message.Value} -> second stage";
                 Console.Write(" 2nd ");
 
-                var nextMessage = message.TryComplete(data);
+                message.TryComplete(data);
             }
         }
 

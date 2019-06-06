@@ -63,7 +63,7 @@ namespace Bnaya.Samples
             {
                 Console.WriteLine($"Sending: {r}");
                 Task<string> t = _rpc.SendAsync(r);
-                t.ContinueWith(c => Console.WriteLine(c.Result));
+                t.ContinueWith(c => Console.WriteLine($"{r} -> {c.Result}"));
             }
 
             while (true)
