@@ -174,7 +174,7 @@ namespace Bnaya.Samples
 
         private static async Task SingleStepAsync(int i)
         {
-            int delay = 1500; // Abs(1500 - (i * 100));
+            int delay = 1500; //Abs(1500 - (i * 100));
 
             await Task.Delay(delay).ConfigureAwait(false);
             Console.Write($"{i}, ");
