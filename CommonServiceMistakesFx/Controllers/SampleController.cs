@@ -20,7 +20,7 @@ namespace CommonServiceMistakesFx.Controllers
         private static int DELAY_RANGE = 5;
         private ThreadLocal<Random> _rnd = new ThreadLocal<Random>(() => new Random(Guid.NewGuid().GetHashCode()));
 
-        private TimeSpan Delay => TimeSpan.FromMilliseconds(DELAY + _rnd.Value.Next(0, DELAY_RANGE));
+        private TimeSpan Delay => TimeSpan.FromMilliseconds(DELAY);// + _rnd.Value.Next(0, DELAY_RANGE));
 
         // GET api/sample/sync/{i}
         [Route("sync/{i}")]

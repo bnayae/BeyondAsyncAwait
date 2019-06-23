@@ -58,9 +58,14 @@ namespace Bnaya.Samples
         private static async Task AlsoTrickyAsync()
         {
             Info("AlsoTrickyAsync Start");
-            await Task.CompletedTask;
+            await ExecAsync();
             Thread.Sleep(2000);
             Info("AlsoTrickyAsync End");
+        }
+
+        private static Task ExecAsync()
+        {
+            return Task.CompletedTask;
         }
 
         #endregion // AlsoTrickyAsync
@@ -91,7 +96,8 @@ namespace Bnaya.Samples
         private static async Task ExpectedAsync()
         {
             Info("ExpectedAsync Start");
-            await Task.Delay(2000);
+            await Task.Delay(1);
+            Thread.Sleep(2000);
             //await MyDelay(TimeSpan.FromSeconds(2));
             Info("ExpectedAsync End");
         }
