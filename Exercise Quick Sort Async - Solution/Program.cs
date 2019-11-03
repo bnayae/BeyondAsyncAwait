@@ -27,10 +27,10 @@ namespace Bnaya.Samples
                 Show("Sync ", b, sw);
 
 
-                sw.Restart();
-                var c = await QuickSortAsync.SortAsync(a);
-                sw.Stop();
-                Show("Async", c, sw);
+                //sw.Restart();
+                //var c = await QuickSortAsync.SortAsync(a);
+                //sw.Stop();
+                //Show("Async", c, sw);
             }
             Console.ReadKey();
         }

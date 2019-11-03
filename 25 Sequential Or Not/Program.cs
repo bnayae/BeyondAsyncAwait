@@ -99,16 +99,16 @@ namespace Bnaya.Samples
             // instead of single block with multi-task
             // having multi-blocks with single task
             // each block map the input to the output
-            var blockes = new Task[degreeOfParallelism]; // completion of all blocks
+            var blocks = new Task[degreeOfParallelism]; // completion of all blocks
             for (int i = 0; i < degreeOfParallelism; i++)
             {
                 var block = new TransformBlock<Tin, Tout>(act, options);
-                blockes[i] = block.Completion;
+                blocks[i] = block.Completion;
                 input.LinkTo(block, linkOptions);
                 block.LinkTo(output);
             }
 
-            Task _ = Task.WhenAll(blockes).ContinueWith(m => output.Complete());
+            Task _ = Task.WhenAll(blocks).ContinueWith(m => output.Complete());
             return DataflowBlock.Encapsulate(input, output); // wrap the functionality
         }
 
