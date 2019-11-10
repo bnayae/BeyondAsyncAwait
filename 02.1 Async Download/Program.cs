@@ -19,7 +19,10 @@ namespace _02._1_Async_Download
 {
     class Program
     {
+        // https://loremipsum.io/21-of-the-best-placeholder-image-generators/
+        //private const string URL = "https://loremflickr.com/640/360";
         //private const string URL = "https://source.unsplash.com/1200x1200/?woman";
+        //private const string URL = "https://picsum.photos/1200";
         private const string URL = "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg";
 
         static void Main(string[] args)

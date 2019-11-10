@@ -6,3 +6,4 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "CC0001:You should use 'var' whenever possible.", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.QuickSortAsync.SortAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)~System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{``0}}")]
 
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("ConfigureAwait", "ConfigureAwaitEnforcer:ConfigureAwaitEnforcer", Justification = "<Pending>", Scope = "member", Target = "~M:Bnaya.Samples.Program.Main~System.Threading.Tasks.Task")]

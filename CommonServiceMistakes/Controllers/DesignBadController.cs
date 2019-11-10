@@ -17,6 +17,10 @@ namespace Bnaya.Samples.Controllers
     [Route("api/[controller]")]
     public class DesignBadController : Controller
     {
+        // https://loremipsum.io/21-of-the-best-placeholder-image-generators/
+        //private const string URL = "https://loremflickr.com/640/360";
+        //private const string URL_PATTERN = "https://picsum.photos/1200";
+        //private const string URL_PATTERN = "http://lorempixel.com/800/800/animals/";
         private const string URL_PATTERN = "https://source.unsplash.com/{0}x{0}/?{1}/";
         private const string MEDIA_TYPE = "image/jpeg";
 

@@ -13,3 +13,4 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "member", Target = "~M:ThrowAllSample.Program.Main(System.String[])~System.Threading.Tasks.Task")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Readability", "RCS1018:Add default access modifier.", Justification = "<Pending>", Scope = "type", Target = "~T:ThrowAllSample.Program")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Redundancy", "RCS1163:Unused parameter.", Justification = "<Pending>", Scope = "member", Target = "~M:ThrowAllSample.Program.Main(System.String[])~System.Threading.Tasks.Task")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("ConfigureAwait", "ConfigureAwaitEnforcer:ConfigureAwaitEnforcer", Justification = "<Pending>", Scope = "member", Target = "~M:ThrowAllSample.Program.Main(System.String[])~System.Threading.Tasks.Task")]

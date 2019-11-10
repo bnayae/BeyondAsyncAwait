@@ -11,6 +11,9 @@ namespace _02._2_DeadLock_Async
 {
     public class VM : INotifyPropertyChanged
     {
+        // https://loremipsum.io/21-of-the-best-placeholder-image-generators/
+        //private const string URL = "https://loremflickr.com/640/360";
+        //private const string URL = "https://picsum.photos/1200";
         //private const string URL = "http://lorempixel.com/800/800/animals/";
         //private const string URL = "https://source.unsplash.com/800x800/?dog";
         private const string URL = "https://postmediacalgaryherald2.files.wordpress.com/2019/01/Britney-the-morkie.jpg?quality=80&strip=all&w=659&h=494&crop=1&zoom=2";

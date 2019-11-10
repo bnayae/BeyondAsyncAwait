@@ -12,9 +12,10 @@ namespace Exercise_Reacted_Task
             var d2 = new DeltaDetector(p, 5);
 
             // TODO: when the each task complete, write the delta
+            d1.WhenCrossDelta.ContinueWith(c => Console.WriteLine($"Complete {c.Result}"));
+            d2.WhenCrossDelta.ContinueWith(c => Console.WriteLine($"Complete {c.Result}"));
 
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }

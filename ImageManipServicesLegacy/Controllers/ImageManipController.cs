@@ -37,7 +37,11 @@ namespace Bnaya.Samples.Controllers
     [RoutePrefix("api/imagemanip")]
     public class ImageManipController : ApiController
     {
+        // https://loremipsum.io/21-of-the-best-placeholder-image-generators/
         private const string URL = "https://postmediacalgaryherald2.files.wordpress.com/2019/01/Britney-the-morkie.jpg?quality=80&strip=all&w=659&h=494&crop=1&zoom=2";
+        //private const string URL = "https://loremflickr.com/{0}/{0}";
+        //private const string URL = "https://picsum.photos/{0}";
+        //private const string URL = "http://lorempixel.com/{0}/{0}/animals/";
         private const string URL_PATTERN = "https://source.unsplash.com/{0}x{0}/?{1}/";
         private const string URL_PATTERN_RND = "https://source.unsplash.com/random/{0}x{0}";
         private const string MEDIA_TYPE = "image/jpeg";

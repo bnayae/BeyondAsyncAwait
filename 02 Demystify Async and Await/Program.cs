@@ -17,9 +17,9 @@ namespace Bnaya.Samples
             //Task t = CanBeTrickyAsync();
             //Task t = CanBeTrickyDemystifyAsync();
             //Task t = AlsoTrickyAsync();
-            Task t = ExpectedAsync();
+            //Task t = ExpectedAsync();
             //Task t = ExpectedDemystifyAsync();
-            //Task t = MultiAwaitAsync();
+            Task t = MultiAwaitAsync();
             Info(nameof(Main));
             while (!t.IsCompleted)
             {
@@ -96,8 +96,8 @@ namespace Bnaya.Samples
         private static async Task ExpectedAsync()
         {
             Info("ExpectedAsync Start");
-            await Task.Delay(1);
-            Thread.Sleep(2000);
+            await Task.Delay(2000);
+            //Thread.Sleep(2000);
             //await MyDelay(TimeSpan.FromSeconds(2));
             Info("ExpectedAsync End");
         }

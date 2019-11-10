@@ -16,7 +16,6 @@ namespace Bnaya.Samples
             //Task _ = ParentChildSolutionAsync();
             //Task _ = ParentChildRunAsync();
             //Task _ = ParentChildLikeRunAsync();
-
             Console.ReadKey();
         }
 
@@ -30,15 +29,32 @@ namespace Bnaya.Samples
             // Should be sequential
             await Task.Factory.StartNew(async () =>
             {
-                //Console.Write("#");
                 await Task.Delay(1000);
                 Console.Write("2 ");
-            }); // what is the return value of this call?
+            }); // what is the return value of this call
             Console.Write("3 ");
-
         }
 
         #endregion // StartNewAsync
+
+        // what is the return value of this call?
+        private static async Task StartNewDemistifyAsync()
+        {
+            Console.Write("1 ");
+
+            // Should be sequential
+            await Task.Factory.StartNew(() =>
+            {
+                var tsc = new TaskCompletionSource<object>();
+                var tmr = new Timer((s) =>
+                {
+                    Console.Write("2 ");
+                    tsc.TrySetResult(null);
+                }, null, 2000, 0);
+                return tsc.Task;
+            }); // what is the return value of this call
+            Console.Write("3 ");
+        }
 
         #region RunAsync
 
