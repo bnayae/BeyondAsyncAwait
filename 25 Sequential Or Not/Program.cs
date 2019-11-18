@@ -9,7 +9,7 @@ namespace Bnaya.Samples
         private const int ITERATIONS = 15;
         static void Main(string[] args)
         {
-            //Task t = SequentialForkAsync();
+            // Task t = SequentialForkAsync();
             Task t = NonSequentialForkAsync();
 
             Console.ReadKey();
@@ -21,7 +21,8 @@ namespace Bnaya.Samples
         {
             // the output of transform block is sequential 
             // (dictate by the order of the original input)
-            var block = new TransformBlock<int, string>(i => UnitOfWorkAsync(i), 
+            IPropagatorBlock<int, string> block = 
+                                new TransformBlock<int, string>(i => UnitOfWorkAsync(i), 
                                             new ExecutionDataflowBlockOptions { MaxDegreeOfParallelism = ITERATIONS });
 
             // the action block will get the transformation in the original order
@@ -44,7 +45,8 @@ namespace Bnaya.Samples
 
         private static async Task NonSequentialForkAsync()
         {
-            var block = CreateMultiTransform<int, string>(UnitOfWorkAsync,
+            IPropagatorBlock<int, string> block = 
+                CreateMultiTransform<int, string>(UnitOfWorkAsync,
                             new ExecutionDataflowBlockOptions
                                     { MaxDegreeOfParallelism = ITERATIONS });
 

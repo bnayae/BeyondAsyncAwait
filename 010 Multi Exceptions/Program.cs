@@ -23,30 +23,34 @@ namespace _010_Multi_Exceptions
                     throw new ArgumentException("B");
                 });
 
-                await Task.WhenAll(t1, t2);
+                //await Task.WhenAll(t1, t2);
                 //Task t = Task.WhenAll(t1, t2);
                 //Task _ = t.ContinueWith(c => Console.WriteLine(
                 //            $"%%%%  {c.Exception?.GetType().Name} %%%%"), TaskContinuationOptions.OnlyOnFaulted);
                 //await t;
-                //await t.ThrowAll(); //.ContinueWith(c => throw c.Exception);
+                await Task.WhenAll(t1, t2).ThrowAll(); //.ContinueWith(c => throw c.Exception);
 
             }
             catch (AggregateException ex)
             {
-                Console.WriteLine($"######\r\n{ex}\r\n######");
+                foreach (var exc in ex.Flatten().InnerExceptions)
+                {
+                    Console.WriteLine($"######\r\n{exc.GetBaseException().Message}\r\n######");
+
+                }
             }
             catch (NullReferenceException ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine($"@ {ex.GetBaseException().Message}");
             }
 
             catch (ArgumentException ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine($"* {ex.GetBaseException().Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"------- \r\n {ex}");
+                Console.WriteLine($"------- \r\n {ex.GetBaseException().Message}");
             }
 
             Console.ReadKey();

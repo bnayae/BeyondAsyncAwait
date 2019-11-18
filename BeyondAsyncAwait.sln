@@ -173,9 +173,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncSimpleDemo", "AsyncSim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsDownloadAsync", "WindowsDownloadAsync\WindowsDownloadAsync.csproj", "{D9E95510-C283-4118-84A7-488D23F368B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise Reacted Task", "Exercise Reacted Task\Exercise Reacted Task.csproj", "{71AE40AD-BD60-4830-AECC-C4F50B910406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise Reacted Task", "Exercise Reacted Task\Exercise Reacted Task.csproj", "{71AE40AD-BD60-4830-AECC-C4F50B910406}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise Reacted Task - solution", "Exercise Reacted Task - solution\Exercise Reacted Task - solution.csproj", "{D4E0DF56-0201-4A69-95C9-EFCABE57A602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataflow Crawler", "Exercizes\Dataflow Crawler\Dataflow Crawler.csproj", "{B0723F20-4921-48AC-97EE-25EF43598655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataflow Effect Fallback", "Exercizes\Dataflow Effect Fallback\Dataflow Effect Fallback.csproj", "{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataflow Image Tiles", "Exercizes\Dataflow Image Tiles\Dataflow Image Tiles.csproj", "{780768FF-C192-4413-B90E-F1AAB8DE2742}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -808,6 +814,30 @@ Global
 		{D4E0DF56-0201-4A69-95C9-EFCABE57A602}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4E0DF56-0201-4A69-95C9-EFCABE57A602}.Release|x86.ActiveCfg = Release|Any CPU
 		{D4E0DF56-0201-4A69-95C9-EFCABE57A602}.Release|x86.Build.0 = Release|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0723F20-4921-48AC-97EE-25EF43598655}.Release|x86.Build.0 = Release|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Debug|x86.Build.0 = Debug|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Release|x86.ActiveCfg = Release|Any CPU
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D}.Release|x86.Build.0 = Release|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Debug|x86.Build.0 = Debug|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Release|x86.ActiveCfg = Release|Any CPU
+		{780768FF-C192-4413-B90E-F1AAB8DE2742}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -859,6 +889,9 @@ Global
 		{D9E95510-C283-4118-84A7-488D23F368B0} = {6951F710-2D51-4AC7-80C0-37CEA3605F10}
 		{71AE40AD-BD60-4830-AECC-C4F50B910406} = {00A3216C-4703-4C06-840E-A02EB304E338}
 		{D4E0DF56-0201-4A69-95C9-EFCABE57A602} = {00A3216C-4703-4C06-840E-A02EB304E338}
+		{B0723F20-4921-48AC-97EE-25EF43598655} = {00A3216C-4703-4C06-840E-A02EB304E338}
+		{04FCC5A5-7EEC-4C22-8E55-4CC21C2B347D} = {00A3216C-4703-4C06-840E-A02EB304E338}
+		{780768FF-C192-4413-B90E-F1AAB8DE2742} = {00A3216C-4703-4C06-840E-A02EB304E338}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF372A44-B714-4D54-8000-058BE10DD87F}
